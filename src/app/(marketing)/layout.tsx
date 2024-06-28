@@ -1,3 +1,4 @@
+import { ThemeToggleButton } from '@/components/lit2l/ThemeToggleButton'
 import { MainNav } from '@/components/main-nav'
 import { SiteFooter } from '@/components/site-footer'
 import { buttonVariants } from '@/components/ui/button'
@@ -17,6 +18,7 @@ export default async function MarketingLayout({
       <header className='container sticky left-0 right-0 top-0 z-40 border-b bg-background/50'>
         <div className='flex h-20 items-center justify-between py-6'>
           <MainNav items={marketingConfig.mainNav} />
+          <ThemeToggleButton />
           <nav>
             <Link
               href='/login'

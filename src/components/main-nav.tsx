@@ -1,6 +1,7 @@
 'use client'
 
 import Logo from './Logo'
+import { ThemeToggleButton } from './lit2l/ThemeToggleButton'
 import { Button } from './ui/button'
 import { Icons } from '@/components/icons'
 import { MobileNav } from '@/components/mobile-nav'
@@ -47,6 +48,7 @@ export function MainNav({ items, children }: MainNavProps) {
           ))}
         </nav>
       ) : null}
+
       <button
         className='flex items-center space-x-2 md:hidden'
         onClick={() => setShowMobileMenu(!showMobileMenu)}
