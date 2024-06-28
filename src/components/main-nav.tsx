@@ -1,5 +1,7 @@
 'use client'
 
+import Logo from './Logo'
+import { Button } from './ui/button'
 import { Icons } from '@/components/icons'
 import { MobileNav } from '@/components/mobile-nav'
 import { siteConfig } from '@/config/site'
@@ -20,12 +22,12 @@ export function MainNav({ items, children }: MainNavProps) {
 
   return (
     <div className='flex gap-6 md:gap-10'>
-      <Link href='/' className='hidden items-center space-x-2 md:flex'>
-        <Icons.logo />
+      <Button className='hidden items-center space-x-2 md:flex'>
+        <Logo />
         <span className='hidden font-bold sm:inline-block'>
           {siteConfig.name}
         </span>
-      </Link>
+      </Button>
       {items?.length ? (
         <nav className='hidden gap-6 md:flex'>
           {items?.map((item, index) => (

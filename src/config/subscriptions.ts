@@ -1,16 +1,15 @@
-import { type SubscriptionPlan } from "@/types"
-
-import { env } from "@/env.js"
+import { env } from '@/env.js'
+import { type SubscriptionPlan } from '@/types'
 
 export const freePlan: SubscriptionPlan = {
-  name: "Free",
+  name: 'Free',
   description:
-    "The free plan is limited to 3 posts. Upgrade to the PRO plan for unlimited posts.",
-  stripePriceId: "",
+    'The free plan is limited to 3 posts. Upgrade to the PRO plan for unlimited posts.',
+  stripePriceId: ''
 }
 
 export const proPlan: SubscriptionPlan = {
-  name: "PRO",
-  description: "The PRO plan has unlimited posts.",
-  stripePriceId: env.STRIPE_PRO_MONTHLY_PLAN_ID || "",
+  name: 'TigerClub Membership',
+  description: 'Unlimited Kickboxing classes.',
+  stripePriceId: env.STRIPE_PRO_MONTHLY_PLAN_ID || ''
 }
