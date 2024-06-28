@@ -41,7 +41,7 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
             </a>
             . The source code is available on{' '}
             <a
-              href={siteConfig.links.github}
+              href={siteConfig.links.home}
               target='_blank'
               rel='noreferrer'
               className='font-medium underline underline-offset-4'

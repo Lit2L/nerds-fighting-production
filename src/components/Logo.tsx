@@ -8,8 +8,8 @@ function Logo() {
       <Image
         src={Logos}
         alt='Tiger Club Kickboxing'
-        width={90}
-        height={90}
+        width={75}
+        height={75}
         className='rounded-full border'
       />
     </Link>

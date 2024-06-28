@@ -1,7 +1,9 @@
 import { Inter as FontSans } from 'next/font/google'
 import localFont from 'next/font/local'
+import megrim from 'next/font/local'
 import '@/styles/globals.css'
 import { Analytics } from '@/components/analytics'
+import SmoothScrolling from '@/components/lit2l/SmoothScrolling'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Toaster } from '@/components/ui/toaster'
@@ -22,6 +24,11 @@ const fontHeading = localFont({
   variable: '--font-heading'
 })
 
+const logoFont = megrim({
+  src: '../assets/fonts/Megrim-Regular.ttf',
+  variable: '--font-logo'
+})
+
 export const viewport: Viewport = {
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: 'white' },
@@ -36,11 +43,10 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   keywords: [
-    'Next.js',
-    'React',
-    'Tailwind CSS',
-    'Server Components',
-    'Radix UI'
+    'Beginner Kickboxing',
+    'Advanced Kickboxing',
+    'Boxing',
+    'Muay Thai'
   ],
   authors: [
     {
@@ -65,8 +71,9 @@ export const metadata: Metadata = {
     creator: '@lit2l'
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: '/assets/Tiger',
     shortcut: '/favicon-16x16.png',
+    // shortcut: '/assets/TigerLogo.png',
     apple: '/apple-touch-icon.png'
   },
   manifest: `${siteConfig.url}/site.webmanifest`
@@ -84,12 +91,13 @@ export default function RootLayout({
         className={cn(
           'min-h-screen bg-background font-sans antialiased',
           fontSans.variable,
-          fontHeading.variable
+          fontHeading.variable,
+          logoFont.variable
         )}
       >
         <TRPCReactProvider cookies={cookies().toString()}>
           <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
-            {children}
+            <SmoothScrolling>{children}</SmoothScrolling>
             <Analytics />
             <Toaster />
             <TailwindIndicator />

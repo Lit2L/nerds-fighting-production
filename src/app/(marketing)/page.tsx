@@ -18,7 +18,7 @@ export default async function IndexPage() {
             Follow along on Twitter
           </Link>
           <h1 className='font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl'>
-            An example app built using Next.js 13 server components.
+            TigerClub Kickboxing
           </h1>
           <p className='max-w-2xl leading-normal text-muted-foreground sm:text-xl sm:leading-8'>
             I&apos;m building a web app with Next.js 13 and open sourcing
@@ -26,15 +26,13 @@ export default async function IndexPage() {
           </p>
           <div className='space-x-4'>
             <Link href='/login' className={cn(buttonVariants({ size: 'lg' }))}>
-              Get Started
+              Free 2-Day Pass
             </Link>
             <Link
-              href={siteConfig.links.github}
-              target='_blank'
-              rel='noreferrer'
+              href='/dashboard'
               className={cn(buttonVariants({ variant: 'outline', size: 'lg' }))}
             >
-              GitHub
+              Get Started
             </Link>
           </div>
         </div>
@@ -156,7 +154,7 @@ export default async function IndexPage() {
             Taxonomy is open source and powered by open source software. <br />{' '}
             The code is available on{' '}
             <Link
-              href={siteConfig.links.github}
+              href={siteConfig.links.home}
               target='_blank'
               rel='noreferrer'
               className='underline underline-offset-4'
@@ -167,7 +165,7 @@ export default async function IndexPage() {
           </p>
           {stars && (
             <Link
-              href={siteConfig.links.github}
+              href={siteConfig.links.home}
               target='_blank'
               rel='noreferrer'
               className='flex'

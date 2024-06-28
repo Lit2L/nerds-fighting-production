@@ -3,7 +3,7 @@
  * for Docker builds.
  */
 
-// await import("./src/env.js")
+await import('./src/env.js')
 
 /** @type {import("next").NextConfig} */
 const config = {

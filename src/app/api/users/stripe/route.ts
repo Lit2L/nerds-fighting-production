@@ -6,7 +6,7 @@ import { authOptions } from '@/server/auth'
 import { getServerSession } from 'next-auth/next'
 import { z } from 'zod'
 
-const billingUrl = absoluteUrl('/dashboard/billing')
+const billingUrl = absoluteUrl('/dashboard')
 
 export async function GET(req: Request) {
   try {

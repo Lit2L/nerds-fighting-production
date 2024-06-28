@@ -26,7 +26,7 @@ const config = {
     // Feel free to reconfigure them to your own preference.
     '@next/next/no-html-link-for-pages': 'off',
     'tailwindcss/no-custom-classname': 'off',
-    'tailwindcss/classnames-order': 'error',
+    'tailwindcss/classnames-order': 'off',
     '@typescript-eslint/no-unsafe-member-access': 'off',
     '@typescript-eslint/no-unsafe-assignment': 'off',
 

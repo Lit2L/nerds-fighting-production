@@ -13,8 +13,8 @@ export default async function MarketingLayout({
   children
 }: MarketingLayoutProps) {
   return (
-    <div className='flex min-h-screen flex-col'>
-      <header className='container z-40 bg-background'>
+    <div className='relative flex min-h-screen flex-col border-4'>
+      <header className='container sticky left-0 right-0 top-0 z-40 border-b bg-background/50'>
         <div className='flex h-20 items-center justify-between py-6'>
           <MainNav items={marketingConfig.mainNav} />
           <nav>

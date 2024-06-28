@@ -7,6 +7,9 @@ export const siteConfig: SiteConfig = {
   ogImage: 'https://tx.shadcn.com/og.jpg',
   links: {
     twitter: 'https://twitter.com/lit2l',
-    github: 'https://github.com/lit2l/github'
+    dashboard: '/dashboard',
+    login: '/login',
+    register: '/register',
+    home: '/'
   }
 }
