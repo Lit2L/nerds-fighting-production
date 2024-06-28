@@ -1,31 +1,30 @@
-"use client"
+'use client'
 
-import * as React from "react"
-import { useRouter } from "next/navigation"
-import { api } from "@/trpc/react"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { type User } from "@prisma/client"
-import { useForm } from "react-hook-form"
-import type * as z from "zod"
-
-import { cn } from "@/lib/utils"
-import { userNameSchema } from "@/lib/validations/user"
-import { buttonVariants } from "@/components/ui/button"
+import { Icons } from '@/components/icons'
+import { buttonVariants } from '@/components/ui/button'
 import {
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { toast } from "@/components/ui/use-toast"
-import { Icons } from "@/components/icons"
+  CardTitle
+} from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+import { toast } from '@/components/ui/use-toast'
+import { cn } from '@/lib/utils'
+import { userNameSchema } from '@/lib/validations/user'
+import { api } from '@/trpc/react'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { type User } from '@prisma/client'
+import { useRouter } from 'next/navigation'
+import * as React from 'react'
+import { useForm } from 'react-hook-form'
+import type * as z from 'zod'
 
 interface UserNameFormProps extends React.HTMLAttributes<HTMLFormElement> {
-  user: Pick<User, "id" | "name">
+  user: Pick<User, 'id' | 'name'>
 }
 
 type FormData = z.infer<typeof userNameSchema>
@@ -35,36 +34,36 @@ export function UserNameForm({ user, className, ...props }: UserNameFormProps) {
   const {
     handleSubmit,
     register,
-    formState: { errors },
+    formState: { errors }
   } = useForm<FormData>({
     resolver: zodResolver(userNameSchema),
     defaultValues: {
-      name: user?.name || "",
-    },
+      name: user?.name || ''
+    }
   })
   const [isSaving, setIsSaving] = React.useState<boolean>(false)
   const updateName = api.user.updateName.useMutation({
     onSuccess: () => {
       toast({
-        description: "Your name has been updated.",
+        description: 'Your name has been updated.'
       })
       setIsSaving(false)
       router.refresh()
     },
     onError: () => {
       toast({
-        title: "Something went wrong.",
-        description: "Your name was not updated. Please try again.",
-        variant: "destructive",
+        title: 'Something went wrong.',
+        description: 'Your name was not updated. Please try again.',
+        variant: 'destructive'
       })
       setIsSaving(false)
-    },
+    }
   })
 
   async function onSubmit(data: FormData) {
     setIsSaving(true)
     updateName.mutate({
-      name: data.name,
+      name: data.name
     })
   }
 
@@ -83,30 +82,28 @@ export function UserNameForm({ user, className, ...props }: UserNameFormProps) {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="grid gap-1">
-            <Label className="sr-only" htmlFor="name">
+          <div className='grid gap-1'>
+            <Label className='sr-only' htmlFor='name'>
               Name
             </Label>
             <Input
-              id="name"
-              className="w-[400px]"
+              id='name'
+              className='w-[400px]'
               size={32}
-              {...register("name")}
+              {...register('name')}
             />
             {errors?.name && (
-              <p className="px-1 text-xs text-red-600">{errors.name.message}</p>
+              <p className='px-1 text-xs text-red-600'>{errors.name.message}</p>
             )}
           </div>
         </CardContent>
         <CardFooter>
           <button
-            type="submit"
+            type='submit'
             className={cn(buttonVariants(), className)}
             disabled={isSaving}
           >
-            {isSaving && (
-              <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
-            )}
+            {isSaving && <Icons.spinner className='mr-2 size-4 animate-spin' />}
             <span>Save</span>
           </button>
         </CardFooter>

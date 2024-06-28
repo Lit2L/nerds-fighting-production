@@ -1,8 +1,7 @@
-import Stripe from "stripe"
-
-import { env } from "@/env.js"
+import { env } from '@/env.js'
+import Stripe from 'stripe'
 
 export const stripe = new Stripe(env.STRIPE_API_KEY, {
-  apiVersion: "2022-11-15",
-  typescript: true,
+  apiVersion: '2022-11-15',
+  typescript: true
 })
