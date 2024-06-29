@@ -1,3 +1,7 @@
+import { FlipWordsComponent } from '@/components/lit2l/FlipWordsComponent'
+import { AnimatedShinyTextButton } from '@/components/lit2l/ShinyButton'
+import GradualSpacing from '@/components/lit2l/gradual-spacing'
+import { Hero } from '@/components/templates/hero'
 import { buttonVariants } from '@/components/ui/button'
 import { siteConfig } from '@/config/site'
 import { cn } from '@/lib/utils'
@@ -8,45 +12,12 @@ export default async function IndexPage() {
   const stars = false
 
   return (
-    <>
-      <section className='relative space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32'>
-        <Image
-          src='/assets/hero.png'
-          alt='gym'
-          fill
-          className='absolute -z-10 opacity-40'
-        />
-        <div className='container z-10 flex max-w-5xl flex-col items-center gap-4 text-center'>
-          <Link
-            href={siteConfig.links.twitter}
-            className='rounded-2xl bg-muted px-4 py-1.5 text-sm font-medium'
-            target='_blank'
-          >
-            Follow along on Twitter
-          </Link>
-          <h1 className='font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl'>
-            TigerClub Kickboxing
-          </h1>
-          <p className='max-w-2xl leading-normal text-muted-foreground sm:text-xl sm:leading-8'>
-            I&apos;m building a web app with Next.js 13 and open sourcing
-            everything. Follow along as we figure this out together.
-          </p>
-          <div className='space-x-4'>
-            <Link href='/login' className={cn(buttonVariants({ size: 'lg' }))}>
-              Free 2-Day Pass
-            </Link>
-            <Link
-              href='/dashboard'
-              className={cn(buttonVariants({ variant: 'outline', size: 'lg' }))}
-            >
-              Get Started
-            </Link>
-          </div>
-        </div>
-      </section>
+    <div className='relative min-h-screen bg-[radial-gradient(circle_500px_at_50%_200px,#181818,transparent)] px-3'>
+      <Hero />
+
       <section
         id='features'
-        className='container space-y-6 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-24'
+        className='container space-y-6  py-8 dark:bg-transparent md:py-12 lg:py-24'
       >
         <div className='mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center'>
           <h2 className='font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl'>
@@ -197,6 +168,6 @@ export default async function IndexPage() {
           )}
         </div>
       </section>
-    </>
+    </div>
   )
 }

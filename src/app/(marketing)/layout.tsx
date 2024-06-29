@@ -14,12 +14,14 @@ export default async function MarketingLayout({
   children
 }: MarketingLayoutProps) {
   return (
-    <div className='relative flex min-h-screen flex-col border-4'>
+    <div className='relative flex min-h-screen flex-col'>
       <header className='container sticky left-0 right-0 top-0 z-40 border-b bg-background/50'>
         <div className='flex h-20 items-center justify-between py-6'>
           <MainNav items={marketingConfig.mainNav} />
-          <ThemeToggleButton />
-          <nav>
+          <nav className='flex items-center'>
+            <span className='mx-6'>
+              <ThemeToggleButton />
+            </span>
             <Link
               href='/login'
               className={cn(
@@ -32,7 +34,7 @@ export default async function MarketingLayout({
           </nav>
         </div>
       </header>
-      <main className='flex-1'>{children}</main>
+      <main className=''>{children}</main>
       <SiteFooter />
     </div>
   )
