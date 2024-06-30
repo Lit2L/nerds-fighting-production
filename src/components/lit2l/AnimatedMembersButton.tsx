@@ -2,7 +2,7 @@ import AnimatedShinyText from '@/components/lit2l/animated-shiny-text'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
 
-export async function AnimatedShinyTextButton() {
+export async function AnimatedMembersButton() {
   return (
     <div className='z-10 flex items-center justify-center'>
       <Link
@@ -13,14 +13,14 @@ export async function AnimatedShinyTextButton() {
       >
         <AnimatedShinyText className='inline-flex h-9 w-56 items-center justify-center text-white/50 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400'>
           <span className='mr-3 scale-x-[-1] transition-transform ease-in-out group-hover:translate-x-3'>
-            🥊
+            🔔
           </span>
           <span className='font-garamond text-sm font-bold uppercase  '>
-            Free Class
+            Members Only
           </span>
           {/* <ArrowRightIcon className='ml-1 size-3 transition-transform duration-200 ease-in-out group-hover:translate-x-1' /> */}
-          <span className='ml-3 transition-transform  ease-in-out group-hover:-translate-x-3'>
-            🥊
+          <span className='rotate-10 ml-3  transition-transform ease-in-out group-hover:-translate-x-3'>
+            📍
           </span>
         </AnimatedShinyText>
       </Link>

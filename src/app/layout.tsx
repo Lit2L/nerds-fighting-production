@@ -89,7 +89,7 @@ export default function RootLayout({
       <head />
       <body
         className={cn(
-          'bg-dot-black/[0.1] dark:bg-dot-gray-400/[0.1] min-h-screen overflow-x-hidden bg-background/60 font-sans antialiased',
+          'bg-dot-black/[0.1] dark:bg-dot-gray-400/[0.1] min-h-screen max-w-full overflow-x-hidden bg-background/60 font-sans antialiased',
           fontSans.variable,
           fontHeading.variable,
           logoFont.variable

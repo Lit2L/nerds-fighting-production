@@ -1,10 +1,10 @@
 'use client'
 
 import HeroImg from '../../../public/assets/hero.png'
+import { AnimatedMembersButton } from '../lit2l/AnimatedMembersButton'
+import { AnimatedPassButton } from '../lit2l/AnimatedPassButton'
 import { FlipWordsComponent } from '../lit2l/FlipWordsComponent'
-import { AnimatedShinyTextButton } from '../lit2l/ShinyButton'
 import GradualSpacing from '../lit2l/gradual-spacing'
-import { buttonVariants } from '../ui/button'
 import { siteConfig } from '@/config/site'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
@@ -13,7 +13,7 @@ import Link from 'next/link'
 export const Hero = () => {
   return (
     <section className='relative h-[80dvh] w-full '>
-      <div className='zoom-effect absolute inset-10 left-0 right-0 top-0 -z-10 w-full  bg-[radial-gradient(circle_500px_at_50%_200px,#3e3e3e,transparent)] blur-[2px]'>
+      <div className='zoom-effect absolute inset-10 left-0 top-0 -z-10 w-full  bg-[radial-gradient(circle_500px_at_50%_200px,#3e3e3e,transparent)] blur-[2px]'>
         <Image
           src={HeroImg}
           alt='gym'
@@ -39,10 +39,8 @@ export const Hero = () => {
         <FlipWordsComponent />
 
         <div className='flex space-x-4'>
-          <AnimatedShinyTextButton />
-          <Link href='/login' className={cn(buttonVariants({ size: 'lg' }))}>
-            Free 2-Day Pass
-          </Link>
+          <AnimatedPassButton />
+          <AnimatedMembersButton />
         </div>
       </div>
     </section>

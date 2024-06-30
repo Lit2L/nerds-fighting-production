@@ -1,3 +1,4 @@
+import Schedule from '@/components/templates/Schedule'
 import { Features } from '@/components/templates/features'
 import { Hero } from '@/components/templates/hero'
 import { siteConfig } from '@/config/site'
@@ -10,23 +11,14 @@ export default async function IndexPage() {
     <div className='relative min-h-screen bg-[radial-gradient(circle_500px_at_50%_200px,#181818,transparent)] px-3'>
       <Hero />
       <Features />
+      <Schedule />
       <section id='open-source' className='container py-8 md:py-12 lg:py-24'>
         <div className='mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center'>
           <h2 className='font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl'>
             Proudly Serving Orange County
           </h2>
           <p className='max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7'>
-            Taxonomy is open source and powered by open source software. <br />{' '}
-            The code is available on{' '}
-            <Link
-              href={siteConfig.links.home}
-              target='_blank'
-              rel='noreferrer'
-              className='underline underline-offset-4'
-            >
-              GitHub
-            </Link>
-            .{' '}
+            Contributing to a strong community is important to us
           </p>
           {stars && (
             <Link
