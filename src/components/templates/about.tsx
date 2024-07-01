@@ -41,10 +41,7 @@ const featureCards = [
 ]
 export const About = () => {
   return (
-    <section
-      id='features'
-      className='container mx-auto pt-12 dark:bg-[#412618] '
-    >
+    <section id='features' className='container mx-auto pt-12'>
       <div className='mx-auto my-12 flex max-w-[58rem] flex-col items-center space-y-12 text-center'>
         <h2 className='font-heading text-3xl font-bold leading-[1.1] sm:text-3xl md:text-5xl'>
           Who We Are
@@ -57,12 +54,9 @@ export const About = () => {
           consistent, and achieve your goals.
         </p>
       </div>
-      <div className='mx-auto flex flex-col gap-16'>
+      <div className='flex w-full flex-col gap-16'>
         {featureCards.map((card) => (
-          <div
-            key={card.id}
-            className='mx-auto flex items-center justify-start gap-12 border-x px-9'
-          >
+          <div key={card.id} className='flex justify-center gap-12 px-9'>
             {card.id % 2 === 0 ? (
               <>
                 <div className='w-[450px]'>
@@ -103,7 +97,7 @@ export const About = () => {
                     <Image
                       src={card.image}
                       alt={card.title}
-                      className='rounded-lg object-contain'
+                      className='rounded-lg object-cover'
                       fill
                     />
                   </AspectRatio>
