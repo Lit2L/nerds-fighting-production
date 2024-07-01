@@ -1,11 +1,4 @@
 import { AspectRatio } from '../ui/aspect-ratio'
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle
-} from '../ui/card'
 import { CheckCircle } from 'lucide-react'
 import Image from 'next/image'
 

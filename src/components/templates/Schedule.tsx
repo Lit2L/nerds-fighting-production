@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button'
 import { Calendar, Circle } from 'lucide-react'
 
-const Schedule = () => {
+export const Schedule = () => {
   return (
     <div>
       <section id='schedule' className=' py-12'>
@@ -78,5 +78,3 @@ const Schedule = () => {
     </div>
   )
 }
-
-export default Schedule
