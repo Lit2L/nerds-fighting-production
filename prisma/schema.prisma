@@ -63,6 +63,7 @@ model User {
   email         String?   @unique
   emailVerified DateTime?
   image         String?
+  freePass      Boolean?  @default(false)
   createdAt     DateTime  @default(now()) @map(name: "created_at")
   updatedAt     DateTime  @default(now()) @map(name: "updated_at")
 
@@ -85,4 +86,10 @@ model VerificationToken {
 
   @@unique([identifier, token])
   @@map(name: "verification_tokens")
+}
+
+model UserPass {
+  id       String @id @default(cuid())
+  fullName String @unique
+  email    String @unique
 }

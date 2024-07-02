@@ -9,7 +9,7 @@ export async function getUserSubscriptionPlan(
 ): Promise<UserSubscriptionPlan> {
   const user = await db.user.findFirst({
     where: {
-      id: userId
+      id: userId,
     },
     select: {
       stripeSubscriptionId: true,

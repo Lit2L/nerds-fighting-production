@@ -1,4 +1,4 @@
-import { userNameSchema } from '@/lib/validations/user'
+import { userNameSchema, userPassSchema } from '@/lib/validations/user'
 import { createTRPCRouter, protectedProcedure } from '@/server/api/trpc'
 
 export const userRouter = createTRPCRouter({
