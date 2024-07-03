@@ -3,13 +3,14 @@
 import { freePlan, proPlan } from '@/config/subscriptions'
 import { db } from '@/lib/db'
 import { type UserSubscriptionPlan } from '@/types'
+import { redirect } from 'next/navigation'
 
 export async function getUserSubscriptionPlan(
   userId: string
 ): Promise<UserSubscriptionPlan> {
   const user = await db.user.findFirst({
     where: {
-      id: userId,
+      id: userId
     },
     select: {
       stripeSubscriptionId: true,
@@ -20,7 +21,7 @@ export async function getUserSubscriptionPlan(
   })
 
   if (!user) {
-    throw new Error('User not found')
+    redirect('/login')
   }
 
   // Check if user is on a pro plan.

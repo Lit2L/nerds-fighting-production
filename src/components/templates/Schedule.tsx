@@ -9,7 +9,7 @@ export const Schedule = () => {
         className=' relative min-h-screen w-full bg-[radial-gradient(circle_500px_at_50%_200px,#181818,transparent)]  py-12'
       >
         <div className='container mx-auto flex flex-col items-center justify-center'>
-          <div className='space-y-6 text-center'>
+          <div className='space-y-9 text-center'>
             <div className='inline-block rounded-lg bg-orange-100 px-3 py-1 text-sm text-orange-500'>
               Class Schedule
             </div>
@@ -20,13 +20,11 @@ export const Schedule = () => {
               Find the perfect class to fit your fitness goals and schedule.
             </p>
           </div>
-          <div className='mt-12 flex flex-col justify-evenly gap-6 md:flex-row'>
-            <div className='rounded-xl bg-background p-6 shadow-md transition-all duration-300 hover:scale-105'>
+          <div className='mt-16 flex flex-col justify-evenly gap-6 md:flex-row'>
+            <div className='max-w-96 rounded-xl bg-background p-6 shadow-md transition-all duration-300 hover:scale-105'>
               <div className='flex items-center gap-4'>
                 <Circle className='h-8 w-8 text-orange-500' />
-                <h3 className='text-xl font-semibold'>
-                  Kickboxing Boxing Muay Thai
-                </h3>
+                <h3 className='text-xl font-semibold'>Cardio Kickboxing</h3>
               </div>
               <p className='mt-2 text-gray-500'>
                 Learn the fundamentals of kickboxing in a supportive learning
@@ -51,27 +49,30 @@ export const Schedule = () => {
               </div>
             </div>
 
-            <div className='rounded-xl bg-white p-6 shadow-md transition-all duration-300 hover:scale-105'>
+            <div className='max-w-96 rounded-xl bg-white/80 p-6 shadow-md transition-all duration-300 hover:scale-105'>
               <div className='flex items-center gap-4'>
                 <Circle className='h-8 w-8 text-orange-500' />
                 <h3 className='text-xl font-semibold text-orange-950/90'>
-                  Cardio Kickboxing
+                  Flow State Kickboxing
                 </h3>
               </div>
-              <p className='mt-2 text-gray-500'>
-                Train like a fighter, look like a fighter, save the brain cells.
+              <p className='mt-2 text-sm font-medium text-gray-900'>
+                Train your cardio and strength fitness as a group in a fun but
+                challenging hour of cardio kickboxing.
               </p>
               <div className='mt-4 flex items-center justify-between'>
                 <div className='flex flex-col gap-3'>
                   <div className='flex items-center gap-3'>
-                    <Calendar className='h-5 w-5 text-gray-500' />
-                    <span className='text-sm text-gray-500'>
+                    <Calendar className='h-5 w-5 text-gray-900' />
+                    <span className='font-heading text-sm text-gray-950'>
                       Tue - 12:00 AM
                     </span>
                   </div>
                   <div className='flex items-center gap-3'>
-                    <Calendar className='h-5 w-5 text-gray-500' />
-                    <span className='text-sm text-gray-500'>Sat - 8:00 AM</span>
+                    <Calendar className='h-5 w-5 text-gray-900' />
+                    <span className='font-heading text-sm text-gray-900'>
+                      Sat - 8:00 AM
+                    </span>
                   </div>
                 </div>
                 <Link href='/dashboard/billing'>Join Class</Link>

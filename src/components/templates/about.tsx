@@ -46,8 +46,11 @@ const featureCards = [
 
 export const About = () => {
   return (
-    <section id='features' className='container mx-auto py-20'>
-      <div className='mx-auto my-12 flex max-w-[58rem] flex-col items-center space-y-16 text-center'>
+    <section
+      id='about'
+      className='bg-[radial-gradient (circle_500px_at_50%_200px,#181818,transparent)] container mx-auto py-20 '
+    >
+      <div className='mx-auto my-12 flex max-w-[58rem] flex-col items-center justify-center space-y-16 text-center'>
         <h2 className='text-left font-heading text-3xl font-bold leading-[1.1] md:text-3xl'>
           Who We Are
         </h2>
@@ -63,7 +66,7 @@ export const About = () => {
         {featureCards.map((card) => (
           <div
             key={card.id}
-            className='flex flex-col  items-center justify-center gap-12 px-9'
+            className='flex flex-col items-center justify-center gap-12 px-9'
           >
             {card.id % 2 === 0 ? (
               <div className='flex flex-col gap-16 md:flex-row '>
