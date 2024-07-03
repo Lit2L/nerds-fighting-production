@@ -1,5 +1,6 @@
 import { About } from '@/components/templates/about'
 import { Community } from '@/components/templates/community'
+// import { FlowState } from '@/components/templates/flow-state'
 import { Hero } from '@/components/templates/hero'
 import { Schedule } from '@/components/templates/schedule'
 
@@ -9,6 +10,7 @@ export default function IndexPage() {
       <Hero />
       <About />
       <Schedule />
+      {/* <FlowState /> */}
       <Community />
     </div>
   )

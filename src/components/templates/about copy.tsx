@@ -5,46 +5,40 @@ import Image from 'next/image'
 const featureCards = [
   {
     id: 0,
-    title: 'Private Coaching',
+    title: 'Quality Training',
     description:
-      'Learning technique through private lessons is an excellent approach suitable for beginners to experienced swimmers as it allows for personalized instruction based on your ability level and swimming objectives.',
-    info: '30 OR 60 MINS - ALL AGES. ALL LEVELS.',
+      'Our Cardio classes burn over 1000 calories an hour... no biggie.  Improve your cardiovascular health, increase your strength, flexibility and lots and lots of other things.',
     image: '/assets/8.jpg',
     icon: '🥷🥋🏅🏆🏊🏄‍♀️'
   },
   {
     id: 1,
-    title: 'Video Analysis',
+    title: 'Training For All',
     description:
-      'Visually analyze your swimming technique and fast-track the learning process. Pinpoint areas for improvement and get a deeper understanding of swimming mechanics to help make rapid progress toward your goals.',
-    info: '30 OR 60 MINS - ALL AGES. ALL LEVELS.',
+      'Learn to utilize your entire body as a weapon. We blend the best of Boxing, Kickboxing and Muay Thai. Learn effective martial arts skills and gain the advantage on your feet.',
     image: '/assets/10.jpg',
     icon: '💪'
   },
   {
     id: 2,
-    title: 'Flow State Practice',
+    title: 'Supportive Community',
     description:
-      'Join a laid-back community of zen-minded martial artists and immerse yourself in the state of flow with daily group training, weekly stroke clinics, and monthly open water swims - all ages and levels welcome.',
-    info: '60 - 90 MINS - ALL AGES. ALL LEVELS.',
+      'Nothing worth having comes easy. Our team and community understands the struggles that come with training. We embrace the suck together.',
     image: '/assets/6.jpg',
-
     icon: '💪'
   },
   {
     id: 3,
-    title: 'Hands-On Lessons',
+    title: 'Live Long and Healthy',
     description: 'Your future self will thank you more than you can imagine.',
-    info: '30 - ALL AGES. BEGINNERS.',
     image: '/assets/seniorkickboxer.png',
     icon: '🎋'
   },
   {
     id: 4,
-    title: 'Outdoor Training',
+    title: 'Anti-Bullying',
     description:
-      'Train as the ancient warriors have done for centuries. Our outdoor training sessions are designed to help you connect with nature, improve your fitness, and build mental toughness.',
-    info: '60 - 90 MINS - ALL AGES. ALL LEVELS.',
+      'Bullying is a common  martial artists have dealt with bullying in their past and we are no exception.  We help our students carry themselves with respect, strength and confidence, we call that bully repellant.',
     image: '/assets/nobullyzone.png',
     icon: '🚫'
   }
@@ -92,9 +86,6 @@ export const About = () => {
                     <h3 className='font-heading text-lg'>{card.title}</h3>
                   </div>
                   <p className='ml-6 text-sm font-light leading-6 dark:text-white'>
-                    {card.info}
-                  </p>
-                  <p className='ml-6 text-sm font-light leading-6 dark:text-white'>
                     {card.description}
                   </p>
                 </div>
@@ -109,9 +100,6 @@ export const About = () => {
                     </div>
                   </div>
                   <div>
-                    <p className='ml-6 text-sm font-light leading-6 text-black dark:text-white'>
-                      {card.info}
-                    </p>
                     <p className='ml-6 text-sm font-light leading-6 text-black dark:text-white'>
                       {card.description}
                     </p>
