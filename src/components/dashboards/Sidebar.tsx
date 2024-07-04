@@ -24,20 +24,20 @@ export default function Sidebar() {
         <TooltipProvider>
           <Link
             href='#'
-            className='group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:h-8 md:w-8 md:text-base'
+            className='group flex size-9 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:size-8 md:text-base'
             prefetch={false}
           >
-            <Package2 className='h-4 w-4 transition-all group-hover:scale-110' />
+            <Package2 className='size-4 transition-all group-hover:scale-110' />
             <span className='sr-only'>Acme Inc</span>
           </Link>
           <Tooltip>
             <TooltipTrigger asChild>
               <Link
                 href='/'
-                className='flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8'
+                className='flex size-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:size-8'
                 prefetch={false}
               >
-                <Home className='h-5 w-5' />
+                <Home className='size-5' />
                 <span className='sr-only'>Dashboard</span>
               </Link>
             </TooltipTrigger>
@@ -47,10 +47,10 @@ export default function Sidebar() {
             <TooltipTrigger asChild>
               <Link
                 href='/dashboard'
-                className='flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-accent-foreground transition-colors hover:text-foreground md:h-8 md:w-8'
+                className='flex size-9 items-center justify-center rounded-lg bg-accent text-accent-foreground transition-colors hover:text-foreground md:size-8'
                 prefetch={false}
               >
-                <LayoutDashboard className='h-5 w-5' />
+                <LayoutDashboard className='size-5' />
                 <span className='sr-only'>Orders</span>
               </Link>
             </TooltipTrigger>
@@ -60,10 +60,10 @@ export default function Sidebar() {
             <TooltipTrigger asChild>
               <Link
                 href='#'
-                className='flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8'
+                className='flex size-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:size-8'
                 prefetch={false}
               >
-                <Package className='h-5 w-5' />
+                <Package className='size-5' />
                 <span className='sr-only'>Products</span>
               </Link>
             </TooltipTrigger>
@@ -73,10 +73,10 @@ export default function Sidebar() {
             <TooltipTrigger asChild>
               <Link
                 href='#'
-                className='flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8'
+                className='flex size-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:size-8'
                 prefetch={false}
               >
-                <Users className='h-5 w-5' />
+                <Users className='size-5' />
                 <span className='sr-only'>Customers</span>
               </Link>
             </TooltipTrigger>
@@ -86,10 +86,10 @@ export default function Sidebar() {
             <TooltipTrigger asChild>
               <Link
                 href='#'
-                className='flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8'
+                className='flex size-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:size-8'
                 prefetch={false}
               >
-                <LineChart className='h-5 w-5' />
+                <LineChart className='size-5' />
                 <span className='sr-only'>Analytics</span>
               </Link>
             </TooltipTrigger>
@@ -103,10 +103,10 @@ export default function Sidebar() {
             <TooltipTrigger asChild>
               <Link
                 href='#'
-                className='flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8'
+                className='flex size-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:size-8'
                 prefetch={false}
               >
-                <Settings className='h-5 w-5' />
+                <Settings className='size-5' />
                 <span className='sr-only'>Settings</span>
               </Link>
             </TooltipTrigger>

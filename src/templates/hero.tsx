@@ -1,14 +1,11 @@
 'use client'
 
-import HeroImg from '../../../public/assets/hero.png'
+import HeroImg from '../../public/assets/hero.png'
 import { AnimatedMembersButton } from '../components/lit2l/AnimatedMembersButton'
 import { AnimatedPassButton } from '../components/lit2l/AnimatedPassButton'
 import { FlipWordsComponent } from '../components/lit2l/FlipWordsComponent'
 import GradualSpacing from '../components/lit2l/gradual-spacing'
-import { siteConfig } from '@/config/site'
-import { cn } from '@/lib/utils'
 import Image from 'next/image'
-import Link from 'next/link'
 
 export const Hero = () => {
   return (

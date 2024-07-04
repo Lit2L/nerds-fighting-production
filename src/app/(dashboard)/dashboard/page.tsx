@@ -44,10 +44,6 @@ import {
   TableRow
 } from '@/components/ui/table'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { getCurrentUser } from '@/lib/session'
-import { authOptions } from '@/server/auth'
-import { db } from '@/server/db'
-import { api } from '@/trpc/server'
 import {
   ChevronLeft,
   ChevronRight,
@@ -62,21 +58,18 @@ import {
   Package,
   Package2,
   Search,
-  Settings,
   ShoppingCart,
   Truck,
   Users
 } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
-import { redirect } from 'next/navigation'
 
 export const metadata = {
   title: 'Dashboard'
 }
 
 export default async function DashboardPage() {
-  const user = await getCurrentUser()
-
   return (
     <div className='flex min-h-screen w-full flex-col bg-muted/40'>
       <aside className='fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r bg-background sm:flex'>
@@ -87,7 +80,7 @@ export default async function DashboardPage() {
           <Sheet>
             <SheetTrigger asChild>
               <Button variant='outline' className='sm:hidden'>
-                <Menu className='h-5 w-5' />
+                <Menu className='size-5' />
                 <span className='sr-only'>Toggle Menu</span>
               </Button>
             </SheetTrigger>
@@ -95,10 +88,10 @@ export default async function DashboardPage() {
               <nav className='grid gap-6 text-lg font-medium'>
                 <Link
                   href='#'
-                  className='group flex h-10 w-10 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:text-base'
+                  className='group flex size-10 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:text-base'
                   prefetch={false}
                 >
-                  <Package2 className='h-5 w-5 transition-all group-hover:scale-110' />
+                  <Package2 className='size-5 transition-all group-hover:scale-110' />
                   <span className='sr-only'>Acme Inc</span>
                 </Link>
                 <Link
@@ -106,7 +99,7 @@ export default async function DashboardPage() {
                   className='flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground'
                   prefetch={false}
                 >
-                  <Home className='h-5 w-5' />
+                  <Home className='size-5' />
                   Dashboard
                 </Link>
                 <Link
@@ -114,7 +107,7 @@ export default async function DashboardPage() {
                   className='flex items-center gap-4 px-2.5 text-foreground'
                   prefetch={false}
                 >
-                  <ShoppingCart className='h-5 w-5' />
+                  <ShoppingCart className='size-5' />
                   Orders
                 </Link>
                 <Link
@@ -122,7 +115,7 @@ export default async function DashboardPage() {
                   className='flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground'
                   prefetch={false}
                 >
-                  <Package className='h-5 w-5' />
+                  <Package className='size-5' />
                   Products
                 </Link>
                 <Link
@@ -130,7 +123,7 @@ export default async function DashboardPage() {
                   className='flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground'
                   prefetch={false}
                 >
-                  <Users className='h-5 w-5' />
+                  <Users className='size-5' />
                   Customers
                 </Link>
                 <Link
@@ -138,7 +131,7 @@ export default async function DashboardPage() {
                   className='flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground'
                   prefetch={false}
                 >
-                  <LineChart className='h-5 w-5' />
+                  <LineChart className='size-5' />
                   Settings
                 </Link>
               </nav>
@@ -168,7 +161,7 @@ export default async function DashboardPage() {
             </BreadcrumbList>
           </Breadcrumb>
           <div className='relative ml-auto flex-1 md:grow-0'>
-            <Search className='absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground' />
+            <Search className='absolute left-2.5 top-2.5 size-4 text-muted-foreground' />
             <Input
               type='search'
               placeholder='Search...'
@@ -181,7 +174,7 @@ export default async function DashboardPage() {
                 variant='outline'
                 className='overflow-hidden rounded-full'
               >
-                <img
+                <Image
                   src='/placeholder.svg'
                   width={36}
                   height={36}
@@ -259,7 +252,7 @@ export default async function DashboardPage() {
                         size='sm'
                         className='h-7 gap-1 text-sm'
                       >
-                        <Filter className='h-3.5 w-3.5' />
+                        <Filter className='size-3.5' />
                         <span className='sr-only sm:not-sr-only'>Filter</span>
                       </Button>
                     </DropdownMenuTrigger>
@@ -282,7 +275,7 @@ export default async function DashboardPage() {
                     variant='outline'
                     className='h-7 gap-1 text-sm'
                   >
-                    <File className='h-3.5 w-3.5' />
+                    <File className='size-3.5' />
                     <span className='sr-only sm:not-sr-only'>Export</span>
                   </Button>
                 </div>
@@ -488,9 +481,9 @@ export default async function DashboardPage() {
                     Order Oe31b70H
                     <Button
                       variant='outline'
-                      className='h-6 w-6 opacity-0 transition-opacity group-hover:opacity-100'
+                      className='size-6 opacity-0 transition-opacity group-hover:opacity-100'
                     >
-                      <Copy className='h-3 w-3' />
+                      <Copy className='size-' />
                       <span className='sr-only'>Copy Order ID</span>
                     </Button>
                   </CardTitle>
@@ -498,15 +491,15 @@ export default async function DashboardPage() {
                 </div>
                 <div className='ml-auto flex items-center gap-1'>
                   <Button size='sm' variant='outline' className='h-8 gap-1'>
-                    <Truck className='h-3.5 w-3.5' />
+                    <Truck className='size-3.5' />
                     <span className='lg:sr-only xl:not-sr-only xl:whitespace-nowrap'>
                       Track Order
                     </span>
                   </Button>
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                      <Button variant='outline' className='h-8 w-8'>
-                        <MoveVertical className='h-3.5 w-3.5' />
+                      <Button variant='outline' className='size-8'>
+                        <MoveVertical className='size-3.5' />
                         <span className='sr-only'>More</span>
                       </Button>
                     </DropdownMenuTrigger>
@@ -601,7 +594,7 @@ export default async function DashboardPage() {
                   <dl className='grid gap-3'>
                     <div className='flex items-center justify-between'>
                       <dt className='flex items-center gap-1 text-muted-foreground'>
-                        <CreditCard className='h-4 w-4' />
+                        <CreditCard className='size-4' />
                         Visa
                       </dt>
                       <dd>**** **** **** 4532</dd>
@@ -616,14 +609,14 @@ export default async function DashboardPage() {
                 <Pagination className='ml-auto mr-0 w-auto'>
                   <PaginationContent>
                     <PaginationItem>
-                      <Button variant='outline' className='h-6 w-6'>
-                        <ChevronLeft className='h-3.5 w-3.5' />
+                      <Button variant='outline' className='size-6'>
+                        <ChevronLeft className='size-3.5' />
                         <span className='sr-only'>Previous Order</span>
                       </Button>
                     </PaginationItem>
                     <PaginationItem>
-                      <Button variant='outline' className='h-6 w-6'>
-                        <ChevronRight className='h-3.5 w-3.5' />
+                      <Button variant='outline' className='size-6'>
+                        <ChevronRight className='size-3.5' />
                         <span className='sr-only'>Next Order</span>
                       </Button>
                     </PaginationItem>

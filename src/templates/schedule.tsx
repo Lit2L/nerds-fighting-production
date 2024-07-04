@@ -23,8 +23,8 @@ const Schedule: React.FC = () => {
         <div className='mt-16 flex flex-col justify-evenly gap-6 md:flex-row'>
           <div className='max-w-96 rounded-xl bg-background p-6 shadow-md transition-all duration-300 hover:scale-105'>
             <div className='flex items-center gap-4'>
-              <Circle className='h-8 w-8 text-orange-500' />
-              <h3 className='text-xl font-semibold'>Cardio Kickboxing</h3>
+              <Circle className='size-8 text-orange-500' />
+              <h3 className='text-xl font-semibold'>Flow State Kickboxing</h3>
             </div>
             <p className='mt-2 text-gray-500'>
               Learn the fundamentals of kickboxing in a supportive learning
@@ -33,14 +33,14 @@ const Schedule: React.FC = () => {
             <div className='mt-4 flex items-center justify-between'>
               <div className='flex flex-col gap-6'>
                 <div className='flex items-center gap-3'>
-                  <Calendar className='h-5 w-5 text-orange-500' />
-                  <span className='text-sm text-orange-500'>
+                  <Calendar className='size-5 text-orange-300' />
+                  <span className='text-sm text-orange-300'>
                     Mon - 9:00AM - 10:30AM
                   </span>
                 </div>
                 <div className='flex items-center gap-3'>
-                  <Calendar className='h-5 w-5 text-orange-500' />
-                  <span className='text-sm text-orange-500'>
+                  <Calendar className='size-5 text-orange-300' />
+                  <span className='text-sm text-orange-300'>
                     Wed - 9:00AM - 10:30AM
                   </span>
                 </div>
@@ -51,7 +51,7 @@ const Schedule: React.FC = () => {
 
           <div className='max-w-96 rounded-xl bg-white/80 p-6 shadow-md transition-all duration-300 hover:scale-105'>
             <div className='flex items-center gap-6'>
-              <Circle className='h-8 w-8 text-orange-500' />
+              <Circle className='size-8 text-orange-500' />
               <h3 className='text-xl font-semibold text-orange-950/90'>
                 Flow State Kickboxing
               </h3>
@@ -63,13 +63,13 @@ const Schedule: React.FC = () => {
             <div className='mt-4 flex items-center justify-between'>
               <div className='flex flex-col gap-3'>
                 {/* <div className='flex items-center gap-3'>
-                    <Calendar className='h-5 w-5 text-gray-900' />
+                    <Calendar className='size-5 text-gray-900' />
                     <span className='font-heading text-sm text-gray-500'>
                       Tue - 12:00 AM
                     </span>
                   </div> */}
                 <div className='flex items-center gap-3'>
-                  <Calendar className='h-5 w-5 text-gray-500' />
+                  <Calendar className='size-5 text-gray-500' />
                   <span className='font-heading text-sm text-gray-500'>
                     Sat - 8:00 AM
                   </span>

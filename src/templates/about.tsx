@@ -1,4 +1,5 @@
 import { AspectRatio } from '../components/ui/aspect-ratio'
+import { Badge } from '@/components/ui/badge'
 import { CheckCircle } from 'lucide-react'
 import Image from 'next/image'
 
@@ -81,19 +82,21 @@ export const About = () => {
                     <Image
                       src={card.image}
                       alt={card.title}
-                      className='rounded-lg object-cover '
-                      layout='fill'
+                      className='fill rounded-lg object-cover'
+                      height={350}
+                      width={350}
                     />
                   </AspectRatio>
                 </div>
                 <div className='font flex w-[300px] flex-col space-y-3'>
-                  <div className='flex w-full translate-x-6 gap-3'>
-                    <CheckCircle className='h-6 w-6 text-orange-500' />
+                  <Badge className='mx-auto ml-6 text-xs font-semibold leading-6 '>
+                    {card.info}
+                  </Badge>
+                  <div className='flex w-full translate-x-6 gap-3 pt-3'>
+                    <CheckCircle className='size-6 text-orange-500' />
                     <h3 className='font-heading text-lg'>{card.title}</h3>
                   </div>
-                  <p className='ml-6 text-sm font-light leading-6 dark:text-white'>
-                    {card.info}
-                  </p>
+
                   <p className='ml-6 text-sm font-light leading-6 dark:text-white'>
                     {card.description}
                   </p>
@@ -102,16 +105,17 @@ export const About = () => {
             ) : (
               <div className='flex flex-col-reverse gap-16 md:flex-row '>
                 <div className='flex w-[300px] flex-col justify-center space-y-3'>
+                  <Badge className='mx-auto ml-6 text-xs font-semibold leading-6'>
+                    {card.info}
+                  </Badge>
+
                   <div className='flex gap-3'>
-                    <div className='flex translate-x-6  gap-3'>
-                      <CheckCircle className='h-6 w-6 text-orange-500' />
+                    <div className='flex translate-x-6 gap-3 pt-3'>
+                      <CheckCircle className='size-6 text-orange-500' />
                       <h3 className='font-heading text-lg'>{card.title}</h3>
                     </div>
                   </div>
                   <div>
-                    <p className='ml-6 text-sm font-light leading-6 text-black dark:text-white'>
-                      {card.info}
-                    </p>
                     <p className='ml-6 text-sm font-light leading-6 text-black dark:text-white'>
                       {card.description}
                     </p>

@@ -1,10 +1,9 @@
 import { MainNav } from '@/components/main-nav'
-import { DashboardNav } from '@/components/nav'
 import { SiteFooter } from '@/components/site-footer'
 import { UserAccountNav } from '@/components/user-account-nav'
 import { dashboardConfig } from '@/config/dashboard'
 import { getCurrentUser } from '@/lib/session'
-import { notFound, redirect } from 'next/navigation'
+import { redirect } from 'next/navigation'
 
 interface DashboardLayoutProps {
   children?: React.ReactNode

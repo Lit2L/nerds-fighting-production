@@ -12,7 +12,7 @@ export async function AnimatedMembersButton() {
         )}
       >
         <AnimatedShinyText className='inline-flex h-6 w-36 items-center justify-center text-white/50 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400 md:h-9 md:w-56'>
-          <span className='mr-3 scale-75 scale-x-[-1] transition-transform ease-in-out group-hover:translate-x-3'>
+          <span className='mr-3 scale-75 -scale-x-100 transition-transform ease-in-out group-hover:translate-x-3'>
             🔔
           </span>
           <span className='font-garamond text-xs font-bold uppercase  '>

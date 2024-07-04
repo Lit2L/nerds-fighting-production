@@ -1,7 +1,6 @@
 'use client'
 
 import Logo from './Logo'
-import { ThemeToggleButton } from './lit2l/ThemeToggleButton'
 import { Button } from './ui/button'
 import { Icons } from '@/components/icons'
 import { MobileNav } from '@/components/mobile-nav'
