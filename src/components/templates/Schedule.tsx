@@ -2,7 +2,7 @@
 
 import { Calendar, Circle } from 'lucide-react'
 
-export function Schedule() {
+const Schedule: React.FC = () => {
   return (
     <section
       id='schedule'
@@ -87,3 +87,5 @@ export function Schedule() {
     </section>
   )
 }
+
+export default Schedule
