@@ -1,7 +1,7 @@
-import { About } from '@/components/templates/about'
-import { Community } from '@/components/templates/community'
-import { Hero } from '@/components/templates/hero'
-import Schedule from '@/components/templates/schedule'
+import { About } from '@/templates/about'
+import { Community } from '@/templates/community'
+import { Hero } from '@/templates/hero'
+import Schedule from '@/templates/schedule'
 
 export default function IndexPage() {
   return (

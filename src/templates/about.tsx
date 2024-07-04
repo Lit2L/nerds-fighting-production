@@ -1,4 +1,4 @@
-import { AspectRatio } from '../ui/aspect-ratio'
+import { AspectRatio } from '../components/ui/aspect-ratio'
 import { CheckCircle } from 'lucide-react'
 import Image from 'next/image'
 
