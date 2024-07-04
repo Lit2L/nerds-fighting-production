@@ -77,55 +77,6 @@ export const metadata = {
 export default async function DashboardPage() {
   const user = await getCurrentUser()
 
-  if (!user) {
-    redirect(authOptions?.pages?.signIn || '/login')
-  }
-
-  const posts = await api.post.getAll.query()
-
-  const payments = await db.payment.findMany({
-    where: {
-      isPaid: true,
-      createdAt: {
-        gte: new Date(new Date().setDate(new Date().getDate() - 7))
-      }
-    },
-    orderBy: {
-      createdAt: 'desc'
-    },
-    include: {
-      user: true,
-      billingAddress: true
-    }
-  })
-
-  const lastWeekSum = await db.payment.aggregate({
-    where: {
-      isPaid: true,
-      createdAt: {
-        gte: new Date(new Date().setDate(new Date().getDate() - 7))
-      }
-    },
-    _sum: {
-      amount: true
-    }
-  })
-
-  const lastMonthSum = await db.payment.aggregate({
-    where: {
-      isPaid: true,
-      createdAt: {
-        gte: new Date(new Date().setDate(new Date().getDate() - 30))
-      }
-    },
-    _sum: {
-      amount: true
-    }
-  })
-
-  const WEEKLY_GOAL = 500
-  const MONTHLY_GOAL = 2500
-
   return (
     <div className='flex min-h-screen w-full flex-col bg-muted/40'>
       <aside className='fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r bg-background sm:flex'>
