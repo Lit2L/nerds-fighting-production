@@ -8,16 +8,16 @@ const featureCards = [
     id: 0,
     title: 'Private Coaching',
     description:
-      'Learning technique through private lessons is an excellent approach suitable for beginners to experienced swimmers as it allows for personalized instruction based on your ability level and swimming objectives.',
+      'Learning technique through private lessons is an excellent approach suitable for beginners to experienced kickboxers as it allows for personalized instruction based on your ability level and goals.',
     info: '30 OR 60 MINS - ALL AGES. ALL LEVELS.',
-    image: '/assets/8.jpg',
+    image: '/assets/3.jpg',
     icon: '🥷🥋🏅🏆🏊🏄‍♀️'
   },
   {
     id: 1,
     title: 'Video Analysis',
     description:
-      'Visually analyze your swimming technique and fast-track the learning process. Pinpoint areas for improvement and get a deeper understanding of swimming mechanics to help make rapid progress toward your goals.',
+      'Visually analyze your technique and fast-track the learning process. Pinpoint areas for improvement and get a deeper understanding of fight mechanics to help make rapid progress toward your goals.',
     info: '30 OR 60 MINS - ALL AGES. ALL LEVELS.',
     image: '/assets/10.jpg',
     icon: '💪'
@@ -26,7 +26,7 @@ const featureCards = [
     id: 2,
     title: 'Flow State Practice',
     description:
-      'Join a laid-back community of zen-minded martial artists and immerse yourself in the state of flow with daily group training, weekly stroke clinics, and monthly open water swims - all ages and levels welcome.',
+      'Join a laid-back community of zen-minded martial artists and immerse yourself in the state of flow with daily group training, weekly focus clinics, and monthly weekly outdoor workouts - all ages and levels welcome.',
     info: '60 - 90 MINS - ALL AGES. ALL LEVELS.',
     image: '/assets/6.jpg',
 
@@ -46,7 +46,7 @@ const featureCards = [
     description:
       'Train as the ancient warriors have done for centuries. Our outdoor training sessions are designed to help you connect with nature, improve your fitness, and build mental toughness.',
     info: '60 - 90 MINS - ALL AGES. ALL LEVELS.',
-    image: '/assets/nobullyzone.png',
+    image: '/assets/beach.webp',
     icon: '🚫'
   }
 ]
