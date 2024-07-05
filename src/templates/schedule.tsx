@@ -6,9 +6,9 @@ const Schedule: React.FC = () => {
   return (
     <section
       id='schedule'
-      className=' relative min-h-screen w-full  bg-[radial-gradient(circle_300px_at_50%_350px,#AA8822,transparent)] py-20'
+      className=' relative min-h-full w-full  bg-[radial-gradient(circle_300px_at_50%_350px,#AA8822,transparent)] py-36'
     >
-      <div className='container mx-auto flex flex-col items-center justify-center '>
+      <div className='container mx-auto flex flex-col items-center justify-center'>
         <div className='space-y-9 text-center '>
           <div className='inline-block rounded-lg bg-orange-100 px-3 py-1 text-sm text-orange-500'>
             Class Schedule

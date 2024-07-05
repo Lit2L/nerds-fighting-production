@@ -1,18 +1,21 @@
 import { AspectRatio } from '../components/ui/aspect-ratio'
 import { Badge } from '@/components/ui/badge'
-import { CheckCircle } from 'lucide-react'
 import Image from 'next/image'
+import { CiVideoOn } from 'react-icons/ci'
+import { GiTeacher, GiWhistle, GiYinYang } from 'react-icons/gi'
+import { PiParkDuotone } from 'react-icons/pi'
 
 const featureCards = [
   {
     id: 0,
-    title: 'Private Coaching',
+    title: 'Flow State Practice',
     description:
-      'Learning technique through private lessons is an excellent approach suitable for beginners to experienced kickboxers as it allows for personalized instruction based on your ability level and goals.',
-    info: '30 OR 60 MINS - ALL AGES. ALL LEVELS.',
-    image: '/assets/3.jpg',
-    icon: '🥷🥋🏅🏆🏊🏄‍♀️'
+      'Join a laid-back community of zen-minded martial artists and immerse yourself in the state of flow with daily group training.  Our sessions include a mix of body weight exercises, boxing mitts training, thai pads bag work and more.',
+    info: '60 - 90 MINS - ALL AGES. ALL LEVELS.',
+    image: '/assets/6.jpg',
+    icon: <GiYinYang className='size-6 text-sky-600' />
   },
+
   {
     id: 1,
     title: 'Video Analysis',
@@ -20,17 +23,16 @@ const featureCards = [
       'Visually analyze your technique and fast-track the learning process. Pinpoint areas for improvement and get a deeper understanding of fight mechanics to help make rapid progress toward your goals.',
     info: '30 OR 60 MINS - ALL AGES. ALL LEVELS.',
     image: '/assets/10.jpg',
-    icon: '💪'
+    icon: <CiVideoOn className='size-6 text-red-800' />
   },
   {
     id: 2,
-    title: 'Flow State Practice',
+    title: 'Private Coaching',
     description:
-      'Join a laid-back community of zen-minded martial artists and immerse yourself in the state of flow with daily group training, weekly focus clinics, and monthly weekly outdoor workouts - all ages and levels welcome.',
-    info: '60 - 90 MINS - ALL AGES. ALL LEVELS.',
-    image: '/assets/6.jpg',
-
-    icon: '💪'
+      'Learning technique through private lessons is an excellent approach suitable for beginners to experienced kickboxers as it allows for personalized instruction based on your ability level and goals.',
+    info: '30 OR 60 MINS - ALL AGES. ALL LEVELS.',
+    image: '/assets/3.jpg',
+    icon: <GiWhistle className='size-6 text-blue-800' />
   },
   {
     id: 3,
@@ -38,16 +40,16 @@ const featureCards = [
     description: 'Your future self will thank you more than you can imagine.',
     info: '30 - ALL AGES. BEGINNERS.',
     image: '/assets/seniorkickboxer.png',
-    icon: '🎋'
+    icon: <GiTeacher className='size-6 text-red-500' />
   },
   {
     id: 4,
     title: 'Outdoor Training',
     description:
-      'Train as the ancient warriors have done for centuries. Our outdoor training sessions are designed to help you connect with nature, improve your fitness, and build mental toughness.',
+      'Train as the warriors of the past have done for centuries. Our outdoor training sessions are designed to help you connect with nature, improve your fitness, and build mental toughness. ',
     info: '60 - 90 MINS - ALL AGES. ALL LEVELS.',
     image: '/assets/beach.webp',
-    icon: '🚫'
+    icon: <PiParkDuotone className='size-6 text-green-500' />
   }
 ]
 
@@ -57,16 +59,16 @@ export const About = () => {
       id='about'
       className='bg-[radial-gradient (circle_500px_at_50%_200px,#181818,transparent)] container mx-auto py-20 '
     >
-      <div className='mx-auto my-12 flex max-w-[58rem] flex-col items-center justify-center space-y-16 text-center'>
+      <div className='mx-auto my-12 flex max-w-[58rem] flex-col items-center justify-center space-y-9 text-center'>
         <h2 className='text-left font-heading text-3xl font-bold leading-[1.1] md:text-3xl'>
-          Who We Are
+          Our Philosophy
         </h2>
-        <p className='max-w-[85%] py-6 text-left font-heading text-sm leading-normal dark:text-white sm:text-center md:leading-8'>
-          TigerClub has a vision to bring high quality martial arts training to
-          people of all fitness and skill levels. We specialize in achieving
-          Whether your goals is to improve your health & fitness, practice
-          martial arts and self defense, or to gain confidence and mental
-          toughness, we all work together as a team to get there.
+        <p className='md:text-md text-md max-w-[85%] py-6 text-left font-heading leading-normal dark:text-white sm:text-center md:leading-8'>
+          Welcome to Flow State Kickboxing, where we believe in harnessing the
+          power of flow state to elevate your martial arts skill and enjoyment.
+          At our gym, we focus on creating an environment that fosters mental
+          clarity, quick reaction time, physical agility, and spiritual balance,
+          enabling our members to experience the true essence of kickboxing.
         </p>
       </div>
       <div className='flex w-full flex-col gap-16 space-y-12'>
@@ -93,7 +95,9 @@ export const About = () => {
                     {card.info}
                   </Badge>
                   <div className='flex w-full translate-x-6 gap-3 pt-3'>
-                    <CheckCircle className='size-6 text-orange-500' />
+                    <span className=''></span>
+                    {card.icon}
+
                     <h3 className='font-heading text-lg'>{card.title}</h3>
                   </div>
 
@@ -111,7 +115,7 @@ export const About = () => {
 
                   <div className='flex gap-3'>
                     <div className='flex translate-x-6 gap-3 pt-3'>
-                      <CheckCircle className='size-6 text-orange-500' />
+                      {card.icon}
                       <h3 className='font-heading text-lg'>{card.title}</h3>
                     </div>
                   </div>
