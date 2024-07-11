@@ -1,4 +1,4 @@
-import { type DocsConfig } from '@/types'
+import { type DocsConfig } from '@/types/index.d'
 
 export const docsConfig: DocsConfig = {
   mainNav: [

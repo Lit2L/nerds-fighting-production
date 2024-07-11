@@ -70,19 +70,23 @@ model Session {
 }
 
 model User {
-  id            String          @id @default(cuid())
-  name          String?
-  email         String?         @unique
-  emailVerified DateTime?
-  image         String?
-  passStatus    FreePassStatus? @default(unclaimed)
-  createdAt     DateTime        @default(now()) @map(name: "created_at")
-  updatedAt     DateTime        @default(now()) @map(name: "updated_at")
+  id             String          @id @default(cuid())
+  name           String?
+  email          String?         @unique
+  emailVerified  DateTime?
+  image          String?
+  hashedPassword String?
+  passStatus     FreePassStatus? @default(unclaimed)
+  createdAt      DateTime        @default(now()) @map(name: "created_at")
+  updatedAt      DateTime        @default(now()) @map(name: "updated_at")
+  favoriteIds    String[]
 
-  accounts Account[]
-  sessions Session[]
-  posts    Post[]
-  Payment  Payment[]
+  accounts     Account[]
+  listings     Listing[]
+  reservations Reservation[]
+  sessions     Session[]
+  posts        Post[]
+  Payment      Payment[]
 
   stripeCustomerId       String?   @unique @map(name: "stripe_customer_id")
   stripeSubscriptionId   String?   @unique @map(name: "stripe_subscription_id")
@@ -90,6 +94,44 @@ model User {
   stripeCurrentPeriodEnd DateTime? @map(name: "stripe_current_period_end")
 
   @@map(name: "users")
+}
+
+model Listing {
+  id           String   @id @default(cuid())
+  title        String
+  description  String
+  imageSrc     String
+  category     String
+  time         String?
+  studentCount Int?
+  price        Int
+  featureOne   String
+  featureTwo   String
+  featureThree String
+  userId       String
+  createdAt    DateTime @default(now()) @map(name: "created_at")
+  updatedAt    DateTime @default(now()) @map(name: "updated_at")
+
+  user         User          @relation(fields: [userId], references: [id])
+  reservations Reservation[]
+
+  @@map(name: "listings")
+}
+
+model Reservation {
+  id         String    @id @default(cuid())
+  userId     String
+  listingId  String
+  startDate  DateTime
+  endDate    DateTime
+  totalPrice Float
+  createdAt  DateTime
+  startTime  DateTime
+  endTime    DateTime?
+  user       User      @relation(fields: [userId], references: [id])
+  listing    Listing   @relation(fields: [listingId], references: [id])
+
+  @@map(name: "reservations")
 }
 
 model Payment {

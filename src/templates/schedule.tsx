@@ -6,31 +6,45 @@ import Link from 'next/link'
 const classes = [
   {
     id: 1,
-    title: 'Basics and Fundamentals',
-    description: 'Learn basic fundamentals or strengthen your foundation.',
-    schedule: [{ day: 'Mon', time: '8:00am - 9:30am' }]
+    title: 'Mondays',
+    description: 'Focus on basics and fundamentals',
+    level: 'Beginner level and All levels welcome',
+    schedule: [
+      {
+        day: 'Mon',
+        time: '8:00am - 9:30am',
+        level: 'Beginners, All levels welcome'
+      },
+      { day: 'Mon', time: '9:00am - 10:30am', level: 'Intermediate++' }
+    ]
   },
   {
     id: 2,
-    title: 'Flow State Kickboxing',
-    level: 'Intermediate, Advanced++',
+    title: 'Tuesdays',
+    level: 'Intermediate Level and Experienced',
     description:
-      'Technique, conditioning, drills, pads, mitts, everything. Join a group of easy going martial artists focused on health, skill and longevity.',
-    schedule: [{ day: 'Mon', time: '9:00am - 10:30am' }]
+      'Join us for a weekly Technique, conditioning, drills, pads, mitts, everything. Join a group of easy going martial artists focused on health, skill and longevity.',
+    schedule: [{ day: 'Mon', time: '9:00am - 10:30am', level: 'All levels' }]
   },
   {
     id: 3,
-    title: 'Flow State Kickboxing',
+    title: 'Wednesdays',
     description:
       'Train your cardio and strength in a group of as a group in a fun but challenging hour of cardio kickboxing.',
-    schedule: [{ day: 'Sat', time: '8:00AM' }]
+    schedule: [
+      {
+        day: 'Wed',
+        time: '9:00am - 10:30am',
+        level: 'Intermediate or Experienced++'
+      }
+    ]
   },
   {
     id: 4,
-    title: 'Flow State Kickboxing',
+    title: 'Saturdays',
     description:
       'Train your cardio and strength in a group of as a group in a fun but challenging hour of cardio kickboxing.',
-    schedule: [{ day: 'Sat', time: '8:00AM' }]
+    schedule: [{ day: 'Sat', time: '8:00AM', level: 'All levels' }]
   }
 ]
 
@@ -68,12 +82,15 @@ const Schedule: React.FC = () => {
                   <div className='flex flex-col gap-6'>
                     {item.schedule &&
                       item.schedule.map((schedule, index) => (
-                        <div key={index} className='flex items-center gap-3'>
-                          <Calendar className='size-5 text-orange-300' />
-                          <span className='text-sm text-orange-300'>
-                            {schedule.day} - {schedule.time}
-                          </span>
-                        </div>
+                        <>
+                          <div key={index} className='flex items-center gap-3'>
+                            <Calendar className='size-5 text-orange-300' />
+                            <span className='text-sm text-orange-300'>
+                              {schedule.day} - {schedule.time}
+                            </span>
+                          </div>
+                          <p className='text-sm text-gray-500'>{item.level}</p>
+                        </>
                       ))}
                   </div>
                   <Link href='/dashboard/billing'>Join Class</Link>

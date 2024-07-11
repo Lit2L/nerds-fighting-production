@@ -1,7 +1,7 @@
 'use client'
 
 import { cn } from '@/lib/utils'
-import { type SidebarNavItem } from '@/types'
+import { type SidebarNavItem } from '@/types/index.d'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 

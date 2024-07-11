@@ -6,7 +6,7 @@ export async function AnimatedPassButton() {
   return (
     <div className='z-10'>
       <Link
-        href='/'
+        href='/pricing'
         className={cn(
           'group w-36 scale-100 rounded-lg border-4 border-black/5 bg-neutral-600 transition-all ease-in hover:scale-95 hover:cursor-pointer hover:border-double hover:border-orange-900 hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800 md:w-56'
         )}

@@ -6,6 +6,7 @@ import { AnimatedPassButton } from '../components/lit2l/AnimatedPassButton'
 import { FlipWordsComponent } from '../components/lit2l/FlipWordsComponent'
 import GradualSpacing from '../components/lit2l/gradual-spacing'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export const Hero = () => {
   return (
@@ -37,6 +38,7 @@ export const Hero = () => {
 
         <div className='flex translate-y-3 gap-3 md:space-x-12'>
           <AnimatedPassButton />
+
           <AnimatedMembersButton />
         </div>
       </div>

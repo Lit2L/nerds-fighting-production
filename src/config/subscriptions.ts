@@ -1,5 +1,5 @@
 import { env } from '@/env.js'
-import { type SubscriptionPlan } from '@/types'
+import { type SubscriptionPlan } from '@/types/index.d'
 
 export const freePlan: SubscriptionPlan = {
   name: 'Free',

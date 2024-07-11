@@ -1,8 +1,8 @@
 // TODO: Fix this when we turn strict mode on.
 
+import { UserSubscriptionPlan } from '../types/index.d'
 import { freePlan, proPlan } from '@/config/subscriptions'
-import { db } from '@/lib/db'
-import { type UserSubscriptionPlan } from '@/types'
+import { db } from '@/server/db'
 import { redirect } from 'next/navigation'
 
 export async function getUserSubscriptionPlan(
@@ -36,10 +36,8 @@ export async function getUserSubscriptionPlan(
   return {
     ...plan,
     ...user,
-    // @ts-expect-error assign
     // eslint-disable-next-line @typescript-eslint/no-unsafe-call
     stripeCurrentPeriodEnd: user.stripeCurrentPeriodEnd?.getTime(),
-    // @ts-expect-error construction
     isPro
   }
 }

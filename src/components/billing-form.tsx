@@ -1,5 +1,6 @@
 'use client'
 
+import { type UserSubscriptionPlan } from '../types/index.d'
 import { Icons } from '@/components/icons'
 import { buttonVariants } from '@/components/ui/button'
 import {
@@ -12,7 +13,6 @@ import {
 } from '@/components/ui/card'
 import { toast } from '@/components/ui/use-toast'
 import { cn, formatDate } from '@/lib/utils'
-import { type UserSubscriptionPlan } from '@/types'
 import * as React from 'react'
 
 interface BillingFormProps extends React.HTMLAttributes<HTMLFormElement> {

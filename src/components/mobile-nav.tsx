@@ -2,7 +2,7 @@ import Logo from './Logo'
 import { siteConfig } from '@/config/site'
 import { useLockBody } from '@/hooks/use-lock-body'
 import { cn } from '@/lib/utils'
-import { type MainNavItem } from '@/types'
+import { type MainNavItem } from '@/types/index.d'
 import Link from 'next/link'
 import * as React from 'react'
 

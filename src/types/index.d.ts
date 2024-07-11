@@ -1,4 +1,4 @@
-import { type Icons } from '@/components/icons'
+import { type Icons } from '../components/icons'
 import { type User } from '@prisma/client'
 
 // import type { Icon } from 'lucide-react'
@@ -23,7 +23,7 @@ export type SidebarNavItem = {
     }
   | {
       href?: string
-      items: NavLink[]
+      items: NavItem[]
     }
 )
 

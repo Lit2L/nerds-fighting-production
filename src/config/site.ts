@@ -1,4 +1,4 @@
-import { type SiteConfig } from '@/types'
+import { type SiteConfig } from '@/types/index.d'
 
 export const siteConfig: SiteConfig = {
   name: 'TigerClub Kickboxing',

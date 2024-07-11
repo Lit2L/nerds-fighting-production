@@ -1,6 +1,6 @@
 import { env } from '@/env.js'
-import { db } from '@/lib/db'
 import { stripe } from '@/lib/stripe'
+import { db } from '@/server/db'
 import { headers } from 'next/headers'
 import type Stripe from 'stripe'
 
