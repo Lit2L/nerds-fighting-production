@@ -87,10 +87,10 @@ model User {
   posts        Post[]
   payments     Payment[]
 
-  stripeCustomerId       String? @unique
-  stripeSubscriptionId   String? @unique
+  stripeCustomerId       String?   @unique
+  stripeSubscriptionId   String?   @unique
   stripePriceId          String?
-  stripeCurrentPeriodEnd String?
+  stripeCurrentPeriodEnd DateTime?
 
   @@map(name: "users")
 }
