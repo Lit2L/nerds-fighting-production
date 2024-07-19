@@ -1,11 +1,15 @@
 /** @type {import('prettier').Config & import('prettier-plugin-tailwindcss').PluginOptions & import('@ianvs/prettier-plugin-sort-imports').PluginConfig} } */
 const config = {
-  endOfLine: 'lf',
   semi: false,
   singleQuote: true,
   jsxSingleQuote: true,
   tabWidth: 2,
   trailingComma: 'none',
+  arrowParens: 'always',
+  bracketSpacing: true,
+  jsxBracketSameLine: false,
+  printWidth: 100,
+
   importOrderSeparation: false,
   importOrderSortSpecifiers: true,
   importOrderBuiltinModulesToTop: true,

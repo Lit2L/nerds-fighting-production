@@ -21,10 +21,10 @@ const classes = [
   {
     id: 2,
     title: 'Tuesdays',
-    level: 'Intermediate Level and Experienced',
+    level: 'All levels',
     description:
-      'Join us for a weekly Technique, conditioning, drills, pads, mitts, everything. Join a group of easy going martial artists focused on health, skill and longevity.',
-    schedule: [{ day: 'Mon', time: '9:00am - 10:30am', level: 'All levels' }]
+      'Join us for a weekly session focused on technique, conditioning, drills while enjoying the open air.',
+    schedule: [{ day: 'Tuesday', time: '6:00pm - 7:00pm', level: 'All levels' }]
   },
   {
     id: 3,
@@ -71,7 +71,7 @@ const Schedule: React.FC = () => {
             classes.map((item, index) => (
               <div
                 key={item.id}
-                className='max-w-96 rounded-xl bg-background p-6 shadow-md transition-all duration-300 hover:scale-105'
+                className='max-w-96 rounded-xl bg-black/60 p-6 shadow-md transition-all duration-300 hover:scale-105'
               >
                 <div className='flex items-center gap-4'>
                   <Circle className='size-6 text-orange-500' />
@@ -90,10 +90,12 @@ const Schedule: React.FC = () => {
                             </span>
                           </div>
                           <p className='text-sm text-gray-500'>{item.level}</p>
+                          <Link href='https://calendly.com/larryly1/private-coaching?month=2024-07'>
+                            Join Class
+                          </Link>
                         </>
                       ))}
                   </div>
-                  <Link href='/dashboard/billing'>Join Class</Link>
                 </div>
               </div>
             ))}

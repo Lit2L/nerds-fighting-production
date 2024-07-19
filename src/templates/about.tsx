@@ -8,12 +8,12 @@ import { PiParkDuotone } from 'react-icons/pi'
 const featureCards = [
   {
     id: 0,
-    title: 'Flow State Practice',
+    title: 'Private Coaching',
     description:
-      'Join a laid-back community of zen-minded martial artists and immerse yourself in the state of flow with daily group training.  Our sessions include a mix of body weight exercises, boxing mitts training, thai pads bag work and more.',
-    info: '60 - 90 MINS - ALL AGES. ALL LEVELS.',
-    image: '/assets/6.jpg',
-    icon: <GiYinYang className='size-6 text-sky-600' />
+      'Learning technique through private lessons is an excellent approach suitable for beginners to experienced kickboxers as it allows for personalized instruction based on your ability level and goals. ',
+    info: '60 MINS - ALL AGES. ALL LEVELS.',
+    image: '/assets/3.jpg',
+    icon: <GiWhistle className='size-6 text-blue-800' />
   },
 
   {
@@ -27,17 +27,18 @@ const featureCards = [
   },
   {
     id: 2,
-    title: 'Private Coaching',
+    title: 'Flow State Practice',
     description:
-      'Learning technique through private lessons is an excellent approach suitable for beginners to experienced kickboxers as it allows for personalized instruction based on your ability level and goals.',
-    info: '30 OR 60 MINS - ALL AGES. ALL LEVELS.',
-    image: '/assets/3.jpg',
-    icon: <GiWhistle className='size-6 text-blue-800' />
+      'Join a laid-back community of zen-minded martial artists and immerse yourself in the state of flow with daily group trainings.  Our sessions include a mix of dynamic body weight exercises, drills, mitts, thai pads, heavy bag work and more.',
+    info: '60 - 90 MINS - ALL AGES. ALL LEVELS.',
+    image: '/assets/6.jpg',
+    icon: <GiYinYang className='size-6 text-sky-600' />
   },
   {
     id: 3,
-    title: 'Hands-On Lessons',
-    description: 'Your future self will thank you more than you can imagine.',
+    title: 'Cardio Kickboxing Sessions',
+    description:
+      'A high energy, dynamic hour of kickboxing.  Your future self will thank you more than you can imagine.',
     info: '30 - ALL AGES. BEGINNERS.',
     image: '/assets/seniorkickboxer.png',
     icon: <GiTeacher className='size-6 text-red-500' />
@@ -61,64 +62,24 @@ export const About = () => {
     >
       <div className='mx-auto my-12 flex max-w-[58rem] flex-col items-center justify-center space-y-9 text-center'>
         <h2 className='text-left font-heading text-3xl font-bold leading-[1.1] md:text-3xl'>
-          Welcome to NerF Kickboxing Club.
+          Welcome to TigerClub Kickboxing.
         </h2>
         <p className='md:text-md text-md max-w-[85%] py-6 text-left font-heading leading-normal dark:text-white sm:text-center md:leading-8'>
-          We want people of all ages and backgrounds to experience the
-          transformation that comes from training like a martial artist. Nothing
-          else allows you to let go, release and relax your mind. Get fit, gain
-          practical strength, and help you build a skillset that fosters self
-          confidence. Our unique training style utilizes the practice of
-          multiple martial arts and training techniques designed to be fun,
-          challenge your body, keep your mind engaged and most importantly
-          improve the lives of our members.
+          TigerClub Kickboxing is dedicated to the Free, Creative Martial Artist. We take what is
+          useful and we start the development of our martial artists from there. We understand the
+          majority of people who train are not looking to become professional fighters. Our purpose
+          isn&apos;t to throw you in the ring and hope for the best. Your health and longevity is
+          our main priority. We believe that everyone should have the opportunity to train and
+          develop as a fighter and to enjoy the benefits of having a skillset that can potentially
+          save your life. Not only do we teach you how to train, we teach you how to train others. A
+          skill that you can carry with you for the rest of your life. We offer a safe and fun
+          environment for our members to learn, train hard and geek out on all things martial arts.
         </p>
       </div>
-      {/* <div>
-        <p>
-        We train, We endure, We level up. We
-          are a kickboxing gym focused on transferring the all the amazing
-          benefits from the practice of staying true to philosophies that foster
-          respect, discipline, self improvement, confidence, focus, humbleness,
-          emotional control and more. Our members come from all types of
-          different backgrounds all joined together through the love for kicking
-          ass.
-Welcome to NFK Gym. When people hear words like martial arts and kickboxing, images of fighting usually come up. We know how intimidating it can be to join a martial arts gym. Since we've all felt the same, we'd like to calm your worries as our first priority here is safety and longevity.
-          of staying true to philosophies that foster respect, discipline, self improvement, confidence, focus, humbleness, emotional control and more. Our members come from all types of different backgrounds all joined together through the love for kicking ass. that watching fights, enjoying your favorite martial arts movie   e have a different vision 'd like to offer an alternate
-e focus on creating an environment that fosters mental clarity, quick reaction time, physical agility, and spiritual balance, enabling our members to experience the true essence of kickboxing.
-        the bullied, We are the underestimated, We are the kids that watched
-          too many kung-fu movies, We are the ones hosting fight nights because
-          we love talking and debating about matchups, We are the anime fans who
-          imagine themselves defeating the great danger that threatens the
-          world. We are
-          the ones who found a home in martial arts.
-          sheath the sword. The benefits a of martial arts lifestyle are
-          countless and keeping the life skills, abilities and the experience of
-          joining a community of normal people who love living life in a strong,
-          skilled and healthy body that exudes a warriors calm confidence.
-          improve ourselves and help improve others. Where we believe in
-          harnessing the power of flow state to elevate your martial arts skill
-          and enjoyment. At our gym, we focus on creating an environment that
-          fosters mental clarity, quick reaction time, physical agility, and
-          spiritual balance, enabling our members to experience the true essence
-          of kickboxing. When people hear words like martial arts and kickboxing
-          gym, mental images of intense fighters knocking each other out and
-          giving each other consussions. fighting usually come up. We know how
-          intimidating it can be to join a martial arts gym. Since we've all
-          felt the same, we'd like to calm your worries as our first priority
-          here is safety and longevity. that watching fights, enjoying your
-          favorite martial arts movie e have a different vision 'd like to offer
-          an alternate e focus on creating an environment that fosters mental
-          clarity, quick reaction time, physical agility, and spiritual balance,
-          enabling our members to experience the true essence of kickboxing.
-        </p>
-      </div> */}
+
       <div className='flex w-full flex-col gap-16 space-y-12'>
         {featureCards.map((card) => (
-          <div
-            key={card.id}
-            className='flex flex-col items-center justify-center gap-12 px-9'
-          >
+          <div key={card.id} className='flex flex-col items-center justify-center gap-12 px-9'>
             {card.id % 2 === 0 ? (
               <div className='flex flex-col gap-16 md:flex-row '>
                 <div className='md:w-[350px]'>
