@@ -1,18 +1,12 @@
+'use client'
+
 import React from 'react'
+import { InlineWidget } from 'react-calendly'
 
 const Bookings = () => {
   return (
-    <div className='py-16'>
-      <div
-        className='calendly-inline-widget h-[700px] min-w-[320px]'
-        data-url='https://calendly.com/larryly1'
-        style={{ minWidth: '320px', height: '700px' }}
-      ></div>
-      <script
-        type='text/javascript'
-        src='https://assets.calendly.com/assets/external/widget.js'
-        async
-      ></script>
+    <div className='my-16 h-full py-16'>
+      <InlineWidget url='https://calendly.com/larryly1' />
     </div>
   )
 }
