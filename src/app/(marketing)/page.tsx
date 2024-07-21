@@ -1,4 +1,5 @@
 import { About } from '@/templates/about'
+import Benefits from '@/templates/benefits'
 import Bookings from '@/templates/bookings'
 import { Community } from '@/templates/community'
 import { Hero } from '@/templates/hero'
@@ -10,6 +11,7 @@ export default function IndexPage() {
       <Hero />
       <About />
       <Schedule />
+      <Benefits />
       <Bookings />
       <Community />
     </div>

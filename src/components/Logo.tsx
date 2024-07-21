@@ -1,4 +1,4 @@
-import Logos from '../../public/assets/TigerLogo.png'
+import Logos from '../../public/2.png'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -7,7 +7,7 @@ function Logo() {
     <Link href='/' className=''>
       <Image
         src={Logos}
-        alt='Tiger Club Kickboxing'
+        alt='Nerds Kickboxing Club'
         width={75}
         height={75}
         className='rounded-full border'

@@ -25,7 +25,7 @@ const fontHeading = localFont({
 })
 
 const logoFont = megrim({
-  src: '../assets/fonts/Megrim-Regular.ttf',
+  src: '../assets/fonts/Goldman-Regular.ttf',
   variable: '--font-logo'
 })
 
@@ -43,12 +43,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`
   },
   description: siteConfig.description,
-  keywords: [
-    'Beginner Kickboxing',
-    'Advanced Kickboxing',
-    'Boxing',
-    'Muay Thai'
-  ],
+  keywords: ['Beginner Kickboxing', 'Advanced Kickboxing', 'Boxing', 'Muay Thai'],
   authors: [
     {
       name: 'lit2l',
@@ -80,17 +75,13 @@ export const metadata: Metadata = {
   manifest: `${siteConfig.url}/site.webmanifest`
 }
 
-export default function RootLayout({
-  children
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en' suppressHydrationWarning>
       <head />
       <body
         className={cn(
-          'min-h-screen max-w-full overflow-x-hidden bg-background/60 font-sans antialiased bg-dot-black/[0.1] dark:bg-dot-gray-400/[0.1]',
+          'min-h-screen max-w-full overflow-x-hidden bg-background/60 font-sans antialiased ',
           fontSans.variable,
           fontHeading.variable,
           logoFont.variable

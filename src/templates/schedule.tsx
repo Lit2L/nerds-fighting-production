@@ -7,13 +7,14 @@ const classes = [
   {
     id: 1,
     title: 'Mondays',
-    description: 'Focus on basics and fundamentals',
-    level: 'Beginner level and All levels welcome',
+    type: 'Cardio Kickboxing',
+    description: 'Cardio Kickboxing, Strength and Conditioning.',
+    level: 'All levels welcome',
     schedule: [
       {
         day: 'Mon',
-        time: '8:00am - 9:30am',
-        level: 'Beginners, All levels welcome'
+        time: '7:00am - 8:30am',
+        level: 'All Levels Welcome'
       },
       { day: 'Mon', time: '9:00am - 10:30am', level: 'Intermediate++' }
     ]
@@ -90,7 +91,7 @@ const Schedule: React.FC = () => {
                             </span>
                           </div>
                           <p className='text-sm text-gray-500'>{item.level}</p>
-                          <Link href='https://calendly.com/larryly1/private-coaching?month=2024-07'>
+                          <Link href='https://calendly.com/nerdsfighting/private-coaching?month=2024-07'>
                             Join Class
                           </Link>
                         </>

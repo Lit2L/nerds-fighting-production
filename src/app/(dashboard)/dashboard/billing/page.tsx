@@ -26,24 +26,18 @@ export default async function BillingPage() {
   // If user has a pro plan, check cancel status on Stripe.
   let isCanceled = false
   if (subscriptionPlan.isPro && subscriptionPlan.stripeSubscriptionId) {
-    const stripePlan = await stripe.subscriptions.retrieve(
-      subscriptionPlan.stripeSubscriptionId
-    )
+    const stripePlan = await stripe.subscriptions.retrieve(subscriptionPlan.stripeSubscriptionId)
     // isCanceled = stripePlan.cancel_at_period_end; // TODO: Check if should check status or not
-    isCanceled =
-      stripePlan.cancel_at_period_end || stripePlan.status == 'canceled'
+    isCanceled = stripePlan.cancel_at_period_end || stripePlan.status == 'canceled'
   }
 
   return (
     <DashboardShell>
-      <DashboardHeader
-        heading='Billing'
-        text='Manage billing and your subscription plan.'
-      />
+      <DashboardHeader heading='Billing' text='Manage billing and your subscription plan.' />
       <div className='grid gap-8'>
         <Alert className='!pl-14'>
           <Icons.warning />
-          <AlertTitle>TigerClub Kickboxing</AlertTitle>
+          <AlertTitle>Nerds Kickboxing Clubs</AlertTitle>
           <br />
           <AlertDescription>A Gym Made For You.</AlertDescription>
         </Alert>

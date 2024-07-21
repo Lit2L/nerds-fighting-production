@@ -13,7 +13,8 @@ const featureCards = [
       'Learning technique through private lessons is an excellent approach suitable for beginners to experienced kickboxers as it allows for personalized instruction based on your ability level and goals. ',
     info: '60 MINS - ALL AGES. ALL LEVELS.',
     image: '/assets/3.jpg',
-    icon: <GiWhistle className='size-6 text-blue-800' />
+    icon: <GiWhistle className='size-6 text-blue-800' />,
+    href: 'https://calendly.com/nerdsfighting/private-coaching'
   },
 
   {
@@ -23,16 +24,18 @@ const featureCards = [
       'Visually analyze your technique and fast-track the learning process. Run through a full session lead by your instructor designed to pinpoint areas for improvement and get a deeper understanding of fight mechanics to help make rapid progress toward your goals.',
     info: '30 OR 60 MINS - ALL AGES. ALL LEVELS.',
     image: '/assets/10.jpg',
-    icon: <CiVideoOn className='size-6 text-red-800' />
+    icon: <CiVideoOn className='size-6 text-red-800' />,
+    href: 'https://calendly.com/nerdsfighting/video-analysis-session-1'
   },
   {
     id: 2,
-    title: 'Flow State Practice',
+    title: 'Nerd Club Training',
     description:
       'Join a laid-back community of zen-minded martial artists and immerse yourself in the state of flow with daily group trainings.  Our sessions include a mix of dynamic body weight exercises, drills, mitts, thai pads, heavy bag work and more.',
     info: '60 - 90 MINS - ALL AGES. ALL LEVELS.',
     image: '/assets/6.jpg',
-    icon: <GiYinYang className='size-6 text-sky-600' />
+    icon: <GiYinYang className='size-6 text-sky-600' />,
+    href: 'https://calendly.com/nerdsfighting/free-trial-kickboxing-class'
   },
   {
     id: 3,
@@ -41,7 +44,8 @@ const featureCards = [
       'A high energy, dynamic hour of kickboxing.  Your future self will thank you more than you can imagine.',
     info: '30 - ALL AGES. BEGINNERS.',
     image: '/assets/seniorkickboxer.png',
-    icon: <GiTeacher className='size-6 text-red-500' />
+    icon: <GiTeacher className='size-6 text-red-500' />,
+    href: 'https://calendly.com/nerdsfighting/free-trial-kickboxing-class'
   },
   {
     id: 4,
@@ -50,7 +54,8 @@ const featureCards = [
       'Train as the warriors of the past have done for centuries. Our outdoor training sessions are designed to help you connect with nature, improve your fitness, and build mental toughness. ',
     info: '60 - 90 MINS - ALL AGES. ALL LEVELS.',
     image: '/assets/beach.webp',
-    icon: <PiParkDuotone className='size-6 text-green-500' />
+    icon: <PiParkDuotone className='size-6 text-green-500' />,
+    href: 'https://calendly.com/nerdsfighting/free-trial-kickboxing-class'
   }
 ]
 
@@ -62,10 +67,13 @@ export const About = () => {
     >
       <div className='mx-auto my-12 flex max-w-[58rem] flex-col items-center justify-center space-y-9 text-center'>
         <h2 className='text-left font-heading text-3xl font-bold leading-[1.1] md:text-3xl'>
-          Welcome to TigerClub Kickboxing.
+          Welcome to Nerds Kickboxing Club
         </h2>
+        <h3 className='text-left text-lg font-semibold leading-6 dark:text-white'>
+          We observe, we learn, we practice, we test, we implement, we evolve.
+        </h3>
         <p className='md:text-md text-md max-w-[85%] py-6 text-left font-heading leading-normal dark:text-white sm:text-center md:leading-8'>
-          TigerClub Kickboxing is dedicated to the Free, Creative Martial Artist. We take what is
+          Nerds Kickboxing Club is dedicated to the Free, Creative Martial Artist. We take what is
           useful and we start the development of our martial artists from there. We understand the
           majority of people who train are not looking to become professional fighters. Our purpose
           isn&apos;t to throw you in the ring and hope for the best. Your health and longevity is

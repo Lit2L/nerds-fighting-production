@@ -22,11 +22,9 @@ export function MainNav({ items, children }: MainNavProps) {
 
   return (
     <div className='flex gap-6 md:gap-10'>
-      <Button className='hidden items-center space-x-2 md:flex'>
+      <Button className='hidden items-center space-x-2 bg-white/60 text-red-950 md:flex'>
         <Logo />
-        <span className='hidden font-logo font-bold sm:inline-block'>
-          {siteConfig.name}
-        </span>
+        <span className='hidden font-sans font-bold sm:inline-block'>{siteConfig.name}</span>
       </Button>
       {items?.length ? (
         <nav className='hidden gap-6 md:flex'>
@@ -36,9 +34,7 @@ export function MainNav({ items, children }: MainNavProps) {
               href={item.disabled ? '#' : item.href}
               className={cn(
                 'flex items-center text-lg font-medium tracking-widest transition-colors hover:text-foreground/80 sm:text-sm',
-                item.href.startsWith(`/${segment}`)
-                  ? 'text-foreground'
-                  : 'text-foreground/60',
+                item.href.startsWith(`/${segment}`) ? 'text-foreground' : 'text-foreground/60',
                 item.disabled && 'cursor-not-allowed opacity-80'
               )}
             >
@@ -55,9 +51,7 @@ export function MainNav({ items, children }: MainNavProps) {
         {showMobileMenu ? <Icons.close /> : <Logo />}
         <span className='font-bold'>Menu</span>
       </button>
-      {showMobileMenu && items && (
-        <MobileNav items={items}>{children}</MobileNav>
-      )}
+      {showMobileMenu && items && <MobileNav items={items}>{children}</MobileNav>}
     </div>
   )
 }
