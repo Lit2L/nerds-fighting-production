@@ -67,21 +67,30 @@ export const About = () => {
     >
       <div className='mx-auto my-12 flex max-w-[58rem] flex-col items-center justify-center space-y-9 text-center'>
         <h2 className='text-left font-heading text-3xl font-bold leading-[1.1] md:text-3xl'>
-          Welcome to Nerds Kickboxing Club
+          The Practice
         </h2>
-        <h3 className='text-left text-lg font-semibold leading-6 dark:text-white'>
-          We observe, we learn, we practice, we test, we implement, we evolve.
-        </h3>
-        <p className='md:text-md text-md max-w-[85%] py-6 text-left font-heading leading-normal dark:text-white sm:text-center md:leading-8'>
-          Nerds Kickboxing Club is dedicated to the Free, Creative Martial Artist. We take what is
-          useful and we start the development of our martial artists from there. We understand the
-          majority of people who train are not looking to become professional fighters. Our purpose
-          isn&apos;t to throw you in the ring and hope for the best. Your health and longevity is
-          our main priority. We believe that everyone should have the opportunity to train and
-          develop as a fighter and to enjoy the benefits of having a skillset that can potentially
-          save your life. Not only do we teach you how to train, we teach you how to train others. A
-          skill that you can carry with you for the rest of your life. We offer a safe and fun
-          environment for our members to learn, train hard and geek out on all things martial arts.
+
+        <p className='md:text-md text-md font-krona max-w-[85%] py-6 text-left leading-normal dark:text-white sm:text-center md:leading-8'>
+          is dedicated to the Free, Creative Martial Artist. Expressing yourself through the art of
+          fighting means taking part in a tradition that has been passed down for centuries. It is a
+          hero&apos;s journey you can initiate yourself and even pause during work hours but make no
+          mistake that it is a journey that will allow you to be disciplined, courageous, and a
+          willingness to face your fears. The self initiated journey of the martial artist is a path
+          that will lead you to the discovery of your true self. We take what is useful and we start
+          the development of our martial artists from there. We understand the majority of people
+          who train are not looking to become professional fighters. Our purpose isn&apos;t to throw
+          you in the ring and hope for the best. Your health and longevity is our main priority. We
+          believe that everyone should have the opportunity to train and develop as a fighter and to
+          enjoy the benefits of having a skillset that can potentially save your life. Not only do
+          we teach you how to train, we teach you how to train others. A skill that you can carry
+          with you for the rest of your life. We offer a safe and fun environment for our members to
+          learn, train hard and geek out on all things martial arts.
+        </p>
+        <p className=''>
+          {' '}
+          Nerds Fighting began with a small group of friends who wanted to learn how to fight and
+          protect themselves. What started as a means of protection and self-defense transformed
+          into a passion and curiousity Over time{' '}
         </p>
       </div>
 

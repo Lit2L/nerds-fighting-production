@@ -1,4 +1,4 @@
-import { Inter as FontSans } from 'next/font/google'
+import { Inter as FontSans, Krona_One } from 'next/font/google'
 import localFont from 'next/font/local'
 import megrim from 'next/font/local'
 import '@/styles/globals.css'
@@ -18,9 +18,16 @@ const fontSans = FontSans({
   variable: '--font-sans'
 })
 
+const kronaOne = Krona_One({
+  subsets: ['latin', 'latin-ext'],
+  weight: ['400'],
+  display: 'swap',
+  variable: '--font-krona-one'
+})
+
 // Font files can be colocated inside of `pages`
 const fontHeading = localFont({
-  src: '../assets/fonts/CalSans-SemiBold.woff2',
+  src: '../assets/fonts/BlackOpsOne-Regular.ttf',
   variable: '--font-heading'
 })
 
@@ -84,7 +91,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           'min-h-screen max-w-full overflow-x-hidden bg-background/60 font-sans antialiased ',
           fontSans.variable,
           fontHeading.variable,
-          logoFont.variable
+          kronaOne.variable
         )}
       >
         <TRPCReactProvider cookies={cookies().toString()}>

@@ -63,6 +63,10 @@ const config: Config = {
         card: {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))'
+        },
+        nerdblue: {
+          DEFAULT: 'hsl(var(--nerdblue))',
+          foreground: 'hsl(var(--nerdblue-foreground))'
         }
       },
       borderRadius: {
@@ -96,7 +100,8 @@ const config: Config = {
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
         heading: ['var(--font-heading)', ...fontFamily.sans],
-        logo: ['var(--font-logo)', ...fontFamily.sans]
+        logo: ['var(--font-logo)', ...fontFamily.sans],
+        kronaOne: ['var(--font-krona-one)', ...fontFamily.sans]
       }
     }
   },
@@ -149,9 +154,10 @@ function addVariablesForColors({
   addBase: (arg0: { ':root': Record<string, string> }) => void
   theme: (arg0: string) => Record<string, string>
 }) {
-  const allColors = flattenColorPalette(
-    theme('colors') as Record<string, string>
-  ) as Record<string, string>
+  const allColors = flattenColorPalette(theme('colors') as Record<string, string>) as Record<
+    string,
+    string
+  >
   const newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   )

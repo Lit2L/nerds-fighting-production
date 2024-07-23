@@ -9,7 +9,7 @@ export function FlipWordsComponent() {
 
   return (
     <div className='flex h-48 w-full items-center justify-center px-4'>
-      <div className='font-hanken mx-auto w-full text-center text-[2em] font-extrabold tracking-tight text-orange-300 dark:text-orange-300 md:text-[2.5em]'>
+      <div className='font- text-nerdblue mx-auto w-full text-center text-[2em] font-extrabold tracking-tight dark:text-[#F23030] md:text-[2.5em]'>
         Be
         <FlipWords words={words} />
       </div>

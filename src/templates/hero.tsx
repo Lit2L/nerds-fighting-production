@@ -8,18 +8,18 @@ import Link from 'next/link'
 export const Hero = () => {
   return (
     <section className='relative h-[70dvh] w-full '>
-      <div className='container z-10 flex h-full max-w-5xl flex-col items-center justify-center gap-4  text-center'>
+      <div className='container z-10 flex h-full max-w-5xl flex-col items-center justify-center gap-4 text-center'>
         <div className='space-y-12'>
           <Link
             href={siteConfig.links.twitter}
-            className='rounded-2xl bg-muted px-4 py-1.5 text-sm font-medium'
+            className='rounded-2xl bg-[#F23030]/50 px-4 py-1.5 text-sm font-medium'
             target='_blank'
           >
             Kickboxing & Martial Arts Club
           </Link>
           <GradualSpacing
-            className='text-center font-logo text-3xl tracking-tighter text-orange-500/80 drop-shadow-2xl dark:text-orange-400 dark:shadow-gray-200 sm:text-5xl md:text-6xl'
-            text='Nerds Kickboxing Club'
+            className='font-kronaOne text-nerdblue-foreground text-center text-3xl tracking-[-0.2em] drop-shadow-2xl dark:shadow-gray-200 sm:text-5xl md:text-6xl'
+            text='Nerds Fighting'
           />
         </div>
         <FlipWordsComponent />
@@ -33,3 +33,5 @@ export const Hero = () => {
     </section>
   )
 }
+
+// dark:text-[#29ADFF]
