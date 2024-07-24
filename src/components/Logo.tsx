@@ -1,4 +1,4 @@
-import Logos from '../../public/2.png'
+import Logos from '../../public/3.png'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -10,7 +10,7 @@ function Logo() {
         alt='Nerds Kickboxing Club'
         width={75}
         height={75}
-        className='rounded-full border'
+        className='rounded-full'
       />
     </Link>
   )

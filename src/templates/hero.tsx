@@ -18,7 +18,7 @@ export const Hero = () => {
             Kickboxing & Martial Arts Club
           </Link>
           <GradualSpacing
-            className='font-kronaOne text-nerdblue-foreground text-center text-3xl tracking-[-0.2em] drop-shadow-2xl dark:shadow-gray-200 sm:text-5xl md:text-6xl'
+            className='text-center font-kronaOne text-3xl tracking-[-0.2em] text-nerdblue-foreground drop-shadow-2xl dark:shadow-gray-200 sm:text-5xl md:text-6xl'
             text='Nerds Fighting'
           />
         </div>

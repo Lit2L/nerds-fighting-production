@@ -3,7 +3,7 @@
 
 import { freePlan, proPlan } from '@/config/subscriptions'
 import { db } from '@/server/db'
-import { UserSubscriptionPlan } from 'types'
+import { type UserSubscriptionPlan } from 'types'
 
 export async function getUserSubscriptionPlan(userId: string): Promise<UserSubscriptionPlan> {
   const user = await db.user.findFirst({

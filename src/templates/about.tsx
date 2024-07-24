@@ -10,7 +10,7 @@ const featureCards = [
     id: 0,
     title: 'Private Coaching',
     description:
-      'Learning technique through private lessons is an excellent approach suitable for beginners to experienced kickboxers as it allows for personalized instruction based on your ability level and goals. ',
+      'Personalized instruction tailored to your ability and goals. Ideal for beginners and experienced kickboxers alike, private lessons help you master technique at your own pace.',
     info: '60 MINS - ALL AGES. ALL LEVELS.',
     image: '/assets/3.jpg',
     icon: <GiWhistle className='size-6 text-blue-800' />,
@@ -21,7 +21,7 @@ const featureCards = [
     id: 1,
     title: 'Video Analysis',
     description:
-      'Visually analyze your technique and fast-track the learning process. Run through a full session lead by your instructor designed to pinpoint areas for improvement and get a deeper understanding of fight mechanics to help make rapid progress toward your goals.',
+      'Accelerate your progress with visual feedback. Our instructors guide you through sessions to pinpoint areas for improvement and deepen your understanding of fight mechanics.',
     info: '30 OR 60 MINS - ALL AGES. ALL LEVELS.',
     image: '/assets/10.jpg',
     icon: <CiVideoOn className='size-6 text-red-800' />,
@@ -29,9 +29,9 @@ const featureCards = [
   },
   {
     id: 2,
-    title: 'Nerd Club Training',
+    title: 'Nerds Training',
     description:
-      'Join a laid-back community of zen-minded martial artists and immerse yourself in the state of flow with daily group trainings.  Our sessions include a mix of dynamic body weight exercises, drills, mitts, thai pads, heavy bag work and more.',
+      'Join a supportive community of martial artists. Enjoy daily group sessions that include bodyweight exercises, drills, mitts, Thai pads, heavy bag work, and more, all designed to help you reach your peak performance.',
     info: '60 - 90 MINS - ALL AGES. ALL LEVELS.',
     image: '/assets/6.jpg',
     icon: <GiYinYang className='size-6 text-sky-600' />,
@@ -41,7 +41,7 @@ const featureCards = [
     id: 3,
     title: 'Cardio Kickboxing Sessions',
     description:
-      'A high energy, dynamic hour of kickboxing.  Your future self will thank you more than you can imagine.',
+      'Experience a high-energy, dynamic hour of kickboxing. Perfect for beginners, these sessions boost your fitness and leave you feeling empowered.',
     info: '30 - ALL AGES. BEGINNERS.',
     image: '/assets/seniorkickboxer.png',
     icon: <GiTeacher className='size-6 text-red-500' />,
@@ -51,7 +51,7 @@ const featureCards = [
     id: 4,
     title: 'Outdoor Training',
     description:
-      'Train as the warriors of the past have done for centuries. Our outdoor training sessions are designed to help you connect with nature, improve your fitness, and build mental toughness. ',
+      'Train like ancient warriors with our outdoor sessions. Connect with nature, enhance your fitness, and build mental toughness in a challenging and invigorating environment.',
     info: '60 - 90 MINS - ALL AGES. ALL LEVELS.',
     image: '/assets/beach.webp',
     icon: <PiParkDuotone className='size-6 text-green-500' />,
@@ -65,32 +65,16 @@ export const About = () => {
       id='about'
       className='bg-[radial-gradient (circle_500px_at_50%_200px,#181818,transparent)] container mx-auto py-20 '
     >
-      <div className='mx-auto my-12 flex max-w-[58rem] flex-col items-center justify-center space-y-9 text-center'>
+      <div className='mx-auto my-12 flex max-w-[58rem] flex-col items-center justify-center space-y-9 pb-36 text-center'>
         <h2 className='text-left font-heading text-3xl font-bold leading-[1.1] md:text-3xl'>
-          The Practice
+          Train with Purpose
         </h2>
-
-        <p className='md:text-md text-md font-krona max-w-[85%] py-6 text-left leading-normal dark:text-white sm:text-center md:leading-8'>
-          is dedicated to the Free, Creative Martial Artist. Expressing yourself through the art of
-          fighting means taking part in a tradition that has been passed down for centuries. It is a
-          hero&apos;s journey you can initiate yourself and even pause during work hours but make no
-          mistake that it is a journey that will allow you to be disciplined, courageous, and a
-          willingness to face your fears. The self initiated journey of the martial artist is a path
-          that will lead you to the discovery of your true self. We take what is useful and we start
-          the development of our martial artists from there. We understand the majority of people
-          who train are not looking to become professional fighters. Our purpose isn&apos;t to throw
-          you in the ring and hope for the best. Your health and longevity is our main priority. We
-          believe that everyone should have the opportunity to train and develop as a fighter and to
-          enjoy the benefits of having a skillset that can potentially save your life. Not only do
-          we teach you how to train, we teach you how to train others. A skill that you can carry
-          with you for the rest of your life. We offer a safe and fun environment for our members to
-          learn, train hard and geek out on all things martial arts.
-        </p>
-        <p className=''>
-          {' '}
-          Nerds Fighting began with a small group of friends who wanted to learn how to fight and
-          protect themselves. What started as a means of protection and self-defense transformed
-          into a passion and curiousity Over time{' '}
+        <h3 className='font-kronaOne'>The Dojo.</h3>
+        <p className='md:text-md text-md font-krona max-w-[85%]  pb-6 text-left leading-normal dark:text-white sm:text-center md:leading-8'>
+          At Nerds Fighting we&apos;ve crafted a friendly environment that fosters respect,
+          learning, growth and teamwork while guiding you through training that hones your skills
+          and enhances your fighting abilities. We&apos;ve developed a wide range of dynamic
+          workouts and drills design to improve coordination, speed and power.
         </p>
       </div>
 

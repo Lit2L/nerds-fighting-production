@@ -15,8 +15,8 @@ export async function AnimatedPassButton() {
           <span className='mr-3 scale-75 scale-x-[-.8] transition-transform ease-in-out group-hover:translate-x-3'>
             🥊
           </span>
-          <span className='font-garamond text-xs font-bold uppercase  '>Free 2-Day Pass</span>
-          {/* <ArrowRightIcon className='ml-1 size-3 transition-transform duration-200 ease-in-out group-hover:translate-x-1' /> */}
+          <span className='font-garamond text-xs font-bold uppercase'>Free Class</span>
+
           <span className='ml-3 scale-75 transition-transform ease-in-out group-hover:-translate-x-3'>
             🥊
           </span>

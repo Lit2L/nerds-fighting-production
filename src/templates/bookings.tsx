@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { InlineWidget, PopupWidget } from 'react-calendly'
+import { InlineWidget } from 'react-calendly'
 
 const Bookings = () => {
   return (
@@ -17,7 +17,7 @@ const Bookings = () => {
         </div>
         <div className='mt-12 rounded-lg border bg-background p-6 md:p-10'>
           <div className='aspect-[4/3] overflow-hidden rounded-lg'>
-            <div className='calendly h-full w-full'>
+            <div className='calendly'>
               <InlineWidget url='https://calendly.com/nerdsfighting' />
             </div>
           </div>
@@ -28,24 +28,3 @@ const Bookings = () => {
 }
 
 export default Bookings
-
-//   return (
-//     <section className="w-full py-12 md:py-24 lg:py-32">
-//       <div className="container px-4 md:px-6">
-//         <div className="mx-auto max-w-3xl text-center space-y-4">
-//           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Schedule a Demo</h2>
-//           <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-//             Book a time that works best for you to learn more about our platform.
-//           </p>
-//         </div>
-//         <div className="mt-12 rounded-lg border bg-background p-6 md:p-10">
-//           <div className="aspect-[4/3] overflow-hidden rounded-lg">
-//             <div className="h-full w-full">
-//               <div />
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   )
-// }

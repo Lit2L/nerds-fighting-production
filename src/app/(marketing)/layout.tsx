@@ -20,7 +20,7 @@ export default function MarketingLayout({ children }: MarketingLayoutProps) {
             <span className='mx-6'>
               <ThemeToggleButton />
             </span>
-            <Link
+            {/* <Link
               href='/login'
               className={cn(
                 buttonVariants({ variant: 'secondary', size: 'sm' }),
@@ -28,7 +28,7 @@ export default function MarketingLayout({ children }: MarketingLayoutProps) {
               )}
             >
               Login
-            </Link>
+            </Link> */}
           </nav>
         </div>
       </header>
