@@ -1,4 +1,4 @@
-import Logos from '../../public/3.png'
+import Logos from '../../public/logo1.png'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -8,8 +8,8 @@ function Logo() {
       <Image
         src={Logos}
         alt='Nerds Kickboxing Club'
-        width={75}
-        height={75}
+        width={100}
+        height={100}
         className='rounded-full'
       />
     </Link>

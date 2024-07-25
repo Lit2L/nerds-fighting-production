@@ -27,11 +27,7 @@ import {
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu'
 import { Input } from '@/components/ui/input'
-import {
-  Pagination,
-  PaginationContent,
-  PaginationItem
-} from '@/components/ui/pagination'
+import { Pagination, PaginationContent, PaginationItem } from '@/components/ui/pagination'
 import { Progress } from '@/components/ui/progress'
 import { Separator } from '@/components/ui/separator'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
@@ -170,10 +166,7 @@ export default async function DashboardPage() {
           </div>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button
-                variant='outline'
-                className='overflow-hidden rounded-full'
-              >
+              <Button variant='outline' className='overflow-hidden rounded-full'>
                 <Image
                   src='/placeholder.svg'
                   width={36}
@@ -200,8 +193,8 @@ export default async function DashboardPage() {
                 <CardHeader className='pb-3'>
                   <CardTitle>Your Orders</CardTitle>
                   <CardDescription className='max-w-lg text-balance leading-relaxed'>
-                    Introducing Our Dynamic Orders Dashboard for Seamless
-                    Management and Insightful Analysis.
+                    Introducing Our Dynamic Orders Dashboard for Seamless Management and Insightful
+                    Analysis.
                   </CardDescription>
                 </CardHeader>
                 <CardFooter>
@@ -214,9 +207,7 @@ export default async function DashboardPage() {
                   <CardTitle className='text-4xl'>$1,329</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className='text-xs text-muted-foreground'>
-                    +25% from last week
-                  </div>
+                  <div className='text-xs text-muted-foreground'>+25% from last week</div>
                 </CardContent>
                 <CardFooter>
                   <Progress value={25} aria-label='25% increase' />
@@ -228,9 +219,7 @@ export default async function DashboardPage() {
                   <CardTitle className='text-4xl'>$5,329</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className='text-xs text-muted-foreground'>
-                    +10% from last month
-                  </div>
+                  <div className='text-xs text-muted-foreground'>+10% from last month</div>
                 </CardContent>
                 <CardFooter>
                   <Progress value={12} aria-label='12% increase' />
@@ -247,11 +236,7 @@ export default async function DashboardPage() {
                 <div className='ml-auto flex items-center gap-2'>
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                      <Button
-                        variant='outline'
-                        size='sm'
-                        className='h-7 gap-1 text-sm'
-                      >
+                      <Button variant='outline' size='sm' className='h-7 gap-1 text-sm'>
                         <Filter className='size-3.5' />
                         <span className='sr-only sm:not-sr-only'>Filter</span>
                       </Button>
@@ -259,22 +244,12 @@ export default async function DashboardPage() {
                     <DropdownMenuContent align='end'>
                       <DropdownMenuLabel>Filter by</DropdownMenuLabel>
                       <DropdownMenuSeparator />
-                      <DropdownMenuCheckboxItem checked>
-                        Fulfilled
-                      </DropdownMenuCheckboxItem>
-                      <DropdownMenuCheckboxItem>
-                        Declined
-                      </DropdownMenuCheckboxItem>
-                      <DropdownMenuCheckboxItem>
-                        Refunded
-                      </DropdownMenuCheckboxItem>
+                      <DropdownMenuCheckboxItem checked>Fulfilled</DropdownMenuCheckboxItem>
+                      <DropdownMenuCheckboxItem>Declined</DropdownMenuCheckboxItem>
+                      <DropdownMenuCheckboxItem>Refunded</DropdownMenuCheckboxItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
-                  <Button
-                    size='sm'
-                    variant='outline'
-                    className='h-7 gap-1 text-sm'
-                  >
+                  <Button size='sm' variant='outline' className='h-7 gap-1 text-sm'>
                     <File className='size-3.5' />
                     <span className='sr-only sm:not-sr-only'>Export</span>
                   </Button>
@@ -284,24 +259,16 @@ export default async function DashboardPage() {
                 <Card x-chunk='dashboard-05-chunk-3'>
                   <CardHeader className='px-7'>
                     <CardTitle>Orders</CardTitle>
-                    <CardDescription>
-                      Recent orders from your store.
-                    </CardDescription>
+                    <CardDescription>Recent orders from your store.</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <Table>
                       <TableHeader>
                         <TableRow>
                           <TableHead>Customer</TableHead>
-                          <TableHead className='hidden sm:table-cell'>
-                            Type
-                          </TableHead>
-                          <TableHead className='hidden sm:table-cell'>
-                            Status
-                          </TableHead>
-                          <TableHead className='hidden md:table-cell'>
-                            Date
-                          </TableHead>
+                          <TableHead className='hidden sm:table-cell'>Type</TableHead>
+                          <TableHead className='hidden sm:table-cell'>Status</TableHead>
+                          <TableHead className='hidden md:table-cell'>Date</TableHead>
                           <TableHead className='text-right'>Amount</TableHead>
                         </TableRow>
                       </TableHeader>
@@ -313,17 +280,13 @@ export default async function DashboardPage() {
                               liam@example.com
                             </div>
                           </TableCell>
-                          <TableCell className='hidden sm:table-cell'>
-                            Sale
-                          </TableCell>
+                          <TableCell className='hidden sm:table-cell'>Sale</TableCell>
                           <TableCell className='hidden sm:table-cell'>
                             <Badge className='text-xs' variant='secondary'>
                               Fulfilled
                             </Badge>
                           </TableCell>
-                          <TableCell className='hidden md:table-cell'>
-                            2023-06-23
-                          </TableCell>
+                          <TableCell className='hidden md:table-cell'>2023-06-23</TableCell>
                           <TableCell className='text-right'>$250.00</TableCell>
                         </TableRow>
                         <TableRow>
@@ -333,17 +296,13 @@ export default async function DashboardPage() {
                               olivia@example.com
                             </div>
                           </TableCell>
-                          <TableCell className='hidden sm:table-cell'>
-                            Refund
-                          </TableCell>
+                          <TableCell className='hidden sm:table-cell'>Refund</TableCell>
                           <TableCell className='hidden sm:table-cell'>
                             <Badge className='text-xs' variant='outline'>
                               Declined
                             </Badge>
                           </TableCell>
-                          <TableCell className='hidden md:table-cell'>
-                            2023-06-24
-                          </TableCell>
+                          <TableCell className='hidden md:table-cell'>2023-06-24</TableCell>
                           <TableCell className='text-right'>$150.00</TableCell>
                         </TableRow>
                         <TableRow>
@@ -353,17 +312,13 @@ export default async function DashboardPage() {
                               noah@example.com
                             </div>
                           </TableCell>
-                          <TableCell className='hidden sm:table-cell'>
-                            Subscription
-                          </TableCell>
+                          <TableCell className='hidden sm:table-cell'>Subscription</TableCell>
                           <TableCell className='hidden sm:table-cell'>
                             <Badge className='text-xs' variant='secondary'>
                               Fulfilled
                             </Badge>
                           </TableCell>
-                          <TableCell className='hidden md:table-cell'>
-                            2023-06-25
-                          </TableCell>
+                          <TableCell className='hidden md:table-cell'>2023-06-25</TableCell>
                           <TableCell className='text-right'>$350.00</TableCell>
                         </TableRow>
                         <TableRow>
@@ -373,17 +328,13 @@ export default async function DashboardPage() {
                               emma@example.com
                             </div>
                           </TableCell>
-                          <TableCell className='hidden sm:table-cell'>
-                            Sale
-                          </TableCell>
+                          <TableCell className='hidden sm:table-cell'>Sale</TableCell>
                           <TableCell className='hidden sm:table-cell'>
                             <Badge className='text-xs' variant='secondary'>
                               Fulfilled
                             </Badge>
                           </TableCell>
-                          <TableCell className='hidden md:table-cell'>
-                            2023-06-26
-                          </TableCell>
+                          <TableCell className='hidden md:table-cell'>2023-06-26</TableCell>
                           <TableCell className='text-right'>$450.00</TableCell>
                         </TableRow>
                         <TableRow>
@@ -393,17 +344,13 @@ export default async function DashboardPage() {
                               liam@example.com
                             </div>
                           </TableCell>
-                          <TableCell className='hidden sm:table-cell'>
-                            Sale
-                          </TableCell>
+                          <TableCell className='hidden sm:table-cell'>Sale</TableCell>
                           <TableCell className='hidden sm:table-cell'>
                             <Badge className='text-xs' variant='secondary'>
                               Fulfilled
                             </Badge>
                           </TableCell>
-                          <TableCell className='hidden md:table-cell'>
-                            2023-06-23
-                          </TableCell>
+                          <TableCell className='hidden md:table-cell'>2023-06-23</TableCell>
                           <TableCell className='text-right'>$250.00</TableCell>
                         </TableRow>
                         <TableRow>
@@ -413,17 +360,13 @@ export default async function DashboardPage() {
                               liam@example.com
                             </div>
                           </TableCell>
-                          <TableCell className='hidden sm:table-cell'>
-                            Sale
-                          </TableCell>
+                          <TableCell className='hidden sm:table-cell'>Sale</TableCell>
                           <TableCell className='hidden sm:table-cell'>
                             <Badge className='text-xs' variant='secondary'>
                               Fulfilled
                             </Badge>
                           </TableCell>
-                          <TableCell className='hidden md:table-cell'>
-                            2023-06-23
-                          </TableCell>
+                          <TableCell className='hidden md:table-cell'>2023-06-23</TableCell>
                           <TableCell className='text-right'>$250.00</TableCell>
                         </TableRow>
                         <TableRow>
@@ -433,17 +376,13 @@ export default async function DashboardPage() {
                               olivia@example.com
                             </div>
                           </TableCell>
-                          <TableCell className='hidden sm:table-cell'>
-                            Refund
-                          </TableCell>
+                          <TableCell className='hidden sm:table-cell'>Refund</TableCell>
                           <TableCell className='hidden sm:table-cell'>
                             <Badge className='text-xs' variant='outline'>
                               Declined
                             </Badge>
                           </TableCell>
-                          <TableCell className='hidden md:table-cell'>
-                            2023-06-24
-                          </TableCell>
+                          <TableCell className='hidden md:table-cell'>2023-06-24</TableCell>
                           <TableCell className='text-right'>$150.00</TableCell>
                         </TableRow>
                         <TableRow>
@@ -453,17 +392,13 @@ export default async function DashboardPage() {
                               emma@example.com
                             </div>
                           </TableCell>
-                          <TableCell className='hidden sm:table-cell'>
-                            Sale
-                          </TableCell>
+                          <TableCell className='hidden sm:table-cell'>Sale</TableCell>
                           <TableCell className='hidden sm:table-cell'>
                             <Badge className='text-xs' variant='secondary'>
                               Fulfilled
                             </Badge>
                           </TableCell>
-                          <TableCell className='hidden md:table-cell'>
-                            2023-06-26
-                          </TableCell>
+                          <TableCell className='hidden md:table-cell'>2023-06-26</TableCell>
                           <TableCell className='text-right'>$450.00</TableCell>
                         </TableRow>
                       </TableBody>
@@ -561,9 +496,7 @@ export default async function DashboardPage() {
                   </div>
                   <div className='grid auto-rows-max gap-3'>
                     <div className='font-semibold'>Billing Information</div>
-                    <div className='text-muted-foreground'>
-                      Same as shipping address
-                    </div>
+                    <div className='text-muted-foreground'>Same as shipping address</div>
                   </div>
                 </div>
                 <Separator className='my-4' />
@@ -577,7 +510,7 @@ export default async function DashboardPage() {
                     <div className='flex items-center justify-between'>
                       <dt className='text-muted-foreground'>Email</dt>
                       <dd>
-                        <a href='#'>liam@acme.com</a>
+                        <Link href='#'>liam@acme.com</Link>
                       </dd>
                     </div>
                     <div className='flex items-center justify-between'>

@@ -22,12 +22,9 @@ export function MainNav({ items, children }: MainNavProps) {
 
   return (
     <div className='flex gap-6 md:gap-10'>
-      <Button className='hidden items-center space-x-2 text-red-950 md:flex'>
+      <Link href='/' className='hidden items-center space-x-2 text-red-950 md:flex'>
         <Logo />
-        <span className='hidden font-kronaOne tracking-[-.09em]  sm:inline-block'>
-          {siteConfig.name}
-        </span>
-      </Button>
+      </Link>
       {items?.length ? (
         <nav className='hidden gap-6 md:flex'>
           {items?.map((item, index) => (

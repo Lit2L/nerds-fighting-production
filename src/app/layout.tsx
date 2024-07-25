@@ -31,8 +31,8 @@ const fontHeading = localFont({
   variable: '--font-heading'
 })
 
-const logoFont = megrim({
-  src: '../assets/fonts/Goldman-Regular.ttf',
+const logoFont = localFont({
+  src: '../assets/fonts/northstar-font/Northstar3D-4D3x.otf',
   variable: '--font-logo'
 })
 
@@ -91,7 +91,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           'min-h-screen max-w-full overflow-x-hidden bg-background/60 font-sans antialiased ',
           fontSans.variable,
           fontHeading.variable,
-          kronaOne.variable
+          kronaOne.variable,
+          logoFont.variable
         )}
       >
         <TRPCReactProvider cookies={cookies().toString()}>
