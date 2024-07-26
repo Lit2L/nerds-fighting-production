@@ -2,11 +2,7 @@ import 'server-only'
 import { transformer } from './shared'
 import { appRouter, type AppRouter } from '@/server/api/root'
 import { createTRPCContext } from '@/server/api/trpc'
-import {
-  TRPCClientError,
-  createTRPCProxyClient,
-  loggerLink
-} from '@trpc/client'
+import { TRPCClientError, createTRPCProxyClient, loggerLink } from '@trpc/client'
 import { callProcedure } from '@trpc/server'
 import { observable } from '@trpc/server/observable'
 import { type TRPCErrorResponse } from '@trpc/server/rpc'

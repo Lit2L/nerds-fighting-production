@@ -2,7 +2,7 @@ import AnimatedShinyText from '@/components/lit2l/animated-shiny-text'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
 
-export async function AnimatedPassButton() {
+export async function AnimatedJoinBtn() {
   return (
     <div className='z-10'>
       <Link
@@ -15,7 +15,7 @@ export async function AnimatedPassButton() {
           <span className='mr-3 scale-75 scale-x-[-.8] transition-transform ease-in-out group-hover:translate-x-3'>
             🥊
           </span>
-          <span className='font-heading text-xs font-bold uppercase'>Join Class</span>
+          <span className='font-heading text-xs font-bold uppercase'>Free Pass</span>
 
           <span className='ml-3 scale-75 transition-transform ease-in-out group-hover:-translate-x-3'>
             🥊

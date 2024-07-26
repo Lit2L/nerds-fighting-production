@@ -24,7 +24,7 @@ const config = {
   rules: {
     // These opinionated rules are enabled in stylistic-type-checked above.
     // Feel free to reconfigure them to your own preference.
-    '@next/next/no-html-link-for-pages': 'off',
+
     'tailwindcss/no-custom-classname': 'off',
     'tailwindcss/classnames-order': 'off',
     '@typescript-eslint/no-unsafe-member-access': 'off',

@@ -89,13 +89,19 @@ const config: Config = {
           },
           '30%, 60%': {
             'background-position': 'calc(100% + var(--shimmer-width)) 0'
+          },
+          from: {
+            backgroundPosition: '0 0'
+          },
+          to: {
+            backgroundPosition: '-200% 0'
           }
         }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        shimmer: 'shimmer 8s infinite'
+        shimmer: 'shimmer 8s linear infinite'
       },
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],

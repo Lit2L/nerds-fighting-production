@@ -1,48 +1,68 @@
 'use client'
 
+import { AnimatedJoinBtn } from '@/components/lit2l/AnimatedJoinBtn'
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Calendar, Circle } from 'lucide-react'
 import Link from 'next/link'
+import { FaYinYang } from 'react-icons/fa'
+import {
+  GiArmorPunch,
+  GiFulguroPunch,
+  GiHighPunch,
+  GiPunch,
+  GiPunchBlast,
+  GiPunchingBag
+} from 'react-icons/gi'
+import { MdOutlineStarRate, MdSportsMartialArts } from 'react-icons/md'
+import { SiFacepunch } from 'react-icons/si'
 
 const classes = [
   {
     id: 1,
-    title: 'Mondays',
+    title: 'Sundays',
     type: 'Cardio Kickboxing',
-    description: 'Cardio Kickboxing, Strength and Conditioning.',
-    level: 'All levels welcome',
-    schedule: [
-      {
-        day: 'Mon',
-        time: '7:00am - 8:30am',
-        level: 'All Levels Welcome'
-      },
-      { day: 'Mon', time: '9:00am - 10:30am', level: 'Intermediate++' }
-    ]
+    description:
+      'Break a sweat and relieve your stress with a fun and interactive Cardio Kickboxing class.',
+    level: 'All levels',
+    schedule: [{ day: 'Mon', time: '7:30am - 9:30am' }]
   },
   {
     id: 2,
+    title: 'Mondays',
+    type: 'Group Training',
+    description: 'Skills & Conditioning.',
+    level: 'All levels',
+    schedule: [
+      { day: 'Mon', time: '7:30am - 9:00am' },
+      { day: 'Mon', time: '9:00am - 10:30pm' }
+    ]
+  },
+  {
+    id: 3,
     title: 'Tuesdays',
     level: 'All levels',
     description:
       'Join us for a weekly session focused on technique, conditioning, drills while enjoying the open air.',
-    schedule: [{ day: 'Tuesday', time: '6:00pm - 7:00pm', level: 'All levels' }]
+    schedule: [{ day: 'Tuesday', time: '6:00pm - 7:00pm' }]
   },
   {
-    id: 3,
+    id: 4,
     title: 'Wednesdays',
+    level: 'Intermediate +',
     description:
       'Train your cardio and strength in a group of as a group in a fun but challenging hour of cardio kickboxing.',
     schedule: [
       {
         day: 'Wed',
         time: '9:00am - 10:30am',
-        level: 'Intermediate or Experienced++'
+        level: 'Intermediate+'
       }
     ]
   },
   {
-    id: 4,
+    id: 5,
     title: 'Saturdays',
+    level: 'All levels',
     description:
       'Train your cardio and strength in a group of as a group in a fun but challenging hour of cardio kickboxing.',
     schedule: [{ day: 'Sat', time: '8:00AM', level: 'All levels' }]
@@ -60,7 +80,7 @@ const Schedule: React.FC = () => {
           <div className='inline-block rounded-lg bg-orange-100 px-3 py-1 text-sm text-orange-500'>
             Class Schedule
           </div>
-          <h2 className='text-3xl font-bold tracking-tight text-orange-100 sm:text-4xl lg:text-5xl'>
+          <h2 className='font-logo text-3xl  tracking-tight  sm:text-4xl lg:text-5xl'>
             Class Schedule
           </h2>
           <p className='font-heading text-gray-100'>
@@ -70,35 +90,53 @@ const Schedule: React.FC = () => {
         <div className='mt-16 grid grid-cols-1 justify-evenly gap-6 sm:grid-cols-2'>
           {classes &&
             classes.map((item, index) => (
-              <div
+              <Card
                 key={item.id}
-                className='max-w-96 rounded-xl bg-black/60 p-6 shadow-md transition-all duration-300 hover:scale-105'
+                className='max-w-96 rounded-xl bg-gray-700/90 p-6 shadow-md transition-all duration-300 hover:scale-105'
               >
-                <div className='flex items-center gap-4'>
-                  <Circle className='size-6 text-orange-500' />
-                  <h3 className='text-md font-semibold'>{item.title}</h3>
-                </div>
-                <p className='mt-2 text-sm text-gray-500'>{item.description}</p>
-                <div className='mt-4 flex items-center justify-between'>
-                  <div className='flex flex-col gap-6'>
+                <CardTitle className='font-heading text-2xl'>
+                  <div className='flex items-center gap-3'>
+                    <Circle className='size-4 ' />
+                    <h3 className='tracking-wide text-gray-300'>{item.title}</h3>
+                  </div>
+                </CardTitle>
+
+                <div className='mt-4 '>
+                  <div className='flex w-full flex-col gap-3'>
                     {item.schedule &&
                       item.schedule.map((schedule, index) => (
                         <>
-                          <div key={index} className='flex items-center gap-3'>
-                            <Calendar className='size-5 text-orange-300' />
-                            <span className='text-sm text-orange-300'>
-                              {schedule.day} - {schedule.time}
-                            </span>
+                          <div
+                            key={schedule.day}
+                            className='flex items-center font-heading tracking-tight'
+                          >
+                            <Calendar className='w-1/16 mr-4 size-5 dark:text-emerald-500' />
+                            <div
+                              key={schedule.time}
+                              className='flex w-full items-center justify-between '
+                            >
+                              <span className='w-1/16 text-sm font-bold text-orange-300'>
+                                {schedule.day} - {schedule.time}
+                              </span>
+
+                              <p className='w-3/16 flex border font-heading text-xs uppercase text-gray-500 dark:text-green-500'>
+                                {item.level}
+                              </p>
+                            </div>
                           </div>
-                          <p className='text-sm text-gray-500'>{item.level}</p>
-                          <Link href='https://calendly.com/nerdsfighting/private-coaching?month=2024-07'>
-                            Join Class
-                          </Link>
                         </>
                       ))}
+
+                    <Card className='border-none bg-[#181818]/40 p-3'>
+                      <p className='font-sans text-sm tracking-wide dark:text-gray-200'>
+                        {item.description}
+                      </p>
+                    </Card>
+
+                    <AnimatedJoinBtn />
                   </div>
                 </div>
-              </div>
+              </Card>
             ))}
         </div>
       </div>

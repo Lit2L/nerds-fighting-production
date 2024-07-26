@@ -1,18 +1,16 @@
-import Logos from '../../public/logo1.png'
+import Logos from '../../public/NFlogo.png'
 import Image from 'next/image'
 import Link from 'next/link'
 
 function Logo() {
   return (
-    <Link href='/' className=''>
-      <Image
-        src={Logos}
-        alt='Nerds Kickboxing Club'
-        width={100}
-        height={100}
-        className='rounded-full'
-      />
-    </Link>
+    <Image
+      src={Logos}
+      alt='Nerds Kickboxing Club'
+      width={300}
+      height={300}
+      className='rounded-full'
+    />
   )
 }
 

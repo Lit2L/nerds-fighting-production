@@ -10,7 +10,7 @@ export default function IndexPage() {
     <div className='relative min-h-screen w-full bg-[radial-gradient(circle_500px_at_50%_200px,#181818,transparent)] '>
       <Hero />
       <About />
-      <Practice />
+      {/* <Practice /> */}
       <Schedule />
       {/* <Benefits /> */}
       <Bookings />
