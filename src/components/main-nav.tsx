@@ -19,8 +19,8 @@ export function MainNav({ items, children }: MainNavProps) {
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false)
 
   return (
-    <div className='flex gap-6 md:gap-10'>
-      <Link href='/' className='flex size-28 items-center '>
+    <div className='flex h-24 w-7/12 justify-between'>
+      <Link href='/' className='flex size-28 h-24 items-center '>
         <Logo />
       </Link>
 
@@ -43,11 +43,15 @@ export function MainNav({ items, children }: MainNavProps) {
       ) : null}
 
       <button
-        className='flex items-center space-x-2 md:hidden'
+        className='flex size-24 flex-col items-center justify-center  rounded-full bg-gradient-to-b from-gray-500 via-gray-300/70 to-emerald-950 text-center font-logo text-xs font-bold uppercase text-stone-950 shadow-lg shadow-emerald-500 md:hidden'
         onClick={() => setShowMobileMenu(!showMobileMenu)}
       >
-        {showMobileMenu ? <Icons.close /> : <Logo />}
-        <span className='font-bold'>Menu</span>
+        {showMobileMenu ? (
+          <Icons.close />
+        ) : (
+          <span className='text-center font-heading text-2xl font-bold text-red-950'>NF</span>
+        )}
+        <span className='text-center font-heading text-lg font-bold'>Menu</span>
       </button>
       {showMobileMenu && items && <MobileNav items={items}>{children}</MobileNav>}
     </div>

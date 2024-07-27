@@ -2,10 +2,10 @@ import { type MarketingConfig } from '@/types/index.d'
 
 export const marketingConfig: MarketingConfig = {
   mainNav: [
-    {
-      title: 'Pricing',
-      href: '/pricing'
-    },
+    // {
+    //   title: 'Pricing',
+    //   href: '/pricing'
+    // },
     {
       title: 'About',
       href: '/#about'
@@ -13,10 +13,10 @@ export const marketingConfig: MarketingConfig = {
     {
       title: 'Schedule',
       href: '/#schedule'
-    },
-    {
-      title: 'Dashboard',
-      href: '/dashboard'
     }
+    // {
+    //   title: 'Dashboard',
+    //   href: '/dashboard'
+    // }
   ]
 }

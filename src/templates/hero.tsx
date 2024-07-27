@@ -10,7 +10,7 @@ export const Hero = () => {
     <section className='relative h-[70dvh] w-full '>
       <div className='container z-10 flex h-full max-w-5xl flex-col items-center justify-center gap-4 text-center'>
         <div className='space-y-12'>
-          <Badge className='rounded-lg bg-emerald-500/90 font-heading text-xs uppercase tracking-wide text-red-900 shadow-lg'>
+          <Badge className='rounded-lg bg-gradient-to-r from-gray-500 via-gray-300/70 to-gray-500 font-heading text-xs uppercase tracking-wide text-red-900 shadow-lg shadow-red-900'>
             Kickboxing & Martial Arts Club
           </Badge>
           <GradualSpacing

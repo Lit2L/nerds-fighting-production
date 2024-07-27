@@ -96,7 +96,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         )}
       >
         <TRPCReactProvider cookies={cookies().toString()}>
-          <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
+          <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
             <SmoothScrolling>{children}</SmoothScrolling>
             <Analytics />
             <Toaster />

@@ -21,8 +21,7 @@ const classes = [
     id: 1,
     title: 'Sundays',
     type: 'Cardio Kickboxing',
-    description:
-      'Break a sweat and relieve your stress with a fun and interactive Cardio Kickboxing class.',
+    description: 'Noobie Kickboxing',
     level: 'All levels',
     schedule: [{ day: 'Mon', time: '7:30am - 9:30am' }]
   },
@@ -30,32 +29,34 @@ const classes = [
     id: 2,
     title: 'Mondays',
     type: 'Group Training',
-    description: 'Skills & Conditioning.',
+    description: 'Nerds Fighting Session. ',
     level: 'All levels',
     schedule: [
       { day: 'Mon', time: '7:30am - 9:00am' },
       { day: 'Mon', time: '9:00am - 10:30pm' }
     ]
   },
-  {
-    id: 3,
-    title: 'Tuesdays',
-    level: 'All levels',
-    description:
-      'Join us for a weekly session focused on technique, conditioning, drills while enjoying the open air.',
-    schedule: [{ day: 'Tuesday', time: '6:00pm - 7:00pm' }]
-  },
+  // {
+  //   id: 3,
+  //   title: 'Tuesdays',
+  //   level: 'All levels',
+  //   description:
+  //     'Join us for a weekly session focused on technique, conditioning, drills while enjoying the open air.',
+  //   schedule: [{ day: 'Tuesday', time: '6:00pm - 7:00pm' }]
+  // },
   {
     id: 4,
     title: 'Wednesdays',
     level: 'Intermediate +',
-    description:
-      'Train your cardio and strength in a group of as a group in a fun but challenging hour of cardio kickboxing.',
+    description: 'Nerds Fighting Session. ',
     schedule: [
       {
         day: 'Wed',
-        time: '9:00am - 10:30am',
-        level: 'Intermediate+'
+        time: '8:00am - 9:00am'
+      },
+      {
+        day: 'Wed',
+        time: '9:00am - 10:30am'
       }
     ]
   },
@@ -63,8 +64,7 @@ const classes = [
     id: 5,
     title: 'Saturdays',
     level: 'All levels',
-    description:
-      'Train your cardio and strength in a group of as a group in a fun but challenging hour of cardio kickboxing.',
+    description: 'Noobie Kickboxing.',
     schedule: [{ day: 'Sat', time: '8:00AM', level: 'All levels' }]
   }
 ]
@@ -92,7 +92,7 @@ const Schedule: React.FC = () => {
             classes.map((item, index) => (
               <Card
                 key={item.id}
-                className='max-w-96 rounded-xl bg-gray-700/90 p-6 shadow-md transition-all duration-300 hover:scale-105'
+                className='max-h-fit w-full max-w-96 rounded-xl bg-emerald-950/80 p-6 shadow-md transition-all duration-300 hover:scale-105'
               >
                 <CardTitle className='font-heading text-2xl'>
                   <div className='flex items-center gap-3'>
@@ -101,25 +101,25 @@ const Schedule: React.FC = () => {
                   </div>
                 </CardTitle>
 
-                <div className='mt-4 '>
-                  <div className='flex w-full flex-col gap-3'>
+                <div className='mt-4 flex h-full flex-col'>
+                  <div className='flex h-full w-full flex-col  gap-3'>
                     {item.schedule &&
                       item.schedule.map((schedule, index) => (
                         <>
                           <div
                             key={schedule.day}
-                            className='flex items-center font-heading tracking-tight'
+                            className='flex w-full items-center font-heading tracking-tighter'
                           >
-                            <Calendar className='w-1/16 mr-4 size-5 dark:text-emerald-500' />
+                            <Calendar className='w-1/16  size-5 dark:text-emerald-500' />
                             <div
                               key={schedule.time}
                               className='flex w-full items-center justify-between '
                             >
-                              <span className='w-1/16 text-sm font-bold text-orange-300'>
+                              <span className='w-1/16 text-xs font-bold text-stone-200'>
                                 {schedule.day} - {schedule.time}
                               </span>
 
-                              <p className='w-3/16 flex border font-heading text-xs uppercase text-gray-500 dark:text-green-500'>
+                              <p className='w-3/16 flex font-heading text-xs uppercase text-emerald-500 dark:text-green-500'>
                                 {item.level}
                               </p>
                             </div>
@@ -127,13 +127,12 @@ const Schedule: React.FC = () => {
                         </>
                       ))}
 
-                    <Card className='border-none bg-[#181818]/40 p-3'>
-                      <p className='font-sans text-sm tracking-wide dark:text-gray-200'>
+                    <div className='my-6 flex h-full w-full flex-col justify-between'>
+                      <p className='font-mono text-sm tracking-tighter text-white/60 dark:text-gray-200'>
                         {item.description}
                       </p>
-                    </Card>
-
-                    <AnimatedJoinBtn />
+                      <AnimatedJoinBtn />
+                    </div>
                   </div>
                 </div>
               </Card>
