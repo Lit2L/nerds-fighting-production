@@ -19,8 +19,8 @@ export function MainNav({ items, children }: MainNavProps) {
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false)
 
   return (
-    <div className='flex h-24 w-7/12 justify-between'>
-      <Link href='/' className='flex size-28 h-24 items-center '>
+    <div className='flex h-20 w-full items-center justify-between'>
+      <Link href='/' className='flex size-24 items-center '>
         <Logo />
       </Link>
 

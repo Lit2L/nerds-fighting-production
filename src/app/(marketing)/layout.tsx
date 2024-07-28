@@ -10,9 +10,9 @@ interface MarketingLayoutProps {
 
 export default function MarketingLayout({ children }: MarketingLayoutProps) {
   return (
-    <div className='relative flex min-h-screen flex-col justify-between overflow-x-hidden pt-20'>
-      <header className='container fixed inset-x-0 top-0 z-40 border-b bg-background/80 '>
-        <div className='flex h-24 items-center justify-between py-1'>
+    <div className='relative flex min-h-screen flex-col justify-between overflow-x-hidden'>
+      <header className='fixed inset-x-0 top-0 z-40 h-24 bg-gradient-to-bl from-emerald-500 via-emerald-400/60 to-emerald-600/90'>
+        <div className='container flex items-center justify-between'>
           <MainNav items={marketingConfig.mainNav} />
           <nav className='flex items-center'>
             <span className='mx-6'>
@@ -30,7 +30,7 @@ export default function MarketingLayout({ children }: MarketingLayoutProps) {
           </nav>
         </div>
       </header>
-      {children}
+      <div className='mt-24'>{children}</div>
       <SiteFooter />
     </div>
   )
