@@ -69,7 +69,7 @@ export const About = () => {
       className='relative min-h-full w-full bg-[radial-gradient(circle_350px_at_50%_450px,#a614204d,transparent)] py-36'
     >
       <div className=''>
-        <h2 className='my-12 text-center font-heading text-3xl font-bold leading-[1.1] md:text-3xl'>
+        <h2 className='my-6 text-center font-heading text-3xl font-bold leading-[1.1] md:text-3xl'>
           What Nerds?
         </h2>
         <div className='relative flex translate-y-24 flex-col items-center justify-center pb-36'>
@@ -90,8 +90,8 @@ export const About = () => {
               <div className='flex flex-col items-center justify-center p-3 text-left'>
                 <p className='md:text-md p-3 font-mono text-sm font-semibold tracking-tighter dark:text-white md:leading-9'>
                   <span className='font-heading text-lg text-emerald-500'>Nerds Fighting</span> was
-                  started by a group of proud self-proclaimed nerds who believed it was time to
-                  learn how to fight and defend themselves.
+                  founded by a passionate group of self-proclaimed nerds who believed it was time to
+                  master the art of self-defense and fighting skills.
                   <br />
                   <span className='font-heading text-lg text-emerald-500'>Nerds Fighting</span>
                 </p>
@@ -106,12 +106,24 @@ export const About = () => {
               </div>
             </div>
             <Separator className='my-3 bg-white' />
-            <div className='my-6 h-full max-w-[600px] rounded-3xl border-x border-y  border-gray-500/20 bg-zinc-900/70 drop-shadow'>
-              <div className='flex flex-col items-center justify-center p-3 text-left'>
-                <p className='md:text-md p-3 font-mono text-sm font-semibold tracking-tighter dark:text-white md:leading-9'>
-                  Nerds Fighting believes that everyone has the right to feel safe and empowered,
-                  and that martial arts can be a powerful tool to help people achieve that.{' '}
-                </p>
+            <div className='my-6 h-full max-w-[600px] rounded-3xl border-x border-y  border-gray-500/20 bg-zinc-900/70 bg-[radial-gradient(circle_250px_at_50%_180px,#f2f2f260,transparent)] drop-shadow'>
+              <div className='flex flex-col items-center justify-center p-3 text-left '>
+                <div className='p-6 font-mono text-xl font-bold'>
+                  What we want:
+                  <ul className='md:text-md flex flex-col space-y-6 p-6 font-mono text-sm font-semibold tracking-tighter dark:text-white'>
+                    <li className=''>
+                      • Nerds Fighting wants you to have the ability to protect yourself and your
+                      loved ones.
+                    </li>
+                    <li className=''>
+                      • Nerds Fighting wants you to be comfortable in your skin no matter where are.
+                    </li>
+                    <li className=''>
+                      • Nerds Fighting wants you to live in a body that is sharp, strong and capable
+                      for the rest of your life.
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>

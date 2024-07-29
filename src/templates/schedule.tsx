@@ -1,6 +1,6 @@
 'use client'
 
-import { AnimatedJoinBtn } from '@/components/lit2l/AnimatedJoinBtn'
+import { AnimatedJoinButton } from '@/components/lit2l/AnimatedJoinButton'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
 import { Calendar, Circle } from 'lucide-react'
@@ -21,38 +21,37 @@ const classes = [
   {
     id: 1,
     title: 'Sundays',
-    type: 'Cardio Kickboxing',
-    description: 'Beginner Noob Kickboxing',
+    description: 'Beginner Kickboxing',
     level: 'All levels',
     schedule: [
-      { day: 'Sun', time: '7:45am - 9:00am' },
-      { day: 'Sun', time: '9:00am - 10:30am' }
+      { id: 1, day: 'Sun', time: '7:45am - 9:00am' },
+      { id: 2, day: 'Sun', time: '9:00am - 9:30am' }
     ]
   },
   {
     id: 2,
     title: 'Mondays',
-    type: 'Group Training',
     description: 'Improving and Developing Skill. ',
     level: 'All levels',
     schedule: [
-      { day: 'Mon', time: '7:30 - 9:00am' },
-      { day: 'Mon', time: '9:00 - 10:30pm' }
+      { id: 1, day: 'Mon', time: '7:00 - 8:00am' },
+      { id: 2, day: 'Mon', time: '9:00 - 10:30pm' }
     ]
   },
 
   {
     id: 3,
     title: 'Wednesdays',
-    type: 'Group Training',
     level: 'Intermediate+',
     description: 'Improving and Developing Skill. ',
     schedule: [
       {
+        id: 1,
         day: 'Wed',
         time: '7:45 - 9:00am'
       },
       {
+        id: 2,
         day: 'Wed',
         time: '9:00 - 10:30am'
       }
@@ -62,10 +61,10 @@ const classes = [
     id: 4,
     title: 'Saturdays',
     level: 'All levels',
-    description: 'Noobie Kickboxing.',
+    description: 'Beginner Kickboxing.',
     schedule: [
-      { day: 'Sat', time: '7:45am - 9:00am', level: 'All levels' },
-      { day: '', time: '' }
+      { id: 1, day: 'Sat', time: '7:45am - 9:00am' },
+      { id: 2, day: '', time: '' }
     ]
   }
 ]
@@ -76,34 +75,34 @@ const Schedule: React.FC = () => {
       id='schedule'
       className=' relative min-h-full w-full bg-[radial-gradient(circle_300px_at_50%_350px,#10b98133,transparent)] py-36'
     >
-      <div className='container mx-auto flex flex-col items-center justify-center'>
+      <div className='mx-auto flex flex-col items-center justify-center sm:container'>
         <div className='space-y-9 text-center'>
-          <h2 className='font-logo text-6xl  tracking-tight  '>Class Schedule</h2>
+          <h2 className='font-logo text-3xl tracking-wide lg:text-6xl'>Class Schedule</h2>
           <p className='font-heading text-gray-100'>
             Find the perfect class to fit your fitness goals and schedule.
           </p>
         </div>
-        <div className='mt-16 grid grid-cols-1 justify-evenly gap-6 sm:grid-cols-2'>
+        <div className='mt-16 grid grid-cols-1 justify-center gap-6 sm:grid-cols-2'>
           {classes &&
-            classes.map((item, index) => (
+            classes.map((item) => (
               <Card
                 key={item.id}
-                className='h-72 w-96 rounded-xl border-zinc-700 bg-zinc-900/90 p-6 shadow-md transition-all duration-300 hover:scale-105'
+                className='h-72 w-80 rounded-xl border-zinc-700 bg-zinc-900/90 p-6 shadow-md transition-all duration-300 hover:scale-105'
               >
                 <CardTitle className='font-heading text-2xl'>
                   <div className='flex items-center gap-3'>
-                    <Circle className='size-4 ' />
+                    <MdSportsMartialArts className='size-6' />
                     <h3 className='tracking-wide text-gray-300'>{item.title}</h3>
                   </div>
                 </CardTitle>
-                <Separator className='my-3' />
+                <Separator className='my-6' />
 
-                <div className='flex flex-col items-center justify-between '>
-                  {item.schedule &&
-                    item.schedule.map((schedule, index) => (
+                <div className='flex flex-col items-center justify-between gap-3'>
+                  <>
+                    {item.schedule.map((schedule) => (
                       <>
                         <div
-                          key={schedule.time}
+                          key={schedule.id}
                           className='flex w-full items-center font-heading tracking-tighter'
                         >
                           <Calendar className='w-1/16 mx-2 size-5 dark:text-emerald-500' />
@@ -122,13 +121,16 @@ const Schedule: React.FC = () => {
                         </div>
                       </>
                     ))}
-
-                  <div className=''>
-                    <p className='text-left font-heading text-sm tracking-tighter text-white/60 dark:text-gray-200'>
+                  </>
+                </div>
+                <div className='my-6 flex w-full flex-col items-start justify-between gap-6 '>
+                  <span className='ml-3 flex items-center gap-1'>
+                    <SiFacepunch className='size-4' />
+                    <p className='ml-3 font-heading text-sm tracking-tighter text-white/60 dark:text-gray-200'>
                       {item.description}
                     </p>
-                    <AnimatedJoinBtn />
-                  </div>
+                  </span>
+                  <AnimatedJoinButton />
                 </div>
               </Card>
             ))}

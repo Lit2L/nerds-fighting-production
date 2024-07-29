@@ -17,15 +17,15 @@ export function MobileNav({ items, children }: MobileNavProps) {
   return (
     <div
       className={cn(
-        'fixed inset-0 top-16 z-50 grid h-[calc(100vh-4rem)] grid-flow-row auto-rows-max overflow-auto p-6 pb-32 shadow-md animate-in slide-in-from-bottom-80 md:hidden'
+        'fixed inset-0 top-16 z-50 grid h-[calc(100vh-4rem)] w-full grid-flow-row auto-rows-max overflow-auto p-6 pb-32 shadow-md animate-in slide-in-from-bottom-80 md:hidden'
       )}
     >
-      <div className='relative z-20 grid gap-6 rounded-md bg-popover p-4 text-popover-foreground shadow-md'>
+      <div className='relative z-20 grid w-44 gap-6 rounded-md bg-popover p-4 text-popover-foreground shadow-md'>
         <Link href='/' className='flex items-center space-x-2'>
           {/* <Logo /> */}
           <span className='border-4 border-white font-logo'>{siteConfig.name}</span>
         </Link>
-        <nav className='grid grid-flow-row auto-rows-max text-sm'>
+        <nav className='grid w-full grid-flow-row auto-rows-max text-sm'>
           {items.map((item, index) => (
             <Link
               key={index}
