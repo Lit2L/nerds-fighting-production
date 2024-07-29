@@ -1,5 +1,3 @@
-'use client'
-
 import { FlipWords } from './flip-words'
 import React from 'react'
 

@@ -1,5 +1,3 @@
-'use client'
-
 import { AnimatedJoinButton } from '@/components/lit2l/AnimatedJoinButton'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
@@ -98,30 +96,26 @@ const Schedule: React.FC = () => {
                 <Separator className='my-6' />
 
                 <div className='flex flex-col items-center justify-between gap-3'>
-                  <>
-                    {item.schedule.map((schedule) => (
-                      <>
-                        <div
-                          key={schedule.id}
-                          className='flex w-full items-center font-heading tracking-tighter'
-                        >
-                          <Calendar className='w-1/16 mx-2 size-5 dark:text-emerald-500' />
-                          <div
-                            key={schedule.time}
-                            className='flex w-full items-center justify-between '
-                          >
-                            <span className='w-1/16 text-xs font-bold text-stone-200'>
-                              {schedule.day} - {schedule.time}
-                            </span>
+                  {item.schedule.map((schedule) => (
+                    <div
+                      key={schedule.id}
+                      className='flex w-full items-center font-heading tracking-tighter'
+                    >
+                      <Calendar className='w-1/16 mx-2 size-5 dark:text-emerald-500' />
+                      <div
+                        key={schedule.time}
+                        className='flex w-full items-center justify-between '
+                      >
+                        <span className='w-1/16 text-xs font-bold text-stone-200'>
+                          {schedule.day} - {schedule.time}
+                        </span>
 
-                            <p className='w-3/16 flex font-heading text-xs uppercase text-emerald-500 dark:text-green-500'>
-                              {item.level}
-                            </p>
-                          </div>
-                        </div>
-                      </>
-                    ))}
-                  </>
+                        <p className='w-3/16 flex font-heading text-xs uppercase text-emerald-500 dark:text-green-500'>
+                          {item.level}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
                 <div className='my-6 flex w-full flex-col items-start justify-between gap-6 '>
                   <span className='ml-3 flex items-center gap-1'>

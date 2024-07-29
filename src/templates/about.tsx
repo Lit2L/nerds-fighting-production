@@ -66,7 +66,7 @@ export const About = () => {
   return (
     <section
       id='about'
-      className='relative min-h-full w-full bg-[radial-gradient(circle_350px_at_50%_450px,#a614204d,transparent)] py-36'
+      className='container relative min-h-full w-full bg-[radial-gradient(circle_350px_at_50%_450px,#a614204d,transparent)] py-36'
     >
       <div className=''>
         <h2 className='my-6 text-center font-heading text-3xl font-bold leading-[1.1] md:text-3xl'>
@@ -86,41 +86,35 @@ export const About = () => {
               The Dojo.
               <FaYinYang className='-z-10 mx-auto size-12' />
             </h3>
-            <div className='my-6 h-full max-w-[600px] rounded-3xl border-x border-y  border-gray-500/20 bg-zinc-900/70 drop-shadow'>
+            <div className='my-12 h-full max-w-[700px] rounded-3xl border-x border-y  border-gray-500/20 bg-zinc-900/70 drop-shadow'>
               <div className='flex flex-col items-center justify-center p-3 text-left'>
-                <p className='md:text-md p-3 font-mono text-sm font-semibold tracking-tighter dark:text-white md:leading-9'>
+                <p className='md:text-md p-3 font-mono text-xs font-semibold leading-6 tracking-tighter dark:text-white sm:text-sm md:leading-9'>
                   <span className='font-heading text-lg text-emerald-500'>Nerds Fighting</span> was
                   founded by a passionate group of self-proclaimed nerds who believed it was time to
-                  master the art of self-defense and fighting skills.
+                  master the art of self-defense and fighting skills. They developed a training
+                  style that emphasizes longevity and skill, minimizing unnecessary damage to the
+                  body and brain. Our mission is to share this approach with others, allowing
+                  everyone to train like a fighter while protecting their health. Join us to
+                  experience the benefits of this unique, safe, and effective training method.
                   <br />
-                  <span className='font-heading text-lg text-emerald-500'>Nerds Fighting</span>
                 </p>
-
-                {/* <p className="">As a victim of bullying for nearly most of my young years I can say that the weight of not having to worry about being a victim to some other person whim ranging from being out of shape, tired of feeling intimidated or bullied and some
-                  struggled with mental health issues like anxiety, depression, and low
-                  self-confidence. The Nerds Fighting crew as a group built stronger bonds and as
-                  individuals became stronger individuals that exuded more confidence, improved
-                  their health, and felt a new sense of empowerment.Each individual
-                  had their reasons for joining but the benefits were too positive for ones mental,
-                  physical and spiritual health to not share with the world.</p> */}
               </div>
             </div>
             <Separator className='my-3 bg-white' />
-            <div className='my-6 h-full max-w-[600px] rounded-3xl border-x border-y  border-gray-500/20 bg-zinc-900/70 bg-[radial-gradient(circle_250px_at_50%_180px,#f2f2f260,transparent)] drop-shadow'>
+            <div className=' my-6 h-full max-w-[700px] rounded-3xl border-x border-y  border-gray-500/20 bg-zinc-900/70 bg-[radial-gradient(circle_250px_at_50%_160px,#f2f2f260,transparent)] drop-shadow'>
               <div className='flex flex-col items-center justify-center p-3 text-left '>
                 <div className='p-6 font-mono text-xl font-bold'>
-                  What we want:
-                  <ul className='md:text-md flex flex-col space-y-6 p-6 font-mono text-sm font-semibold tracking-tighter dark:text-white'>
+                  <span className='font-heading text-lg text-emerald-500'>Nerds Fighting</span>
+                  <ul className='flex flex-col space-y-6 p-6 font-mono text-xs font-semibold tracking-tighter dark:text-white md:text-sm'>
                     <li className=''>
-                      • Nerds Fighting wants you to have the ability to protect yourself and your
-                      loved ones.
+                      • Wants you to have the ability to protect yourself and your loved ones.
                     </li>
                     <li className=''>
-                      • Nerds Fighting wants you to be comfortable in your skin no matter where are.
+                      • Wants you to be confident and comfortable in your own skin no matter where
+                      are.
                     </li>
                     <li className=''>
-                      • Nerds Fighting wants you to live in a body that is sharp, strong and capable
-                      for the rest of your life.
+                      “Wants you to live long-lasting, sharp, strong, and flexible body.”
                     </li>
                   </ul>
                 </div>
