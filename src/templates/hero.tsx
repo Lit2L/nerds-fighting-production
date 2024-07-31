@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/badge'
 
 export const Hero = () => {
   return (
-    <section className='relative h-[90dvh] w-full border'>
+    <section className='relative h-[80dvh] w-full py-12'>
       <div className='container z-10 flex h-full flex-col items-center gap-4 text-center'>
         <div className='mt-16 space-y-12'>
           <Badge className='md:text-md rounded-lg bg-gradient-to-r from-gray-500 via-gray-300/70 to-gray-500 text-xs uppercase tracking-tighter text-red-900 shadow-lg shadow-red-900 sm:font-heading sm:tracking-wide'>

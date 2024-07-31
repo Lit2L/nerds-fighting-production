@@ -22,7 +22,7 @@ const classes = [
     description: 'Beginner Kickboxing',
     level: 'All levels',
     schedule: [
-      { id: 1, day: 'Sun', time: '7:45am - 9:00am' },
+      { id: 1, day: 'Sun', time: '8:00am - 9:00am' },
       { id: 2, day: 'Sun', time: '9:00am - 9:30am' }
     ]
   },
@@ -40,18 +40,18 @@ const classes = [
   {
     id: 3,
     title: 'Wednesdays',
-    level: 'Intermediate+',
+    level: 'All levels',
     description: 'Improving and Developing Skill. ',
     schedule: [
       {
         id: 1,
         day: 'Wed',
-        time: '7:45 - 9:00am'
+        time: '9:00 - 10:30am'
       },
       {
         id: 2,
         day: 'Wed',
-        time: '9:00 - 10:30am'
+        time: 'TBD'
       }
     ]
   },
@@ -62,7 +62,7 @@ const classes = [
     description: 'Beginner Kickboxing.',
     schedule: [
       { id: 1, day: 'Sat', time: '7:45am - 9:00am' },
-      { id: 2, day: '', time: '' }
+      { id: 2, day: 'Sat', time: '9:00 - 10:30am' }
     ]
   }
 ]
@@ -119,7 +119,7 @@ const Schedule: React.FC = () => {
                 </div>
                 <div className='my-6 flex w-full flex-col items-start justify-between gap-6 '>
                   <span className='ml-3 flex items-center gap-1'>
-                    <SiFacepunch className='size-4' />
+                    <GiPunchingBag className='size-6 text-red-500' />
                     <p className='ml-3 font-heading text-sm tracking-tighter text-white/60 dark:text-gray-200'>
                       {item.description}
                     </p>
