@@ -1,6 +1,7 @@
 'use client'
 
 import Logo from './Logo'
+import { Button } from './ui/button'
 import { Icons } from '@/components/icons'
 import { MobileNav } from '@/components/mobile-nav'
 import { cn } from '@/lib/utils'
@@ -20,9 +21,9 @@ export function MainNav({ items, children }: MainNavProps) {
 
   return (
     <div className='flex h-24 w-full items-center justify-center sm:justify-between'>
-      <Link href='/' className='hidden size-20 sm:flex sm:items-center '>
+      <div className='h-20 w-28'>
         <Logo />
-      </Link>
+      </div>
 
       {items?.length ? (
         <nav className='hidden gap-6 md:flex '>

@@ -1,7 +1,5 @@
-// import Logos from '../../public/NFlogo.png'
 import Logos from '../../public/Group10.png'
 import Image from 'next/image'
-import Link from 'next/link'
 
 function Logo() {
   return (

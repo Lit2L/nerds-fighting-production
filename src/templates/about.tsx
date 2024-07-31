@@ -98,7 +98,7 @@ export const About = () => {
                   minimizing unnecessary damage to the body and brain. Our mission is to share this
                   approach with others, allowing everyone to train like a fighter while protecting
                   their health. Join us to experience the benefits of this unique, safe, and
-                  effective training method.
+                  effective training style.
                   <br />
                 </p>
               </div>
@@ -136,7 +136,7 @@ export const About = () => {
                       <Image
                         src={card.image}
                         alt={card.title}
-                        className='fill rounded-lg object-cover'
+                        className='rounded-lg object-cover'
                         height={350}
                         width={350}
                       />
@@ -183,7 +183,8 @@ export const About = () => {
                         src={card.image}
                         alt={card.title}
                         className='rounded-lg object-cover '
-                        fill
+                        height={350}
+                        width={350}
                       />
                     </AspectRatio>
                   </div>
