@@ -32,7 +32,7 @@ const featureCards = [
   },
   {
     id: 2,
-    title: 'Nerds Training',
+    title: 'Group Training',
     description:
       'Join a supportive community of martial artists. Enjoy daily group sessions that include bodyweight exercises, drills, mitts, Thai pads, heavy bag work, and more, all designed to help you reach your peak performance.',
     info: '60 - 90 MINS - ALL AGES. ALL LEVELS.',

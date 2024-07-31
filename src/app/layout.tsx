@@ -74,10 +74,10 @@ export const metadata: Metadata = {
     creator: '@lit2l'
   },
   icons: {
-    icon: '/assets/Tiger',
-    shortcut: '/favicon-16x16.png',
+    icon: '/Group10.png',
+    shortcut: '/Group10.png',
     // shortcut: '/assets/TigerLogo.png',
-    apple: '/apple-touch-icon.png'
+    apple: '/Group10.png'
   },
   manifest: `${siteConfig.url}/site.webmanifest`
 }

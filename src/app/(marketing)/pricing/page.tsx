@@ -24,7 +24,7 @@ export default function PricingPage() {
 
         {/* <div className='absolute left-[50%] top-0 z-10 flex h-full w-full -translate-x-[50%] flex-col items-center justify-center'> */}
         {/* <div className='absolute left-[50%] top-0 z-10 flex h-full w-full -translate-x-[50%] flex-col items-center justify-center'> */}
-        <div className='container absolute left-[50%] top-0 mx-auto flex max-h-screen max-w-7xl -translate-x-[50%] flex-col gap-6 py-8 md:translate-y-[50%]  md:py-12 lg:py-24'>
+        <div className='container absolute left-1/2 top-0 mx-auto flex max-h-screen max-w-7xl -translate-x-[50%] flex-col gap-6 py-8 md:translate-y-[50%]  md:py-12 lg:py-24'>
           <div className='text-center'>
             <h2 className='font-logo text-3xl leading-[1.1] sm:text-3xl md:text-6xl'>
               Nerds Fighting
