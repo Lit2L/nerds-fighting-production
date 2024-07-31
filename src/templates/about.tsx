@@ -93,7 +93,7 @@ export const About = () => {
                   founded by a passionate group of nerds who believed it was time to learn how to
                   defend themselves. All members had one request, to be able to continue their lives
                   during and after training without sustaining brain injury. With health and
-                  longevity as the prime focus we've developed a training style that emphasizes
+                  longevity as the prime focus we&apos;ve developed a training style that emphasizes
                   heavily towards defensive skills, proper technique and controlled sparring,
                   minimizing unnecessary damage to the body and brain. Our mission is to share this
                   approach with others, allowing everyone to train like a fighter while protecting
