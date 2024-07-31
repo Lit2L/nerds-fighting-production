@@ -90,7 +90,7 @@ export const About = () => {
               <div className='flex flex-col items-center justify-center p-3 text-left'>
                 <p className='md:text-md p-3 font-mono text-xs font-semibold leading-6 tracking-tighter text-white dark:text-white sm:text-sm md:leading-9'>
                   <span className='font-heading text-lg text-emerald-500'>Nerds Fighting</span> was
-                  founded by a passionate group of nerds who believed it was time to learn how to
+                  started by a passionate group of nerds who believed it was time to learn how to
                   defend themselves. All members had one request, to be able to continue their lives
                   during and after training without sustaining brain injury. With health and
                   longevity as the prime focus we&apos;ve developed a training style that emphasizes

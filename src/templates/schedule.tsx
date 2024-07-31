@@ -129,6 +129,13 @@ const Schedule: React.FC = () => {
               </Card>
             ))}
         </div>
+        <Card className='my-12'>
+          <CardContent className='p-6'>
+            <h3 className='font-heading text-2xl'>Location: Williams MMA</h3>
+            <Separator className='my-3' />
+            Address: 8780 Warner Ave, Suite 7 Fountain Valley, CA 92708
+          </CardContent>
+        </Card>
       </div>
     </section>
   )
