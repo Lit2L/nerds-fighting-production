@@ -45,7 +45,7 @@ const classes = [
     schedule: [
       {
         id: 1,
-        day: 'Wed',
+        day: '8:00 - 9:00am',
         time: '9:00 - 10:30am'
       },
       {
