@@ -78,8 +78,7 @@ export const metadata: Metadata = {
     shortcut: '/Group10.png',
     // shortcut: '/assets/TigerLogo.png',
     apple: '/Group10.png'
-  },
-  manifest: `${siteConfig.url}/site.webmanifest`
+  }
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -1,10 +1,9 @@
-import Logos from '../../public/Group10.png'
 import Image from 'next/image'
 
 function Logo() {
   return (
     <Image
-      src={Logos}
+      src='/Group10.png'
       alt='Nerds Kickboxing Club'
       width={800}
       height={800}

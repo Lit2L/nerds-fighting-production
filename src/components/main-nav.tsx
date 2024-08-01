@@ -21,9 +21,9 @@ export function MainNav({ items, children }: MainNavProps) {
 
   return (
     <div className='flex h-24 w-full items-center justify-center sm:justify-between'>
-      <div className='h-20 w-28'>
+      <Link href='/' className='h-20 w-28'>
         <Logo />
-      </div>
+      </Link>
 
       {items?.length ? (
         <nav className='hidden gap-6 md:flex '>
