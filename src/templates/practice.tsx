@@ -9,7 +9,7 @@ export const Practice = () => {
           The Practice
         </h2>
         <h3 className='font-kronaOne'></h3>
-        <p className='md:text-md text-md font-krona max-w-[85%]  pb-6 text-left leading-normal dark:text-white sm:text-center md:leading-8'>
+        <p className='md:text-md text-md max-w-[85%] pb-6  text-left font-kronaOne leading-normal dark:text-white sm:text-center md:leading-8'>
           We emphasize rigorous training with special attention to striking and defensive technique,
           and effective counter and defensive reactions. We drill a strong foundation of abilites
           into your bones. Simply put, if you train like a fighter, you&apos;ll move like a fighter.

@@ -73,13 +73,9 @@ export const About = () => {
           What Nerds?
         </h2>
         <div className='relative flex translate-y-24 flex-col items-center justify-center pb-36'>
-          <Image
-            src='/temple.png'
-            alt='temple'
-            width={400}
-            height={400}
-            className='absolute -top-10 z-10 opacity-90'
-          />
+          <div className='absolute -top-10 z-10 opacity-90'>
+            <Image src='/temple.png' alt='temple' width={400} height={400} className='' />
+          </div>
 
           <div className='flex -translate-y-24 flex-col items-center justify-center rounded-full py-20'>
             <h3 className='pt-36 text-center font-kronaOne text-lg'>
@@ -117,7 +113,7 @@ export const About = () => {
                       are.
                     </li>
                     <li className=''>
-                      • Wants you to live long-lasting, sharp, strong, and flexible body.
+                      • Wants you to live in a body that is sharp, strong, and built for longevity.
                     </li>
                   </ul>
                 </div>

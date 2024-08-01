@@ -1,5 +1,5 @@
 import { About } from '@/templates/about'
-import Bookings from '@/templates/bookings'
+// import Bookings from '@/templates/bookings'
 import { Hero } from '@/templates/hero'
 import Schedule from '@/templates/schedule'
 
@@ -9,7 +9,7 @@ export default function IndexPage() {
       <Hero />
       <About />
       <Schedule />
-      <Bookings />
+      {/* <Bookings /> */}
     </div>
   )
 }

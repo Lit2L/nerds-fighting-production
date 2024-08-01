@@ -1,7 +1,7 @@
 import { Inter as FontSans, Krona_One } from 'next/font/google'
 import localFont from 'next/font/local'
 import megrim from 'next/font/local'
-import '@/styles/globals.css'
+import '../styles/globals.css'
 import { Analytics } from '@/components/analytics'
 import SmoothScrolling from '@/components/lit2l/SmoothScrolling'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
@@ -44,7 +44,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL('http://localhost:3000'),
+  metadataBase: new URL('https://nerdsfighting.com'),
   title: {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`
@@ -53,8 +53,8 @@ export const metadata: Metadata = {
   keywords: ['Beginner Kickboxing', 'Advanced Kickboxing', 'Boxing', 'Muay Thai'],
   authors: [
     {
-      name: 'lit2l',
-      url: 'https://lit2l.com'
+      name: 'Nerds Fighting',
+      url: 'https://nerdsfighting.com'
     }
   ],
   creator: 'lit2l',
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang='en' suppressHydrationWarning>
+    <html lang='en'>
       <head />
       <body
         className={cn(

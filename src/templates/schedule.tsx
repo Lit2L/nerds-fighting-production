@@ -32,8 +32,8 @@ const classes = [
     description: 'Improving and Developing Skill. ',
     level: 'All levels',
     schedule: [
-      { id: 1, day: 'Mon', time: '7:00 - 8:00am' },
-      { id: 2, day: 'Mon', time: '9:00 - 10:30pm' }
+      { id: 1, day: 'Mon', time: '7:00 - 8:30am' },
+      { id: 2, day: 'Mon', time: '8:30 - 10:00pm' }
     ]
   },
 
@@ -45,13 +45,13 @@ const classes = [
     schedule: [
       {
         id: 1,
-        day: '8:00 - 9:00am',
-        time: '9:00 - 10:30am'
+        day: 'Wed',
+        time: '8:00 - 9:00am'
       },
       {
         id: 2,
         day: 'Wed',
-        time: 'TBD'
+        time: '9:00 - 10:30am'
       }
     ]
   },
