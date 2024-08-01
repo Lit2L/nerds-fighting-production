@@ -5,8 +5,8 @@ function Logo() {
     <Image
       src='/Group10.png'
       alt='Nerds Kickboxing Club'
-      width={800}
-      height={800}
+      width={400}
+      height={400}
       className='rounded-full'
     />
   )

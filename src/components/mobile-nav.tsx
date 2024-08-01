@@ -21,10 +21,9 @@ export function MobileNav({ items, children }: MobileNavProps) {
       )}
     >
       <div className='relative z-20 grid w-44 gap-6 rounded-md bg-popover p-4 text-popover-foreground shadow-md'>
-        <Link href='/' className='flex items-center space-x-2'>
-          {/* <Logo /> */}
+        <span className='flex items-center space-x-2'>
           <span className='border-4 border-white font-logo'>{siteConfig.name}</span>
-        </Link>
+        </span>
         <nav className='grid w-full grid-flow-row auto-rows-max text-sm'>
           {items.map((item, index) => (
             <Link

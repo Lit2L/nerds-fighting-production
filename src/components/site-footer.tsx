@@ -10,9 +10,9 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
       <div className='container flex h-20 w-full items-center justify-between bg-emerald-950/70'>
         <ModeToggle />
         <div className='flex h-28 w-28 flex-col items-center justify-center'>
-          <Link href='/' className='h-28 w-28 translate-y-5'>
+          <span className='h-28 w-28 translate-y-5'>
             <Logo />
-          </Link>
+          </span>
         </div>
       </div>
     </footer>

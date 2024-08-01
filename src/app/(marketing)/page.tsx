@@ -9,7 +9,6 @@ export default function IndexPage() {
       <Hero />
       <About />
       <Schedule />
-      {/* <Bookings /> */}
     </div>
   )
 }
