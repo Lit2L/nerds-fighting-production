@@ -41,5 +41,5 @@ NerdsFighting is a landing page for a kickboxing and martial arts studio/gym. It
 • Zustand
 • Tailwind CSS
 
-Project Link: https://github.com/your-username/nerdsfighting
+Project Link: https://github.com/Lit2L/NerdsFighting
 
