@@ -31,6 +31,15 @@ NerdsFighting is a landing page for a kickboxing and martial arts studio/gym. It
 - npm or yarn
 
 ### Steps
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/your-username/nerdsfighting.git
+• T3 Application
+• Next.js
+• Studio Freight
+• Framer Motion
+• Next Auth
+• Next Themes
+• Zod
+• Zustand
+• Tailwind CSS
+
+Project Link: https://github.com/your-username/nerdsfighting
+
