@@ -19,51 +19,69 @@ import { SiFacepunch } from 'react-icons/si'
 const classes = [
   {
     id: 1,
-    title: 'Sundays',
+    title: 'Sunday',
     description: 'Beginner Kickboxing',
     level: 'All levels',
     schedule: [
-      { id: 1, day: 'Sun', time: '8:00am - 9:00am' },
-      { id: 2, day: 'Sun', time: '9:00am - 9:30am' }
+      { id: 1, day: 'Sun', time: '8:00 AM' },
+      { id: 2, day: 'Sun', time: '9:00 AM' }
     ]
   },
   {
     id: 2,
-    title: 'Mondays',
-    description: 'Improving and Developing Skill. ',
+    title: 'Monday',
+    description: 'Technique & Skill',
     level: 'All levels',
     schedule: [
-      { id: 1, day: 'Mon', time: '6:00 - 8:30am' },
-      { id: 2, day: 'Mon', time: '8:30 - 10:00pm' }
+      { id: 1, day: 'Mon', time: '6:00 AM' },
+      { id: 2, day: 'Mon', time: '8:00 AM' }
     ]
   },
 
   {
     id: 3,
-    title: 'Wednesdays',
+    title: 'Wednesday',
     level: 'All levels',
-    description: 'Improving and Developing Skill. ',
+    description: 'Technique & Skill ',
     schedule: [
       {
         id: 1,
         day: 'Wed',
-        time: '8:00 - 9:00am'
+        time: '8:00 AM'
       },
       {
         id: 2,
         day: 'Wed',
-        time: '9:00 - 10:30am'
+        time: '9:00 AM'
       }
     ]
   },
   {
     id: 4,
-    title: 'Saturdays',
-    level: 'All levels',
-    description: 'Beginner Kickboxing.',
+    title: 'Thursday',
+    level: 'all levels',
+    description: 'Technique & Skill ',
     schedule: [
-      { id: 1, day: 'Sat', time: '7:45am - 9:00am' },
-      { id: 2, day: 'Sat', time: '9:00 - 10:30am' }
+      {
+        id: 1,
+        day: 'Wed',
+        time: '8:00 AM'
+      },
+      {
+        id: 2,
+        day: 'Wed',
+        time: '9:00 AM'
+      }
+    ]
+  },
+  {
+    id: 5,
+    title: 'Saturday',
+    level: 'All levels',
+    description: 'Cardio Kickboxing.',
+    schedule: [
+      { id: 1, day: 'Sat', time: '8:00 AM' },
+      { id: 2, day: 'Sat', time: '9:00 AM' }
     ]
   }
 ]
@@ -72,61 +90,61 @@ const Schedule: React.FC = () => {
   return (
     <section
       id='schedule'
-      className=' relative min-h-full w-full py-36 dark:bg-[radial-gradient(circle_300px_at_50%_350px,#10b98180,transparent)]'
+      className=' relative min-h-full w-full py-36 dark:bg-[radial-gradient(circle_400px_at_50%_350px,#144437,transparent)]'
     >
       <div className='mx-auto flex flex-col items-center justify-center sm:container'>
         <div className='space-y-9 text-center'>
           <Link
             href='/schedule'
-            className='font-logo text-3xl tracking-wide md:text-6xl xl:text-5xl xl:font-bold text-white'
+            className='font-logo text-3xl tracking-wide text-black/80 dark:text-white  md:text-6xl'
           >
             Class Schedule
           </Link>
-          <p className='font-heading text-gray-100'>
+          <p className='font-heading font-light text-black dark:text-white'>
             Find the schedule that works for you.
           </p>
         </div>
-        <div className='mt-16 flex flex-wrap justify-center gap-6'>
+        <div className='mt-9 flex flex-wrap justify-center gap-6'>
           {classes &&
             classes.map((item) => (
               <Card
                 key={item.id}
-                className='flex h-72 w-80 flex-col rounded-xl border-zinc-700 bg-zinc-900/95 px-6 py-3 dark:bg-zinc-800 shadow-xl shadow-gray-800/40 transition-all duration-300 hover:scale-105'
+                className='flex h-52 w-64 flex-col rounded-xl border-zinc-700 bg-zinc-900/95 p-3 shadow-xl shadow-gray-800 transition-all duration-300 hover:scale-95 dark:bg-zinc-800 dark:shadow-gray-800/40'
               >
-                <CardTitle className='p-1 uppercase'>
-                  <div className='flex items-center gap-3'>
+                <CardTitle className='p-1'>
+                  <div className='flex items-center justify-between gap-3'>
                     <MdSportsMartialArts className='size-6 text-white' />
-                    <h3 className='tracking-wide text-white dark:text-gray-300'>{item.title}</h3>
+                    <h3 className='font-sans text-white dark:text-gray-300'>{item.title}</h3>
                   </div>
                 </CardTitle>
-                <Separator className='my-6' />
+                <Separator className='my-1' />
 
-                <div className='flex flex-col items-center justify-between gap-3'>
+                <div className='flex flex-col items-center  '>
                   {item.schedule.map((schedule) => (
                     <div
                       key={schedule.id}
-                      className='flex w-full items-center font-sans font-light tracking-tighter'
+                      className='flex w-full items-center justify-between border-b border-white/10'
                     >
-                      <Calendar className='w-1/16 mx-2 size-5 text-emerald-600 dark:text-emerald-500' />
+                      <Calendar className='w-1/16 mx-2 size-4 text-emerald-600 dark:text-emerald-500' />
                       <div
                         key={schedule.time}
                         className='flex w-full items-center justify-between py-1'
                       >
-                        <span className='w-1/16 text-sm  text-white dark:text-gray-300'>
-                          {schedule.day} - {schedule.time}
+                        <span className='w-1/16 text-md font-semibold text-white dark:text-gray-300'>
+                          {schedule.time}
                         </span>
 
-                        <p className='w-3/16 flex font-mono text-xs font-semibold uppercase tracking-wide text-white dark:text-green-500'>
+                        <p className='w-3/16 m-1 flex font-sans text-xs font-semibold capitalize text-white dark:text-green-500'>
                           {item.level}
                         </p>
                       </div>
                     </div>
                   ))}
                 </div>
-                <div className='mt-6 flex w-full flex-1 flex-col items-start justify-between'>
-                  <span className='flex items-center gap-1'>
+                <div className='mt-2 flex w-full flex-1 flex-col items-end justify-between'>
+                  <span className='flex w-full items-center justify-between'>
                     <GiPunchingBag className='size-6 text-red-500' />
-                    <p className='ml-3 font-sans text-sm font-semibold tracking-wide text-white dark:text-gray-300'>
+                    <p className='ml-3 font-sans text-xs font-semibold tracking-wide text-white dark:text-gray-300'>
                       {item.description}
                     </p>
                   </span>

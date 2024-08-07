@@ -1,5 +1,6 @@
 import { ThemeToggleButton } from '@/components/lit2l/ThemeToggleButton'
 import { MainNav } from '@/components/main-nav'
+import { MobileNav } from '@/components/mobile-nav'
 import { SiteFooter } from '@/components/site-footer'
 import { buttonVariants } from '@/components/ui/button'
 import { marketingConfig } from '@/config/marketing'

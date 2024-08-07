@@ -9,11 +9,11 @@ export const marketingConfig: MarketingConfig = {
     {
       title: 'About',
       href: '/#about'
-    },
-    {
-      title: 'Pricing',
-      href: '/pricing'
     }
+    // {
+    //   title: 'Pricing',
+    //   href: '/pricing'
+    // }
     // {
     //   title: 'Dashboard',
     //   href: '/dashboard'

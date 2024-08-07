@@ -26,7 +26,7 @@ export function MainNav({ items, children }: MainNavProps) {
       </Link>
 
       {items?.length ? (
-        <nav className='hidden w-full  items-center justify-center gap-6 md:flex'>
+        <nav className='w-full  items-center justify-center gap-6 md:flex'>
           {items?.map((item, index) => (
             <Link
               key={index}
@@ -54,7 +54,7 @@ export function MainNav({ items, children }: MainNavProps) {
           )}
           <span className='text-md text-center font-heading font-bold'>Menu</span>
         </button>
-        {showMobileMenu && items && <MobileNav items={items}>{children}</MobileNav>}
+        <MobileNav items={items}>{children}</MobileNav>}
       </div> */}
     </div>
   )
