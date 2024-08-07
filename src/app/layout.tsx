@@ -27,12 +27,12 @@ const kronaOne = Krona_One({
 
 // Font files can be colocated inside of `pages`
 const fontHeading = localFont({
-  src: '../assets/fonts/BlackOpsOne-Regular.ttf',
+  src: '/assets/BlackOpsOne-Regular.ttf',
   variable: '--font-heading'
 })
 
 const logoFont = localFont({
-  src: '../assets/fonts/northstar-font/Northstar3D-4D3x.otf',
+  src: '/assets/Northstar3D-4D3x.otf',
   variable: '--font-logo'
 })
 
@@ -76,7 +76,6 @@ export const metadata: Metadata = {
   icons: {
     icon: '/Group10.png',
     shortcut: '/Group10.png',
-    // shortcut: '/assets/TigerLogo.png',
     apple: '/Group10.png'
   }
 }
@@ -87,7 +86,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head />
       <body
         className={cn(
-          'min-h-screen max-w-full overflow-x-hidden bg-background/60 font-sans antialiased ',
+          'max-w-screen min-h-screen overflow-x-hidden bg-background/60 font-sans antialiased ',
           fontSans.variable,
           fontHeading.variable,
           kronaOne.variable,

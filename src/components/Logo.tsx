@@ -7,6 +7,7 @@ function Logo() {
       alt='Nerds Kickboxing Club'
       width={400}
       height={400}
+      priority
       className='rounded-full'
     />
   )

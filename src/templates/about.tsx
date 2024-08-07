@@ -66,7 +66,7 @@ export const About = () => {
   return (
     <section
       id='about'
-      className='container relative min-h-full w-full bg-[radial-gradient(circle_350px_at_50%_450px,#a614204d,transparent)] py-24'
+      className='container relative min-h-full w-full bg-[radial-gradient(circle_350px_at_50%_450px,#a614204d,transparent)] py-24  dark:bg-[radial-gradient(circle_350px_at_50%_450px,#a614204d,transparent)]'
     >
       <div className=''>
         <h2 className='my-6 text-center font-heading text-3xl font-bold leading-[1.1] md:text-3xl'>
@@ -143,7 +143,6 @@ export const About = () => {
                       {card.info}
                     </Badge>
                     <div className='flex w-full translate-x-6 gap-3 pt-3'>
-                      <span className=''></span>
                       {card.icon}
 
                       <h3 className='font-heading text-lg'>{card.title}</h3>
@@ -173,7 +172,7 @@ export const About = () => {
                       </p>
                     </div>
                   </div>
-                  <div className='md:w-[350px]'>
+                  <div className='h-[300px] min-w-[260px] md:w-[350px]'>
                     <AspectRatio ratio={4 / 3}>
                       <Image
                         src={card.image}

@@ -9,7 +9,12 @@ await import('./src/env.js')
 const config = {
   reactStrictMode: false,
   images: {
-    domains: ['avatars.githubusercontent.com', 'lh3.googleusercontent.com', 'cdn.discordapp.com']
+    domains: [
+      'avatars.githubusercontent.com',
+      'lh3.googleusercontent.com',
+      'cdn.discordapp.com',
+      'wepik.com'
+    ]
   },
   experimental: {
     serverComponentsExternalPackages: ['@prisma/client']

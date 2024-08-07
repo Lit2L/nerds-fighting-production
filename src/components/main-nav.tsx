@@ -26,7 +26,7 @@ export function MainNav({ items, children }: MainNavProps) {
       </Link>
 
       {items?.length ? (
-        <nav className='hidden gap-6 md:flex '>
+        <nav className='hidden w-full  items-center justify-center gap-6 md:flex'>
           {items?.map((item, index) => (
             <Link
               key={index}
@@ -42,7 +42,7 @@ export function MainNav({ items, children }: MainNavProps) {
           ))}
         </nav>
       ) : null}
-      <div className='flex h-20 w-20 translate-y-3 flex-col items-center justify-center '>
+      {/* <div className='flex h-20 w-20 translate-y-3 flex-col items-center justify-center '>
         <button
           className='flex size-16 translate-x-3 flex-col items-center justify-center  rounded-full bg-gradient-to-b from-gray-500 via-gray-300/70 to-emerald-950 text-center font-logo text-xs font-bold uppercase text-stone-950 shadow-lg shadow-emerald-500 md:hidden'
           onClick={() => setShowMobileMenu(!showMobileMenu)}
@@ -55,7 +55,7 @@ export function MainNav({ items, children }: MainNavProps) {
           <span className='text-md text-center font-heading font-bold'>Menu</span>
         </button>
         {showMobileMenu && items && <MobileNav items={items}>{children}</MobileNav>}
-      </div>
+      </div> */}
     </div>
   )
 }

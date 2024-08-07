@@ -11,8 +11,8 @@ interface MarketingLayoutProps {
 export default function MarketingLayout({ children }: MarketingLayoutProps) {
   return (
     <div className='relative flex min-h-screen flex-col justify-between overflow-x-hidden'>
-      <header className='container fixed inset-x-0 top-0 z-40 h-24 bg-gradient-to-bl from-emerald-500 via-emerald-400/60 to-emerald-600/90'>
-        <div className='flex items-center justify-center sm:justify-between'>
+      <header className=' via-emerald-400/ fixed inset-x-0 top-0 z-40 h-24 bg-gradient-to-bl from-emerald-500 to-emerald-600/95'>
+        <div className='container flex items-center justify-center sm:justify-between'>
           <MainNav items={marketingConfig.mainNav} />
           <nav className='flex items-center'>
             <span className=''>
