@@ -1,26 +1,16 @@
 import { AnimatedJoinButton } from '@/components/lit2l/AnimatedJoinButton'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent, CardTitle } from '@/components/ui/card'
 import { Separator } from '@/components/ui/separator'
-import { Calendar, Circle } from 'lucide-react'
-import Image from 'next/image'
+import { Calendar } from 'lucide-react'
 import Link from 'next/link'
-import { FaYinYang } from 'react-icons/fa'
-import {
-  GiArmorPunch,
-  GiFulguroPunch,
-  GiHighPunch,
-  GiPunch,
-  GiPunchBlast,
-  GiPunchingBag
-} from 'react-icons/gi'
-import { MdOutlineStarRate, MdSportsMartialArts } from 'react-icons/md'
-import { SiFacepunch } from 'react-icons/si'
+import { GiPunchingBag } from 'react-icons/gi'
+import { MdSportsMartialArts } from 'react-icons/md'
 
 const classes = [
   {
     id: 1,
     title: 'Sunday',
-    description: 'Beginner Kickboxing',
+    description: 'Cardio Kickboxing',
     level: 'All levels',
     schedule: [
       { id: 1, day: 'Sun', time: '8:00 AM' },
@@ -30,7 +20,7 @@ const classes = [
   {
     id: 2,
     title: 'Monday',
-    description: 'Technique & Skill',
+    description: 'Cardio Kickboxing',
     level: 'All levels',
     schedule: [
       { id: 1, day: 'Mon', time: '6:00 AM' },
@@ -42,7 +32,7 @@ const classes = [
     id: 3,
     title: 'Wednesday',
     level: 'All levels',
-    description: 'Technique & Skill ',
+    description: 'Cardio Kickboxing',
     schedule: [
       {
         id: 1,
@@ -60,17 +50,17 @@ const classes = [
     id: 4,
     title: 'Thursday',
     level: 'all levels',
-    description: 'Technique & Skill ',
+    description: 'Cardio Kickboxing',
     schedule: [
       {
         id: 1,
-        day: 'Wed',
-        time: '8:00 AM'
+        day: 'Thurs',
+        time: '6:00 AM'
       },
       {
         id: 2,
-        day: 'Wed',
-        time: '9:00 AM'
+        day: 'Thurs',
+        time: '7:00 AM'
       }
     ]
   },

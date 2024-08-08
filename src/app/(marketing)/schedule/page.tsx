@@ -10,7 +10,7 @@ const classes = [
   {
     id: 1,
     title: 'Sunday',
-    description: 'Beginner Kickboxing',
+    description: 'Kickboxing',
     level: 'All levels',
     schedule: [
       { id: 1, day: 'Sun', time: '8:00 AM' },
@@ -37,12 +37,12 @@ const classes = [
       {
         id: 1,
         day: 'Wed',
-        time: '8:00 AM'
+        time: '9:00 AM'
       },
       {
         id: 2,
         day: 'Wed',
-        time: '9:00 AM'
+        time: ''
       }
     ]
   },
@@ -50,17 +50,17 @@ const classes = [
     id: 4,
     title: 'Thursday',
     level: 'All levels',
-    description: 'Technique & Skill ',
+    description: 'Cardio Kickboxing',
     schedule: [
       {
         id: 1,
-        day: 'Wed',
-        time: '8:00 AM'
+        day: 'Thurs',
+        time: '6:00 AM'
       },
       {
         id: 2,
-        day: 'Wed',
-        time: '9:00 AM'
+        day: 'Thurs',
+        time: '7:00 AM'
       }
     ]
   },
@@ -143,7 +143,7 @@ const Schedule: React.FC = () => {
               </Card>
             ))}
         </div>
-        <Card className='my-12'>
+        <Card className='m-12'>
           <CardContent className='p-6'>
             <h3 className='font-heading text-2xl'>Location: Williams MMA</h3>
             <Separator className='my-3' />
