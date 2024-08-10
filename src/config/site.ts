@@ -4,7 +4,7 @@ export const siteConfig: SiteConfig = {
   name: 'Nerds Fighting',
   description: 'Martial Artists and Kickboxers',
   url: 'https://nerdsfighting.com',
-  ogImage: 'https://tx.shadcn.com/og.jpg',
+  ogImage: '/Group10.png',
   links: {
     login: '/login',
     register: '/register',

@@ -1,7 +1,6 @@
 import Logo from './Logo'
 import { ModeToggle } from '@/components/mode-toggle'
 import { cn } from '@/lib/utils'
-import Link from 'next/link'
 import * as React from 'react'
 
 export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {

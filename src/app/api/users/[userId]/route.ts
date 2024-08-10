@@ -10,10 +10,7 @@ const routeContextSchema = z.object({
   })
 })
 
-export async function PATCH(
-  req: Request,
-  context: z.infer<typeof routeContextSchema>
-) {
+export async function PATCH(req: Request, context: z.infer<typeof routeContextSchema>) {
   try {
     const { params } = routeContextSchema.parse(context)
 

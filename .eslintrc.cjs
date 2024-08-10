@@ -27,15 +27,15 @@ const config = {
 
     'tailwindcss/no-custom-classname': 'off',
     'tailwindcss/classnames-order': 'off',
-    '@typescript-eslint/no-unsafe-member-access': 'off',
-    '@typescript-eslint/no-unsafe-assignment': 'off',
-    '@typescript-eslint/no-unsafe-call': 'off',
-    '@typescript-eslint/no-unsafe-argument': 'off',
-    '@typescript-eslint/ban-ts-comment': 'off',
-    '@typescript-eslint/prefer-nullish-coalescing': 'off',
-    '@typescript-eslint/array-type': 'off',
-    '@typescript-eslint/consistent-type-definitions': 'off',
-    '@typescript-eslint/prefer-optional-chain': 'off',
+    '@typescript-eslint/no-unsafe-member-access': 'warn',
+    '@typescript-eslint/no-unsafe-assignment': 'warn',
+    '@typescript-eslint/no-unsafe-call': 'warn',
+    '@typescript-eslint/no-unsafe-argument': 'warn',
+    '@typescript-eslint/ban-ts-comment': 'warn',
+    '@typescript-eslint/prefer-nullish-coalescing': 'warn',
+    '@typescript-eslint/array-type': 'warn',
+    '@typescript-eslint/consistent-type-definitions': 'warn',
+    '@typescript-eslint/prefer-optional-chain': 'warn',
     '@typescript-eslint/consistent-type-imports': [
       'warn',
       {
@@ -43,8 +43,8 @@ const config = {
         fixStyle: 'inline-type-imports'
       }
     ],
-    '@typescript-eslint/no-unused-vars': ['off', { argsIgnorePattern: '^_' }],
-    '@typescript-eslint/require-await': 'off',
+    '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+    '@typescript-eslint/require-await': 'warn',
     '@typescript-eslint/no-misused-promises': [
       'error',
       {

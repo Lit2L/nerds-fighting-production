@@ -68,17 +68,12 @@ export function UserNameForm({ user, className, ...props }: UserNameFormProps) {
   }
 
   return (
-    <form
-      className={cn(className)}
-      onSubmit={handleSubmit(onSubmit)}
-      {...props}
-    >
+    <form className={cn(className)} onSubmit={handleSubmit(onSubmit)} {...props}>
       <Card>
         <CardHeader>
           <CardTitle>Your Name</CardTitle>
           <CardDescription>
-            Please enter your full name or a display name you are comfortable
-            with.
+            Please enter your full name or a display name you are comfortable with.
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -86,23 +81,12 @@ export function UserNameForm({ user, className, ...props }: UserNameFormProps) {
             <Label className='sr-only' htmlFor='name'>
               Name
             </Label>
-            <Input
-              id='name'
-              className='w-[400px]'
-              size={32}
-              {...register('name')}
-            />
-            {errors?.name && (
-              <p className='px-1 text-xs text-red-600'>{errors.name.message}</p>
-            )}
+            <Input id='name' className='w-[400px]' size={32} {...register('name')} />
+            {errors?.name && <p className='px-1 text-xs text-red-600'>{errors.name.message}</p>}
           </div>
         </CardContent>
         <CardFooter>
-          <button
-            type='submit'
-            className={cn(buttonVariants(), className)}
-            disabled={isSaving}
-          >
+          <button type='submit' className={cn(buttonVariants(), className)} disabled={isSaving}>
             {isSaving && <Icons.spinner className='mr-2 size-4 animate-spin' />}
             <span>Save</span>
           </button>

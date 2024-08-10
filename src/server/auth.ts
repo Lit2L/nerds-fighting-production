@@ -2,11 +2,7 @@ import { env } from '@/env.js'
 import { db } from '@/server/db'
 import { PrismaAdapter } from '@next-auth/prisma-adapter'
 import bcrypt from 'bcrypt'
-import {
-  getServerSession,
-  type DefaultSession,
-  type NextAuthOptions
-} from 'next-auth'
+import { getServerSession, type DefaultSession, type NextAuthOptions } from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
 import DiscordProvider from 'next-auth/providers/discord'
 
@@ -56,7 +52,7 @@ export const authOptions: NextAuthOptions = {
         password: { label: 'password', type: 'password' }
       },
       async authorize(credentials) {
-        if (!credentials?.email ?? !credentials?.password) {
+        if (!credentials?.email || !credentials?.password) {
           throw new Error('Invalid credentials')
         }
 
@@ -66,14 +62,11 @@ export const authOptions: NextAuthOptions = {
           }
         })
 
-        if (!user ?? !user?.hashedPassword) {
+        if (!user || !user?.hashedPassword) {
           throw new Error('Invalid Password or email')
         }
 
-        const isCorrectPassword = await bcrypt.compare(
-          credentials.password,
-          user.hashedPassword
-        )
+        const isCorrectPassword = await bcrypt.compare(credentials.password, user.hashedPassword)
 
         if (!isCorrectPassword) {
           throw new Error('Invalid Password or email')

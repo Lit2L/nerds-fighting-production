@@ -7,8 +7,7 @@ export default withAuth(
     const token = await getToken({ req })
     const isAuth = !!token
     const isAuthPage =
-      req.nextUrl.pathname.startsWith('/login') ||
-      req.nextUrl.pathname.startsWith('/register')
+      req.nextUrl.pathname.startsWith('/login') || req.nextUrl.pathname.startsWith('/register')
 
     if (isAuthPage) {
       if (isAuth) {
@@ -24,9 +23,7 @@ export default withAuth(
         from += req.nextUrl.search
       }
 
-      return NextResponse.redirect(
-        new URL(`/login?from=${encodeURIComponent(from)}`, req.url)
-      )
+      return NextResponse.redirect(new URL(`/login?from=${encodeURIComponent(from)}`, req.url))
     }
   },
   {

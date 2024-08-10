@@ -6,8 +6,7 @@ import { useTheme } from '@/hooks/use-theme'
 import { AnimatePresence, motion, type HTMLMotionProps } from 'framer-motion'
 import * as React from 'react'
 
-type IconButtonProps = HTMLMotionProps<'button'> &
-  React.ComponentPropsWithRef<'button'>
+type IconButtonProps = HTMLMotionProps<'button'> & React.ComponentPropsWithRef<'button'>
 
 const IconButton: React.FC<IconButtonProps> = ({ children, ...props }) => (
   <motion.button
