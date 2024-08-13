@@ -16,7 +16,6 @@ export const FlipWords = ({
   const [currentWord, setCurrentWord] = useState(words[0] ?? '') // Ensure a fallback value
   const [isAnimating, setIsAnimating] = useState<boolean>(false)
 
-  // thanks for the fix Julian - https://github.com/Julian-AT
   const startAnimation = useCallback(() => {
     const currentIndex = words.indexOf(currentWord)
     const nextIndex = (currentIndex + 1) % words.length

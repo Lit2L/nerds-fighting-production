@@ -12,10 +12,7 @@ const classes = [
     title: 'Sunday',
     description: 'Cardio Kickboxing',
     level: 'All levels',
-    schedule: [
-      { id: 1, day: 'Sun', time: '8:00 AM' },
-      { id: 2, day: 'Sun', time: '9:00 AM' }
-    ]
+    schedule: [{ id: 1, day: 'Sun', time: '8:00 AM' }]
   },
   {
     id: 2,
@@ -23,8 +20,8 @@ const classes = [
     description: 'Cardio Kickboxing',
     level: 'All levels',
     schedule: [
-      { id: 1, day: 'Mon', time: '6:00 AM' },
-      { id: 2, day: 'Mon', time: '8:00 AM' }
+      { id: 1, day: 'Mon', time: '7:00 AM' },
+      { id: 2, day: 'Mon', time: '9:00 AM' }
     ]
   },
 
@@ -36,11 +33,6 @@ const classes = [
     schedule: [
       {
         id: 1,
-        day: 'Wed',
-        time: '8:00 AM'
-      },
-      {
-        id: 2,
         day: 'Wed',
         time: '9:00 AM'
       }
@@ -56,11 +48,6 @@ const classes = [
         id: 1,
         day: 'Thurs',
         time: '6:00 AM'
-      },
-      {
-        id: 2,
-        day: 'Thurs',
-        time: '7:00 AM'
       }
     ]
   },
@@ -69,10 +56,7 @@ const classes = [
     title: 'Saturday',
     level: 'All levels',
     description: 'Cardio Kickboxing.',
-    schedule: [
-      { id: 1, day: 'Sat', time: '8:00 AM' },
-      { id: 2, day: 'Sat', time: '9:00 AM' }
-    ]
+    schedule: [{ id: 1, day: 'Sat', time: '8:00 AM' }]
   }
 ]
 

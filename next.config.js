@@ -12,6 +12,7 @@ const config = {
     domains: [
       'avatars.githubusercontent.com',
       'lh3.googleusercontent.com',
+      'unsplash.com',
       'cdn.discordapp.com',
       'wepik.com'
     ]
