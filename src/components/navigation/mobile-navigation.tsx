@@ -1,8 +1,7 @@
 'use client'
 
-import Logo from './Logo'
-import { ThemeToggleButton } from '@/components/theme-toggle-button'
-
+import { ModeToggle } from '@/components/mode-toggle'
+import { useClickAway } from '@/hooks/use-click-away'
 import { AnimatePresence, motion, type Variants } from 'framer-motion'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -51,11 +50,11 @@ export function MobileNav() {
   const navToggleRef = useRef<HTMLButtonElement>(null)
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => setIsOpen((open) => !open)
-
+  useClickAway([navRef, navToggleRef], () => setIsOpen(false))
 
   useScrollspy({
-    ids: ['intro', 'projects', 'about', 'contact'],
-    hrefs: ['/#intro', '/#projects', '/#about', '/#contact'],
+    ids: ['intro', 'resume', 'applications', 'contact'],
+    hrefs: ['/#intro', '/#resume', '/#applications', '/#applications'],
     offset: 'topCenter',
     activeClass: 'active-nav-link'
   })
@@ -67,19 +66,14 @@ export function MobileNav() {
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : 'visible'
   }, [isOpen])
-
   return (
     <>
-      <Link href='/#' className='fixed left-2 top-6 z-30 h-20 md:hidden'>
-        <Logo />
-      </Link>
-
       <button
         ref={navToggleRef}
         type='button'
         aria-label={isOpen ? 'Close menu' : 'Open menu'}
         onClick={toggle}
-        className='text-dark-900 fixed right-4 top-8 z-30 mix-blend-difference hover:opacity-60 dark:text-white md:hidden'
+        className='text-dark-100 fixed right-4 top-8 z-30 border-4   dark:text-white md:hidden'
       >
         <svg
           xmlns='http://www.w3.org/2000/svg'
@@ -124,21 +118,23 @@ export function MobileNav() {
             initial='hidden'
             animate='visible'
             exit='hidden'
-            className='bg-dark-100 dark:bg-dark-700 fixed inset-y-0 right-0 z-20 flex h-full w-11/12 flex-col flex-wrap items-start justify-center gap-y-14 px-12 transition-colors md:hidden'
+            className='fixed  inset-y-0 right-0 z-20 flex h-full w-9/12 flex-col flex-wrap items-start justify-center gap-y-14 border-4 bg-black px-12 text-xl transition-colors md:hidden'
           >
-            <motion.div variants={linkVariants}>
-              <ThemeToggleButton />
-            </motion.div>
-            <MotionLink href='/#schedule' variants={linkVariants} className='mobile-nav-link'>
+            <MotionLink href='/#intro' variants={linkVariants} className='mobile-nav-link'>
               Introduction
             </MotionLink>
-
+            <MotionLink href='/#projects' variants={linkVariants} className='mobile-nav-link'>
+              Projects
+            </MotionLink>
             <MotionLink href='/#about' variants={linkVariants} className='mobile-nav-link'>
               About
             </MotionLink>
             <MotionLink href='/#contact' variants={linkVariants} className='mobile-nav-link'>
               Contact
             </MotionLink>
+            <motion.div variants={linkVariants}>
+              <ModeToggle />
+            </motion.div>
           </motion.nav>
         )}
       </AnimatePresence>

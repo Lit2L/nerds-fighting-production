@@ -6,7 +6,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 
 export const FlipWords = ({
   words,
-  duration = 3000,
+  duration = 1000,
   className
 }: {
   words: string[]
@@ -53,10 +53,10 @@ export const FlipWords = ({
           y: 0
         }}
         transition={{
-          duration: 0.4,
+          duration: 0.3,
           ease: 'easeInOut',
           type: 'spring',
-          stiffness: 100,
+          stiffness: 20,
           damping: 6
         }}
         exit={{
@@ -68,7 +68,7 @@ export const FlipWords = ({
           position: 'absolute'
         }}
         className={cn(
-          'relative z-10 inline-block rounded-full px-2 text-left text-3xl font-bold text-black ',
+          'relative z-10 inline-block rounded-full px-2 text-left font-heading text-white ',
           className
         )}
         key={currentWord}
@@ -82,7 +82,7 @@ export const FlipWords = ({
               delay: index * 0.08,
               duration: 0.4
             }}
-            className='inline-block bg-gradient-to-r from-green-500 via-green-400 to-emerald-500 bg-clip-text text-3xl font-bold text-transparent '
+            className='inline-block text-xl text-black dark:text-white'
           >
             {letter}
           </motion.span>

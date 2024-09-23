@@ -88,7 +88,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <Hydrate>
         <TRPCReactProvider cookies={cookies().toString()}>
-          <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
+          <ThemeProvider
+            attribute='class'
+            defaultTheme='dark'
+            enableSystem
+            disableTransitionOnChange
+          >
             <div className=''>{children}</div>
             <Analytics />
             <Toaster />
