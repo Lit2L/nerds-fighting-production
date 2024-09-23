@@ -27,11 +27,11 @@ export const Hero = () => {
           <div className='w-full'>
             <FlipWordsComponent />
           </div>
-          <div className='mt-24 flex w-full justify-between gap-3 lg:gap-12 '>
-            <AnimatedJoinButton />
+        </div>
+        <div className=' mt-6 flex w-full max-w-xl flex-col justify-between gap-3 md:flex-row lg:gap-12'>
+          <AnimatedJoinButton />
 
-            <AnimatedMembersButton />
-          </div>
+          <AnimatedMembersButton />
         </div>
       </div>
     </section>

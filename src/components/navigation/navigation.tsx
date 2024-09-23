@@ -15,7 +15,7 @@ export function Navigation() {
       variants={navVariants}
       initial='hidden'
       animate='visible'
-      className='container fixed inset-x-0 top-0 z-40 hidden h-24 w-full items-center justify-between border bg-gradient-to-bl from-emerald-600/90 via-emerald-500 to-emerald-600/90 md:flex'
+      className='container fixed inset-x-0 top-0 z-40 hidden h-24 w-full items-center justify-between bg-gradient-to-bl from-emerald-600/90 via-emerald-500/50 to-emerald-600/90 md:flex'
     >
       <AnimatedLink href='/#' variants={linkVariants} className='h-20 w-28'>
         <Logo />

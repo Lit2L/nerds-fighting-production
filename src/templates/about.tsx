@@ -86,21 +86,18 @@ export const About = () => {
               <div className='flex flex-col items-center justify-center p-3 text-left'>
                 <p className='md:text-md p-3 font-mono text-xs font-semibold leading-6 tracking-tighter text-white dark:text-white sm:text-sm md:leading-9'>
                   <span className='font-heading text-lg text-emerald-500'>Nerds Fighting</span> was
-                  started by a passionate group of nerds who believed it was time to learn how to
-                  defend themselves. All members had one request, to be able to continue their lives
-                  during and after training without sustaining brain injury. With health and
-                  longevity as the prime focus we&apos;ve developed a training style that emphasizes
-                  heavily towards defensive skills, proper technique and controlled sparring,
-                  minimizing unnecessary damage to the body and brain. Our mission is to share this
-                  approach with others, allowing everyone to train like a fighter while protecting
-                  their health. Join us to experience the benefits of this unique, safe, and
-                  effective training style.
-                  <br />
+                  started on the principle that the benefits, the lessons, and the upgrades that you
+                  earn through training should be accessible to everyone... Whether you&apos;re a
+                  book worm, a business owner, a mom, a dad, a student, or even a nerd... training
+                  like a Muay Thai fighter can really change your life. We welcome everyone into the
+                  mix because Muay Thai brings people of all backgrounds together. We want everyone
+                  to be safe, confident, strong and skilled. We are all nerds for something, here we
+                  are nerds for fighting.
                 </p>
               </div>
             </div>
             <Separator className='my-3 bg-white' />
-            <div className=' my-6 h-full max-w-[700px] rounded-3xl border-x border-y  border-gray-500/20 bg-zinc-900/70 bg-[radial-gradient(circle_250px_at_50%_160px,#f2f2f260,transparent)] drop-shadow'>
+            {/* <div className=' my-6 h-full max-w-[700px] rounded-3xl border-x border-y  border-gray-500/20 bg-zinc-900/70 bg-[radial-gradient(circle_250px_at_50%_160px,#f2f2f260,transparent)] drop-shadow'>
               <div className='flex flex-col items-center justify-center p-3 text-left '>
                 <div className='p-6 font-mono text-xl font-bold'>
                   <span className='font-heading text-lg text-emerald-500'>Nerds Fighting</span>
@@ -117,8 +114,8 @@ export const About = () => {
                     </li>
                   </ul>
                 </div>
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
           </div>
         </div>
 

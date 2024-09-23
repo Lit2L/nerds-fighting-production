@@ -20,7 +20,7 @@ export default function Hydrate({ children }: { children: ReactNode }) {
 
   return (
     <SessionProvider>
-      {isHydrated ? <body className='font-sans'>{children}</body> : <body></body>}
+      {isHydrated ? <body className=' font-sans'>{children}</body> : <body></body>}
     </SessionProvider>
   )
 }
