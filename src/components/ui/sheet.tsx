@@ -34,7 +34,7 @@ const SheetPortal = ({
   ...props
 }: SheetPortalProps) => (
   // @ts-expect-error not found in interface
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+
   <SheetPrimitive.Portal className={cn(className)} {...props}>
     <div className={portalVariants({ position })}>{children}</div>
   </SheetPrimitive.Portal>

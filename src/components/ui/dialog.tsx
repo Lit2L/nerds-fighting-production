@@ -16,7 +16,7 @@ const DialogPortal = ({
   ...props
 }: DialogPrimitive.DialogPortalProps) => (
   // @ts-expect-error not found in interface
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+
   <DialogPrimitive.Portal className={cn(className)} {...props}>
     <div className='fixed inset-0 z-50 flex items-start justify-center sm:items-center'>
       {children}
