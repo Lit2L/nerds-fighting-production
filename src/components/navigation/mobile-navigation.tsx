@@ -73,7 +73,7 @@ export function MobileNav() {
         type='button'
         aria-label={isOpen ? 'Close menu' : 'Open menu'}
         onClick={toggle}
-        className='text-dark-100 fixed right-4 top-8 z-30 border-4   dark:text-white md:hidden'
+        className='text-dark-100 fixed right-4 top-8 z-30 dark:text-black md:hidden'
       >
         <svg
           xmlns='http://www.w3.org/2000/svg'
@@ -118,19 +118,19 @@ export function MobileNav() {
             initial='hidden'
             animate='visible'
             exit='hidden'
-            className='fixed  inset-y-0 right-0 z-20 flex h-full w-9/12 flex-col flex-wrap items-start justify-center gap-y-14 border-4 bg-black px-12 text-xl transition-colors md:hidden'
+            className='fixed  inset-y-0 right-0 z-20 flex h-full w-9/12 flex-col flex-wrap items-start justify-center gap-y-14 bg-emerald-950/95 px-12 font-kronaOne text-xl transition-colors md:hidden'
           >
             <MotionLink href='/#intro' variants={linkVariants} className='mobile-nav-link'>
-              Introduction
+              Home
             </MotionLink>
             <MotionLink href='/#projects' variants={linkVariants} className='mobile-nav-link'>
-              Projects
+              Schedule
             </MotionLink>
             <MotionLink href='/#about' variants={linkVariants} className='mobile-nav-link'>
               About
             </MotionLink>
             <MotionLink href='/#contact' variants={linkVariants} className='mobile-nav-link'>
-              Contact
+              Book
             </MotionLink>
             <motion.div variants={linkVariants}>
               <ModeToggle />

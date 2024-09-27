@@ -8,13 +8,13 @@ import { Badge } from '@/components/ui/badge'
 export const Hero = () => {
   return (
     <section className='relative h-[80dvh] w-full py-12'>
-      <div className='container z-10 flex h-full flex-col items-center gap-4 text-center'>
+      <div className='container flex h-full flex-col items-center gap-4 text-center'>
         <div className='mt-16 space-y-12'>
-          <Badge className='md:text-md rounded-lg bg-gradient-to-r from-gray-500 via-gray-300/70 to-gray-500 text-xs uppercase tracking-tighter text-red-900 shadow-lg shadow-red-900 sm:font-heading sm:tracking-wide'>
+          <Badge className='md:text-md rounded-lg bg-gradient-to-r from-gray-500 via-gray-300/70 to-gray-500 font-heading text-xs uppercase tracking-wide text-red-900 shadow-lg shadow-red-900 sm:tracking-wide'>
             Kickboxing & Martial Arts Club
           </Badge>
           <GradualSpacing
-            className='text-center font-logo text-2xl tracking-[-0.2em] shadow-gray-500 dark:shadow-gray-200 sm:text-5xl md:text-6xl lg:text-7xl'
+            className='text-center font-logo text-3xl tracking-[-0.2em] shadow-gray-500 dark:shadow-gray-200 sm:text-5xl md:text-6xl lg:text-7xl'
             text='Nerds Fighting'
           />
         </div>

@@ -114,7 +114,6 @@ export const postRouter = createTRPCRouter({
         },
         data: {
           title: input.title,
-          // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
           content: input.content
         }
       })

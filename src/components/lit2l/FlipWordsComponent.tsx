@@ -5,9 +5,9 @@ export function FlipWordsComponent() {
   const words = [
     'Program-Updating...',
     'Debug-Limits.exe',
-    'Upgrade-body.go',
-    'Hack-self-confidence.push',
-    'Optimize.Mental.Health'
+    'Upgrade-body.push',
+    'Hack-Mental-Strength.exe',
+    'Optimize.Confidence.lvl'
   ]
 
   return (
