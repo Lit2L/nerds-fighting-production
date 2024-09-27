@@ -123,7 +123,7 @@ export function MobileNav() {
             <MotionLink href='/#intro' variants={linkVariants} className='mobile-nav-link'>
               Home
             </MotionLink>
-            <MotionLink href='/#projects' variants={linkVariants} className='mobile-nav-link'>
+            <MotionLink href='/schedule' variants={linkVariants} className='mobile-nav-link'>
               Schedule
             </MotionLink>
             <MotionLink href='/#about' variants={linkVariants} className='mobile-nav-link'>
