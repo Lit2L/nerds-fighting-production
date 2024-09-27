@@ -54,7 +54,7 @@ export function MobileNav() {
 
   useScrollspy({
     ids: ['intro', 'resume', 'applications', 'contact'],
-    hrefs: ['/#intro', '/#resume', '/#applications', '/#applications'],
+    hrefs: ['/#intro', '/#about', '/#schedule', '/#applications'],
     offset: 'topCenter',
     activeClass: 'active-nav-link'
   })
